@@ -24,14 +24,14 @@ CREATE TABLE `bdei_book` (
   `book_name` varchar(200) DEFAULT NULL,
   `book_author` varchar(160) DEFAULT NULL,
   `category_id` int(11) DEFAULT NULL,
-  `book_press` varchar(200) DEFAULT NULL COMMENT '??????',
-  `book_isbn` varchar(64) DEFAULT NULL COMMENT '????ISBN????',
+  `book_press` varchar(200) DEFAULT NULL COMMENT '出版社',
+  `book_isbn` varchar(64) DEFAULT NULL COMMENT '书本的ISBN号码',
   `save_place` varchar(200) DEFAULT NULL,
-  `book_cover` varchar(250) DEFAULT NULL COMMENT '??????',
+  `book_cover` varchar(250) DEFAULT NULL COMMENT '书籍封面',
   `status` tinyint(1) DEFAULT NULL,
   `read_number` int(11) DEFAULT NULL,
-  `book_classification` varchar(10) DEFAULT NULL COMMENT '????',
-  `book_classification_word` char(1) DEFAULT NULL COMMENT 'A-Z?????',
+  `book_classification` varchar(10) DEFAULT NULL COMMENT '分类',
+  `book_classification_word` char(1) DEFAULT NULL COMMENT 'A-Z的分类',
   `add_time` datetime DEFAULT NULL,
   PRIMARY KEY (`book_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -77,9 +77,9 @@ CREATE TABLE `bdei_book_category` (
 DROP TABLE IF EXISTS `bdei_book_extend`;
 CREATE TABLE `bdei_book_extend` (
   `book_id` int(11) DEFAULT NULL,
-  `book_keyword` varchar(200) DEFAULT NULL COMMENT '?????',
-  `book_key_words` varchar(200) DEFAULT NULL COMMENT '?????',
-  `book_desc` varchar(248) DEFAULT NULL COMMENT '??????'
+  `book_keyword` varchar(200) DEFAULT NULL COMMENT '关键字',
+  `book_key_words` varchar(200) DEFAULT NULL COMMENT '主题词',
+  `book_desc` varchar(248) DEFAULT NULL COMMENT '书本描述'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -145,6 +145,58 @@ CREATE TABLE `bedei_administrator` (
   `add_time` date DEFAULT NULL,
   `last_login_time` date DEFAULT NULL,
   PRIMARY KEY (`admin_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- ----------------------------
+-- Table structure for `bdei_group`
+-- ----------------------------
+DROP TABLE IF EXISTS `bdei_group`;
+CREATE TABLE `bdei_group` (
+  `group_id` int(11) NOT NULL AUTO_INCREMENT,
+  `group_name` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`group_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- ----------------------------
+-- Table structure for `bdei_user_permission`
+-- ----------------------------
+DROP TABLE IF EXISTS `bdei_user_permission`;
+CREATE TABLE `bdei_user_permission` (
+  `user_id` int(11) DEFAULT NULL,
+  `permission_id` int(11) DEFAULT NULL,
+  `in_out` tinyint(1) DEFAULT NULL,
+  KEY `user_permission_id` (`user_id`,`permission_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for `bdei_permission`
+-- ----------------------------
+DROP TABLE IF EXISTS `bdei_permission`;
+CREATE TABLE `bdei_permission` (
+  `permission_id` int(11) NOT NULL AUTO_INCREMENT,
+  `permission_name` varchar(250) DEFAULT NULL,
+  `permission_union_key` varchar(100) DEFAULT NULL,
+  `page_name` varchar(100) DEFAULT NULL,
+  `parent_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`permission_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for `bdei_group_user`
+-- ----------------------------
+DROP TABLE IF EXISTS `bdei_group_user`;
+CREATE TABLE `bdei_group_user` (
+  `admin_id` int(11) DEFAULT NULL,
+  `group_id` int(11) DEFAULT NULL,
+  KEY `admin_group_id` (`admin_id`,`group_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for `bdei_group_permission`
+-- ----------------------------
+DROP TABLE IF EXISTS `bdei_group_permission`;
+CREATE TABLE `bdei_group_permission` (
+  `group_id` int(11) DEFAULT NULL,
+  `permission_id` int(11) DEFAULT NULL,
+  KEY `group_permission` (`group_id`,`permission_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
