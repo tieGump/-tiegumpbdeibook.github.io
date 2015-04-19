@@ -23,6 +23,7 @@ abstract class Action {
         $this->_smarty->right_delimiter = "}";
         $this->createCssUrl();
         $this->_message=new Message();
+        $this->eofTop();
 //        $this->_smarty->allow_php_tag=true;
 
 
@@ -76,5 +77,30 @@ abstract class Action {
             $this->_smarty->assign('get',$_GET);
             $this->_smarty->display($this->_tpl);
         }
+    }
+    function eofTop(){
+        $tpl=$this->tpl;
+        echo <<<EOF
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>百得图书管理</title>
+    <link rel="stylesheet" type="text/css" href="{$tpl}resources/css/style.css" />
+    <!-- jQuery file -->
+    <script src="{$tpl}js/jquery.min.js"></script>
+    <script src="{$tpl}js/jquery.tabify.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        var $ = jQuery.noConflict();
+        $(function() {
+            $('#tabsmenu').tabify();
+            });
+
+    </script>
+
+</head>
+EOF;
+
+
     }
 } 

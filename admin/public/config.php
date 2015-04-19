@@ -1,27 +1,27 @@
 <?php
-//Ä¿Â¼¶¨Òå¿ªÊ¼
+//ç›®å½•å®šä¹‰å¼€å§‹
 define('BASE_DIR',dirname(ROOT).'/');
-define('ACTION_DIR',ROOT.'action/');//¶¯×÷Â·¾¶
-define('SRC_DIR',BASE_DIR.'src/'); //ÀàÂ·¾¶
-define('CACHE_DIR',BASE_DIR.'cache/');//»º´æÂ·¾¶
-define('PHP_CACHE_DIR',CACHE_DIR.'php/'); //php»º´æÂ·¾¶
-define('HTML_CACHE_DIR',CACHE_DIR.'html/');//html »º´æÂ·¾¶ ÔÝÊ±Ã»ÓÃ
-define('PUBLIC_DIR',BASE_DIR.'public/');//¹«¿ªÎÄ¼þÂ·¾¶
-define('TPL_DIR',ROOT.'tpl/');//Ä£°åÂ·¾¶
-define('TPL_CACHE_DIR',BASE_DIR.'tpl_cache/');//Ä£°å»º´æÂ·¾¶
-define('IS_ADMIN',1);//¶¨ÒåÊÇºóÌ¨
-define('TPL_C',ROOT.'/tpl_c/');//Ä£°åÉú³ÉÂ·¾¶
-define('SMARTY_TPL_DIR',PUBLIC_DIR.'smarty/');//smartyÂ·¾¶
-define('UPLOAD_DIR','/var/www/html/usitrip');//ÉÏ´«Â·¾¶F:\Work\newSite\usiadmin\staff_train\upload
-//Ä¿Â¼¶¨Òå½áÊø
+define('ACTION_DIR',ROOT.'action/');//åŠ¨ä½œè·¯å¾„
+define('SRC_DIR',BASE_DIR.'src/'); //ç±»è·¯å¾„
+define('CACHE_DIR',BASE_DIR.'cache/');//ç¼“å­˜è·¯å¾„
+define('PHP_CACHE_DIR',CACHE_DIR.'php/'); //phpç¼“å­˜è·¯å¾„
+define('HTML_CACHE_DIR',CACHE_DIR.'html/');//html ç¼“å­˜è·¯å¾„ æš‚æ—¶æ²¡ç”¨
+define('PUBLIC_DIR',BASE_DIR.'public/');//å…¬å¼€æ–‡ä»¶è·¯å¾„
+define('TPL_DIR',ROOT.'tpl/');//æ¨¡æ¿è·¯å¾„
+define('TPL_CACHE_DIR',BASE_DIR.'tpl_cache/');//æ¨¡æ¿ç¼“å­˜è·¯å¾„
+define('IS_ADMIN',1);//å®šä¹‰æ˜¯åŽå°
+define('TPL_C',ROOT.'/tpl_c/');//æ¨¡æ¿ç”Ÿæˆè·¯å¾„
+define('SMARTY_TPL_DIR',PUBLIC_DIR.'smarty/');//smartyè·¯å¾„
+define('UPLOAD_DIR','/var/www/html/usitrip');//ä¸Šä¼ è·¯å¾„F:\Work\newSite\usiadmin\staff_train\upload
+//ç›®å½•å®šä¹‰ç»“æŸ
 
-//Êý¾Ý¿âÐÅÏ¢¿ªÊ¼
-define('DB_SERVER', 'localhost');						//Êý¾Ý¿âµØÖ·
-define('DB_SERVER_USERNAME', 'root');				//Êý¾Ý¿âÓÃ»§Ãû
-define('DB_SERVER_PASSWORD', '123456');	//Êý¾Ý¿âÃÜÂë
-define('DB_DATABASE', 'bdei_book');	//Ä¬ÈÏÑ¡ÔñµÄÊý¾Ý¿âÃû³Æ
-//Êý¾Ý¿âÐÅÏ¢½áÊø
+//æ•°æ®åº“ä¿¡æ¯å¼€å§‹
+define('DB_SERVER', 'localhost');						//æ•°æ®åº“åœ°å€
+define('DB_SERVER_USERNAME', 'root');				//æ•°æ®åº“ç”¨æˆ·å
+define('DB_SERVER_PASSWORD', '');	//æ•°æ®åº“å¯†ç 
+define('DB_DATABASE', 'bdei_book');	//é»˜è®¤é€‰æ‹©çš„æ•°æ®åº“åç§°
+//æ•°æ®åº“ä¿¡æ¯ç»“æŸ
 
-define('IS_BUG',true);//ÊÇ·ñÊÇ²âÊÔ
-define('IS_PHP_CACHE',true);//ÊÇ·ñ¿ªÆôPHP»º´æ
-define('IS_HTML_CACHE',true);//¿ªÆôHTML»º´æ
+define('IS_BUG',true);//æ˜¯å¦æ˜¯æµ‹è¯•
+define('IS_PHP_CACHE',true);//æ˜¯å¦å¼€å¯PHPç¼“å­˜
+define('IS_HTML_CACHE',true);//å¼€å¯HTMLç¼“å­˜
