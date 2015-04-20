@@ -2,7 +2,7 @@
 <div id="panelwrap">
 
     <div class="header">
-        <div class="title"><a href="#">百得图书管理系统</a></div>
+        <div class="title"><a href="#">管理系统</a></div>
 
         <div class="header_right">Welcome {$admin_name} <a href="#" class="settings">Settings</a> <a
                 href="/admin/login/loginout" class="logout">Logout</a></div>
@@ -33,21 +33,21 @@
 
                 <h2>图书管理</h2>
                 <ul>
-                    <li><a href="#">书籍管理</a></li>
-                    <li><a href="#">图书类型管理</a></li>
-                    <li><a href="#">Clients</a></li>
+                    <li><a href="/admin/book">书籍管理</a></li>
+                    <li><a href="/admin/bookType">图书类型管理</a></li>
+                    <li><a href="/admin/book/add">新增图书</a></li>
                     <li><a href="#">Docs and info</a></li>
                 </ul>
 
                 <h2>用户设置</h2>
 
                 <ul>
-                    <li><a href="#">用户管理</a></li>
-                    <li><a href="#">用户权限管理</a></li>
-                    <li><a href="#">增加用</a></li>
-                    <li><a href="#">修改密码</a></li>
-                    <li><a href="#">用户组管理</a></li>
-                    <li><a href="#">用户组权限管理</a></li>
+                    <li><a href="/admin/user">用户管理</a></li>
+                    <li><a href="/admin/user/permission">用户权限管理</a></li>
+                    <li><a href="/admin/user/add">增加用户</a></li>
+                    <li><a href="/admin/user/changePassword">修改密码</a></li>
+                    <li><a href="/admin/group">用户组管理</a></li>
+                    <li><a href="/admin/group/permission">用户组权限管理</a></li>
                 </ul>
 
                 <h2>Text Section</h2>
@@ -79,6 +79,11 @@
             ifm.height = subWeb.body.scrollHeight;
         }
     }
+    $('ul li a').click(function(){
+        var href=$(this).attr('href');
+        $('#right_content_iframe').attr('src',href);
+        return false;
+    });
 </script>
 
 </body>

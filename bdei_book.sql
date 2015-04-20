@@ -203,3 +203,6 @@ CREATE TABLE `bdei_group_permission` (
 -- Records of bedei_administrator
 -- ----------------------------
 INSERT INTO `bedei_administrator` VALUES ('1', 'admin', '840600c989da4a9a702cc6de5c577b21:9T7', '2015-04-15', '2015-04-15');
+
+ALTER TABLE `bdei_administrator`
+ADD COLUMN `group_id`  int(11) NULL AFTER `last_login_time`;

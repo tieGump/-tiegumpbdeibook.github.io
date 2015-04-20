@@ -13,6 +13,7 @@ class LoginAction extends Action{
     function doLoginAction(){
         $admin=new Administrator();
         if($admin->login($_POST['user_name'],$_POST['user_pwd'])){
+            $admin->changeLastLoginTime($_SESSION['admin']['id']);
             redirect('/admin');
         }else{
             $this->_message->addSession('用户名或密码错误！！！');

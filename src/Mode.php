@@ -112,6 +112,14 @@ abstract class Mode
     }
 
     /**
+     * 检查isset
+     * @param $checkInfo
+     * @return bool
+     */
+    function checkSet($checkInfo){
+        return isset($checkInfo)&&$checkInfo;
+    }
+    /**
      * xigou
      */
     function __destruct(){
