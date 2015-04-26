@@ -20,6 +20,7 @@ class Administrator extends Mode{
         $login=new Login();
         $data['admin_name']=$post['admin_name'];
         $data['admin_pwd']=$login->createPassword($post['admin_pwd']);
+        $data['group_id']=$post['group_id'];
         $data['add_time']=date('Y-m-d H:i:s');
         return $this->addOne($data);
     }

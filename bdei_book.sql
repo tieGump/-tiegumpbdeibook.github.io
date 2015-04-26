@@ -206,3 +206,6 @@ INSERT INTO `bedei_administrator` VALUES ('1', 'admin', '840600c989da4a9a702cc6d
 
 ALTER TABLE `bdei_administrator`
 ADD COLUMN `group_id`  int(11) NULL AFTER `last_login_time`;
+
+ALTER TABLE `bdei_administrator`
+MODIFY COLUMN `admin_id`  int(11) NOT NULL AUTO_INCREMENT FIRST ;

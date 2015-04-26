@@ -1,22 +1,20 @@
-<body>
+<body style="background: white;">
 <div id="tab1" class="tabcontent">
     <h3>新增图书</h3>
 
-    <form method="post" action="">
+    <form method="post" action="/admin/user/doEdit">
         <div class="form">
-
+    <input name="admin_id" type="hidden" value="{$info.admin_id}">
             <div class="form_row">
                 <label>用户名称:</label>
-                <input type="text" class="form_input" name="user_name"/>
-            </div>
-            <div class="form_row">
-                <label>用户密码:</label>
-                <input type="text" class="form_input" name="user_pwd"/>
+                <input type="text" class="form_input" name="admin_name" value="{$info.admin_name}"/>
             </div>
             <div class="form_row">
                 <label>用户属组:</label>
                 <select class="form_select" name="group_id">
-                    <option>Select one</option>
+                    {foreach from=$group_list item=v}
+                    <option value="{$v.group_id}" {if $v.group_id==$info.group_id}selected{/if}>{$v.group_name}</option>
+                    {/foreach}
                 </select>
             </div>
             <div class="form_row">

@@ -1,0 +1,42 @@
+<body>
+{$message}
+<div id="tab1" class="tabcontent">
+    <h3>新增权限</h3>
+
+    <form method="post" action="/admin/permission/doAdd">
+        <div class="form">
+
+            <div class="form_row">
+                <label>权限目录:</label>
+
+                <select class="form_select" name="parent_id" id="permission_list">
+                    {foreach from=$tree_arr item=v}
+                    <option value="{$v.id}">{$v.deep_str}{$v.value}</option>
+                    {/foreach}
+                </select>
+            </div>
+            <div class="form_row">
+                <label>加载页面名称:</label>
+                <input type="text" class="form_input" name="page_name"/>
+            </div>
+            <div class="form_row">
+                <label>权限名称:</label>
+                <input type="text" class="form_input" name="p_name"/>
+            </div>
+            <div class="form_row">
+                <label>权限唯一标识:</label>
+                <input type="text" class="form_input" name="p_union_key"/>
+            </div>
+            <div class="form_row">
+                <input type="submit" class="form_submit" value="提交"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    var treeArr={$tree_arr};
+</script>
+<script type="text/javascript" src="{$tpl}js/permission.js"></script>
+</body>
+</html>

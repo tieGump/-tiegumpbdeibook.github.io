@@ -10,8 +10,10 @@ class Message {
     function add($message){
         $this->_message.=$message;
     }
-    function addSession($message){
-        $_SESSION['message'].=$message;
+
+    function addSession($message,$type='failure'){
+        $arr=array('success'=>'<font color="green">','failure'=>'<font color="red">');
+        $_SESSION['message'].=$arr[$type].$message.'</font>';
         $this->_mark=1;
     }
     function checkFirst(){

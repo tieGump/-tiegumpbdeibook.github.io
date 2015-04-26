@@ -1,0 +1,29 @@
+<body>
+<div id="tab1" class="tabcontent">
+    <h3>修改用户组</h3>
+
+    <form method="post" action="/admin/group/doEdit">
+        <div class="form">
+            <input type="hidden" name="group_id" value="{$group_info.group_id}">
+            <div class="form_row">
+                <label>用户组名称:</label>
+                <input type="text" class="form_input" name="group_name" value="{$group_info.group_name}"/>
+            </div>
+            <div class="form_row">
+                <label>用户权限:</label>
+
+            </div>
+            <div class="form_row">
+                {foreach from=$permission_list item=v}
+                    {$v.deep_str}<input type="checkbox" name="permission[]" value="{$v.id}" {if in_array($v.id,$group_permission)}checked{/if}>{$v.value}<br />
+                {/foreach}
+            </div>
+            <div class="form_row">
+                <input type="submit" class="form_submit" value="Submit"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

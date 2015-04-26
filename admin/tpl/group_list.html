@@ -7,8 +7,8 @@
     <table style="background: #dde8f0">
         <tr class="odd">
             <td>用户名称：</td>
-            <td><input type="text" name="user_name" /></td>
-            <td><input type="submit" value="search"/></td>
+            <td><input type="text" name="user_name" value="{$smarty.get.user_name}"/></td>
+            <td><input type="submit" value="search" /></td>
         </tr>
     </table>
     </form>
@@ -17,11 +17,8 @@
     <table id="rounded-corner">
         <thead>
         <tr>
-            <th></th>
-            <th>用户名称</th>
-            <th>所属用户组</th>
-            <th>添加时间</th>
-            <th>最后登录时间</th>
+            <th>用户组ID</th>
+            <th>用户组名称</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
@@ -32,15 +29,12 @@
         </tr>
         </tfoot>
         <tbody>
-        {foreach from=$user_list.info item=v key=k}
+        {foreach from=$group_list.info item=v key=k}
         <tr class="{if $k%2 eq 0}odd{else}even{/if}">
-            <td><input type="checkbox" name="" /></td>
-            <td>{$v.admin_name}</td>
             <td>{$v.group_id}</td>
-            <td>{$v.add_time}</td>
-            <td>{$v.last_login_time}</td>
-            <td><a href="/admin/user/edit/admin_id/{$v.admin_id}"><img src="{$tpl}resources/images/edit.png" alt="" title="" border="0" /></a></td>
-            <td><a href="/admin/user/delete/admin_id/{$v.admin_id}"><img src="{$tpl}resources/images/trash.gif" alt="" title="" border="0" /></a></td>
+            <td>{$v.group_name}</td>
+            <td><a href="/admin/group/edit/group_id/{$v.group_id}"><img src="{$tpl}resources/images/edit.png" alt="" title="" border="0" /></a></td>
+            <td><a href="/admin/group/delete/group/{$v.group_id}" onclick="if(confirm('您确定要删除吗？'))return true;else return false;"><img src="{$tpl}resources/images/trash.gif" alt="" title="" border="0" /></a></td>
         </tr>
         {/foreach}
 

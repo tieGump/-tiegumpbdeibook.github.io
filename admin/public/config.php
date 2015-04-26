@@ -18,7 +18,7 @@ define('UPLOAD_DIR','/var/www/html/usitrip');//上传路径F:\Work\newSite\usiad
 //数据库信息开始
 define('DB_SERVER', 'localhost');						//数据库地址
 define('DB_SERVER_USERNAME', 'root');				//数据库用户名
-define('DB_SERVER_PASSWORD', '123456');	//数据库密码
+define('DB_SERVER_PASSWORD', '');	//数据库密码
 define('DB_DATABASE', 'bdei_book');	//默认选择的数据库名称
 //数据库信息结束
 

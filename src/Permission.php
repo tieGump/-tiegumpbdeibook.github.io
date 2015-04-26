@@ -8,14 +8,16 @@
 class Permission extends Mode
 {
     private $_permission_array;
-
+    private $_deep_mark='   ';
     function __construct()
     {
         $this->_table = 'bdei_permission';
         $this->_table_id = 'permission_id';
         parent::__construct();
     }
-
+    function setDeepMark($mark=' '){
+        $this->_deep_mark=$mark;
+    }
     /**
      * 用户权限
      * @param $user_id
@@ -34,7 +36,7 @@ class Permission extends Mode
      */
     function getGroupPermission($group_id, $page_name = '')
     {
-        $str_sql = 'SELECT p.permission_id,p.permission_name,p.permission_union_key,p.page_name,p.parent_id FROM ' . $this->_table . ' ,bdei_group_permission gp WHERE gp.permission_id=p.permission_id AND gp.group_id=' . $group_id;
+        $str_sql = 'SELECT p.permission_id,p.permission_name,p.permission_union_key,p.page_name,p.parent_id FROM ' . $this->_table . ' p,bdei_group_permission gp WHERE gp.permission_id=p.permission_id AND gp.group_id=' . $group_id;
         if ($page_name)
             $str_sql .= ' AND p.page_name=' . $page_name;
         return $this->_db->doSelect($str_sql);
@@ -145,8 +147,47 @@ class Permission extends Mode
         return $this->_db->getQueryNumber();
     }
 
-    function createDeepTree()
+    function createDeepTree($type='php')
     {
+        $arr=$this->getAllPermission();
+        return $type=='json'?json_encode($this->createTree($arr)):$this->createTree($arr);
+    }
+    function createTree(&$arr,$parent_id=0,$deep=0){
+        $return=array();
+        foreach($arr as $key=>$value){
+            if($value['parent_id']==$parent_id){
+                if($tmp=$this->createTree($arr,$value['permission_id'],$deep+1)){
+                    $return[]=array('deep_str'=>$this->createDeep($deep),'deep'=>$deep,'value'=>$value['permission_name'],'id'=>$value['permission_id']);
+                    unset($arr[$key]);
+                    $return=array_merge($return,$tmp);
+                }else{
+                    $return[]=array('deep_str'=>$this->createDeep($deep),'deep'=>$deep,'value'=>$value['permission_name'],'id'=>$value['permission_id']);
+                    unset($arr[$key]);
+                }
+            }
 
+        }
+        return $return;
+    }
+    function createDeep($number){
+        $return='';
+        for($i=0;$i<$number;$i++){
+            $return.=$this->_deep_mark;
+        }
+        return $return;
+    }
+
+    /**
+     * 增加权限
+     * @param $post
+     * @return mixed
+     */
+    function addPermission($post){
+        $data=array();
+        $data['permission_name']=$post['p_name'];
+        $data['permission_union_key']=$post['p_union_key'];
+        $data['page_name']=$post['page_name'];
+        $data['parent_id']=$post['parent_id'];
+        return $this->addOne($data);
     }
 }

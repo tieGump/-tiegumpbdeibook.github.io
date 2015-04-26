@@ -36,11 +36,11 @@
         <tr class="{if $k%2 eq 0}odd{else}even{/if}">
             <td><input type="checkbox" name="" /></td>
             <td>{$v.admin_name}</td>
-            <td>{$v.group_id}</td>
+            <td>{$group_list[$v.group_id]}</td>
             <td>{$v.add_time}</td>
             <td>{$v.last_login_time}</td>
             <td><a href="/admin/user/edit/admin_id/{$v.admin_id}"><img src="{$tpl}resources/images/edit.png" alt="" title="" border="0" /></a></td>
-            <td><a href="/admin/user/delete/admin_id/{$v.admin_id}"><img src="{$tpl}resources/images/trash.gif" alt="" title="" border="0" /></a></td>
+            <td><a href="/admin/user/delete/admin_id/{$v.admin_id}" onclick="if(confirm('您确定要删除吗？'))return true;else return false;"><img src="{$tpl}resources/images/trash.gif" alt="" title="" border="0" /></a></td>
         </tr>
         {/foreach}
 
