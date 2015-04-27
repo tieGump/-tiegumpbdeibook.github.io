@@ -20,13 +20,20 @@ class User extends Mode{
     /**
      * 注册
      */
-    function register($post){
+    function register($post,$id=''){
         $login=new Login();
         $data['user_name']=$post['user_name'];
-        $data['user_pwd']=$login->createPassword($post['user_pwd']);
+        $post['user_pwd']?$data['user_pwd']=$login->createPassword($post['user_pwd']):'';
         $data['user_nick']=$post['user_nick'];
         $data['user_sex']=$post['user_sex'];
-        return $this->addOne($data);
+        $data['question']=$post['question'];
+        $data['answer']=$post['answer'];
+        if($id){
+            $this->changeOne($data,$id);
+        }else{
+            $id=$this->addOne($data);
+        }
+        return $id;
     }
     function getList(){
         $str_sql='SELECT '.$this->_filed.' FROM '.$this->_table;

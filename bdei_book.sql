@@ -243,3 +243,14 @@ ADD COLUMN `book_id`  int(11) NULL AFTER `user_name`;
 ALTER TABLE `bdei_review`
 ADD INDEX `user_id` (`user_id`) ,
 ADD INDEX `book_id` (`book_id`) ;
+
+ALTER TABLE `bdei_search_history`
+DROP COLUMN `ip`,
+ADD COLUMN `ip`  char(15) NULL AFTER `search_time`,
+ADD COLUMN `user_id`  int(11) NULL AFTER `ip`;
+ALTER TABLE `bdei_search_history`
+ADD INDEX `user_id` (`user_id`) ;
+
+ALTER TABLE `bdei_review`
+DROP COLUMN `ip`,
+ADD COLUMN `ip`  char(15) NULL AFTER `book_id`;

@@ -1,11 +1,4 @@
 <?php
-/**
- *
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2015/4/2
- * Time: 17:01
- */
 
 class Book extends Mode{
     function __construct(){
@@ -145,7 +138,10 @@ class Book extends Mode{
         $info=array('book_classification_word'=>$word);
         return $this->getIndexList($info);
     }
-
+    function getNameById($id){
+        $info=$this->getOne($id);
+        return $info['book_name'];
+    }
     /**
      * 删除
      * @param $id
