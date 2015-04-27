@@ -209,3 +209,37 @@ ADD COLUMN `group_id`  int(11) NULL AFTER `last_login_time`;
 
 ALTER TABLE `bdei_administrator`
 MODIFY COLUMN `admin_id`  int(11) NOT NULL AUTO_INCREMENT FIRST ;
+
+CREATE TABLE `bdei_search_history` (
+`search_id`  int(11) NULL AUTO_INCREMENT ,
+`search_value`  varchar(250) NULL ,
+`search_type`  tinyint(1) NULL ,
+`search_time`  datetime NULL ,
+PRIMARY KEY (`search_id`)
+)
+;
+
+CREATE TABLE `bdei_config` (
+`config_id`  int(11) NULL AUTO_INCREMENT ,
+`config_name`  varchar(250) NULL ,
+`config_unique_name`  varchar(50) NULL ,
+`config_value`  varchar(250) NULL ,
+`config_desc`  varchar(360) NULL ,
+PRIMARY KEY (`config_id`)
+)
+;
+CREATE TABLE `bdei_review` (
+`review_id`  int(11) NULL AUTO_INCREMENT ,
+`review_content`  text NULL ,
+`user_id`  int(11) NULL ,
+`review_time`  datetime NULL ,
+`user_name`  varchar(60) NULL ,
+PRIMARY KEY (`review_id`)
+)
+;
+
+ALTER TABLE `bdei_review`
+ADD COLUMN `book_id`  int(11) NULL AFTER `user_name`;
+ALTER TABLE `bdei_review`
+ADD INDEX `user_id` (`user_id`) ,
+ADD INDEX `book_id` (`book_id`) ;
