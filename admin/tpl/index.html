@@ -23,13 +23,12 @@
                 <h2>游客管理</h2>
 
                 <ul>
-                    <li><a href="#" class="selected">系统信息编辑</a></li>
-                    <li><a href="#">注册用户管理</a></li>
-                    <li><a href="#">IP访问控制</a></li>
-                    <li><a href="#">阅读历史排行</a></li>
-                    <li><a href="#">读者评论管理</a></li>
-                    <li><a href="#">读者书签管理</a></li>
-                    <li><a href="#">搜索记录管理</a></li>
+                    <li><a href="/admin/configBase" class="selected">系统信息编辑</a></li>
+                    <li><a href="/admin/customer">注册用户管理</a></li>
+                    <li><a href="/admin/disableIP">IP访问控制</a></li>
+                    <li><a href="/admin/readHistory">阅读历史排行</a></li>
+                    <li><a href="/admin/reviews">读者评论管理</a></li>
+                    <li><a href="/admin/searchHistory">搜索记录管理</a></li>
                 </ul>
 
                 <h2>图书管理</h2>
@@ -78,9 +77,11 @@
             ifm.height = subWeb.body.scrollHeight;
         }
     }
-    $('ul li a').click(function(){
+    $('#sidebar ul li a').click(function(){
         var href=$(this).attr('href');
         $('#right_content_iframe').attr('src',href);
+        $('#sidebar ul li a').attr('class','');
+        $(this).attr('class','selected');
         return false;
     });
 </script>

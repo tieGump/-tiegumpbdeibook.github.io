@@ -150,4 +150,7 @@ class Book extends Mode{
         $this->delete($id);
         $this->_db->delete('bdei_book_extend', 'book_id='.(int)$id);
     }
+    static function getSearchType(){
+        return array(1=>'书籍名称',2=>'作者',3=>'分类号',4=>'主题词','5'=>'关键字');
+    }
 }

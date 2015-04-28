@@ -2,20 +2,23 @@
 <div id="tab1" class="tabcontent">
     <h3>基本配置</h3>
 
-    <form method="post" action="/admin/user/doEdit">
+    <form method="post" action="/admin/configBase/doEdit">
         <div class="form">
-    <input name="admin_id" type="hidden" value="{$info.admin_id}">
             <div class="form_row">
-                <label>{$config_info}</label>
-                <input type="text" class="form_input" name="admin_name" value="{$info.admin_name}"/>
+                <label>开放注册</label>
+                <input type="radio" name="open_register" value="1" {if $config_info.open_register.config_value} checked {/if}>是<input type="radio" name="open_register" value="0" {if !$config_info.open_register.config_value} checked {/if}>否  ({$config_info.open_register.config_desc})
             </div>
             <div class="form_row">
-                <label>用户属组:</label>
-                <select class="form_select" name="group_id">
-                    {foreach from=$group_list item=v}
-                    <option value="{$v.group_id}" {if $v.group_id==$info.group_id}selected{/if}>{$v.group_name}</option>
-                    {/foreach}
-                </select>
+                <label>开放阅读</label>
+                <input type="radio" name="open_read" value="1" {if $config_info.open_read.config_value} checked {/if}>是<input type="radio" name="open_read" value="0" {if !$config_info.open_read.config_value} checked {/if}>否  ({$config_info.open_read.config_desc})
+            </div>
+            <div class="form_row">
+                <label>IP限制</label>
+                <input type="radio" name="open_ip" value="1" {if $config_info.open_ip.config_value} checked {/if}>是<input type="radio" name="open_ip" value="0" {if !$config_info.open_ip.config_value} checked {/if}>否  ({$config_info.open_ip.config_desc})
+            </div>
+            <div class="form_row">
+                <label>单位介绍</label>
+                <textarea class="form_textarea" name="company_desc">{$config_info.company_desc.config_value}</textarea>
             </div>
             <div class="form_row">
                 <input type="submit" class="form_submit" value="Submit"/>

@@ -36,7 +36,7 @@ class User extends Mode{
         return $id;
     }
     function getList(){
-        $str_sql='SELECT '.$this->_filed.' FROM '.$this->_table;
+        $str_sql='SELECT '.$this->_fields.' FROM '.$this->_table;
         return $this->getPageList($str_sql);
     }
     function changeInfo($post,$id){

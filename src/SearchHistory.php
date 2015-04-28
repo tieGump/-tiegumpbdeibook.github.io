@@ -15,7 +15,7 @@ class SearchHistory extends Mode{
         return $this->addOne($data);
     }
     function getList($user_id='',$search_value='',$user_name=''){
-        $where='';
+        $where='1';
         if($user_id){
             $where.=' AND user_id='.(int)$user_id;
         }

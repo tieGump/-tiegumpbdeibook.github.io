@@ -12,7 +12,7 @@ class ConfigBase extends Mode{
     }
     function update($post){
         foreach($post as $key=>$value){
-            $str_sql='UPDATE '.$this->_table.' SET config_value='.$value.' WHERE config_unique_name="'.$key.'"';
+            $str_sql='UPDATE '.$this->_table.' SET config_value="'.$value.'" WHERE config_unique_name="'.$key.'"';
             $this->_db->query($str_sql);
         }
     }

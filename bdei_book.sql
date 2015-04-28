@@ -269,3 +269,31 @@ ALTER TABLE `bdei_disable_ip`
 ADD COLUMN `one`  int(3) NULL AFTER `ip_address`,
 ADD COLUMN `two`  int(3) NULL AFTER `one`,
 ADD COLUMN `three`  int(3) NULL AFTER `two`;
+
+ALTER TABLE `bdei_config`
+MODIFY COLUMN `config_name`  varchar(250) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL AFTER `config_id`,
+MODIFY COLUMN `config_unique_name`  varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL AFTER `config_name`,
+MODIFY COLUMN `config_value`  varchar(250) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL AFTER `config_unique_name`,
+MODIFY COLUMN `config_desc`  varchar(360) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL AFTER `config_value`;
+
+ALTER TABLE `bdei_config`
+DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci;
+ALTER TABLE `bdei_disable_ip`
+DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci;
+ALTER TABLE `bdei_disable_ip`
+MODIFY COLUMN `ip_address`  char(15) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL AFTER `id`;
+
+ALTER TABLE `bdei_review`
+DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci;
+
+ALTER TABLE `bdei_review`
+MODIFY COLUMN `review_content`  text CHARACTER SET utf8 COLLATE utf8_general_ci NULL AFTER `review_id`,
+MODIFY COLUMN `user_name`  varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL AFTER `review_time`,
+MODIFY COLUMN `ip`  char(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL AFTER `book_id`;
+
+ALTER TABLE `bdei_search_history`
+MODIFY COLUMN `search_value`  varchar(250) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL AFTER `search_id`,
+MODIFY COLUMN `ip`  char(15) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL AFTER `search_time`,
+DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci;
+
+

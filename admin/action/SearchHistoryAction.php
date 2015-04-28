@@ -9,6 +9,7 @@ class SearchHistoryAction extends Action{
     function IndexAction(){
         $search=new SearchHistory();
         $this->search_list=$search->getList('',$_GET['search_value'],$_GET['user_name']);
+        $this->search_type=Book::getSearchType();
         $this->_tpl='search_list.html';
     }
     function deleteAction(){

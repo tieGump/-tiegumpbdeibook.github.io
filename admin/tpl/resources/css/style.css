@@ -90,6 +90,9 @@ color:#000000; display:block;padding:5px 0 5px 5px;
 .sidebar ul li a:hover{
 background-color:#ededed;
 }
+.sidebar ul li a.selected{
+    background-color:#ededed;
+}
 .sidebar_section_text{
 background-color:#FFFFFF;
 width:170px; border:1px #D6D6D6 solid; border-top:none;

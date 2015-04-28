@@ -39,8 +39,12 @@ class DisableIP extends Mode{
         return $data;
     }
     function change($post,$id){
+        if(!$this->checkIsIpAddress($post['ip_address'])){
+            return false;
+        }
         $data=$this->createData($post);
         $this->changeOne($data,$id);
+        return true;
     }
     function checkIsIpAddress($ip_address){
         $tmp=explode('.',$ip_address);
