@@ -23,7 +23,7 @@ class Reviews extends Mode{
         $info=$this->getList('',0,$book_id);
         return $info;
     }
-    function getList($content='',$user_id='',$book_id=''){
+    function getList($content='',$user_id='',$book_id='',$user_name=''){
         $where='1';
         if($content){
             $where.=' AND review_content LIKE "%'.$content.'%"';
@@ -34,6 +34,12 @@ class Reviews extends Mode{
 
         if($book_id){
             $where.=' AND book_id ='.$book_id;
+        }
+        if(!$user_id&&$user_name){
+            $user=new User();
+            if($user_list=$user->resolveUserName($user_name)){
+                $where.='AND user_id IN('.join(',',$user_list).')';
+            }
         }
         $str_sql='SELECT '.$this->_fields.' FROM '.$this->_table.' WHERE '.$where.' ORDER BY '.$this->_table_id.' DESC';
         return $this->getPageList($str_sql);

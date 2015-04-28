@@ -1,11 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: WangTieJun
- * Date: 2015/4/27
- * Time: 17:39
- */
 
 class ReviewsAction extends Action{
-
+    function IndexAction(){
+        $review=new Reviews();
+        $this->review_list=$review->getList($_GET['content'],$_GET['user_id'],$_GET['book_id']);
+        $this->_tpl='review_list.html';
+    }
+    function deleteAction(){
+        $review_id=(int)$_GET['review_id'];
+        $review=new Reviews();
+        $review->delete($review_id);
+        $this->IndexAction();
+    }
 }

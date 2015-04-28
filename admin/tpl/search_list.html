@@ -1,0 +1,52 @@
+
+<body style="background: white;">
+<h1>搜索管理</h1>
+    <div >
+    <h2>搜索</h2>
+    <form action="" method="get">
+    <table style="background: #dde8f0">
+        <tr class="odd">
+            <td>用户名称：</td>
+            <td><input type="text" name="user_name" /></td>
+            <td>搜索的值：</td>
+            <td><input type="text" name="search_value" /></td>
+            <td><input type="submit" value="search"/></td>
+        </tr>
+    </table>
+    </form>
+    </div>
+    <h2>列表</h2>
+    <table id="rounded-corner">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>搜索的值</th>
+            <th>搜索的类型</th>
+            <th>用户名称</th>
+            <th>IP</th>
+            <th>搜索时间</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <td colspan="12">{$search_list.page}</td>
+        </tr>
+        </tfoot>
+        <tbody>
+        {foreach from=$search_list.info item=v key=k}
+        <tr class="{if $k%2 eq 0}odd{else}even{/if}">
+            <td>{$v.search_id}</td>
+            <td>{$v.search_value}</td>
+            <td>{$v.search_type}</td>
+            <td>{$v.user_id}</td>
+            <td>{$v.ip}</td>
+            <td>{$v.search_time}</td>
+            <td><a href="/admin/searchHistory/delete/search_id/{$v.search_id}" onclick="if(confirm('您确定要删除吗？'))return true;else return false;"><img src="{$tpl}resources/images/trash.gif" alt="" title="" border="0" /></a></td>
+        </tr>
+        {/foreach}
+
+        </tbody>
+    </table>
+</body>
+</html>

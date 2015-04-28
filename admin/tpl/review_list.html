@@ -1,0 +1,54 @@
+
+<body style="background: white;">
+<h1>评论管理</h1>
+    <div >
+    <h2>搜索</h2>
+    <form action="" method="get">
+    <table style="background: #dde8f0">
+        <tr class="odd">
+            <td>用户ID：</td>
+            <td><input type="text" name="user_id" /></td>
+            <td>书本ID：</td>
+            <td><input type="text" name="book_id" /></td>
+            <td>评论内容：</td>
+            <td><input type="text" name="content" /></td>
+            <td><input type="submit" value="search"/></td>
+        </tr>
+    </table>
+    </form>
+    </div>
+    <h2>列表</h2>
+    <table id="rounded-corner">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>评论内容</th>
+            <th>评论时间</th>
+            <th>评论人</th>
+            <th>评论的书本</th>
+            <th>评论的IP</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <td colspan="12">{$review_list.page}</td>
+        </tr>
+        </tfoot>
+        <tbody>
+        {foreach from=$review_list.info item=v key=k}
+        <tr class="{if $k%2 eq 0}odd{else}even{/if}">
+            <td>{$v.review_id}</td>
+            <td>{$v.review_content}</td>
+            <td>{$v.review_time}</td>
+            <td>{$v.user_name}</td>
+            <td>{$v.book_name}</td>
+            <td>{$v.ip}</td>
+            <td><a href="/admin/user/delete/review_id/{$v.review_id}" onclick="if(confirm('您确定要删除吗？'))return true;else return false;"><img src="{$tpl}resources/images/trash.gif" alt="" title="" border="0" /></a></td>
+        </tr>
+        {/foreach}
+
+        </tbody>
+    </table>
+</body>
+</html>

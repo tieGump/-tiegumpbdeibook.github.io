@@ -50,6 +50,7 @@ class User extends Mode{
         return $this->changeOne($data,$id);
     }
     function getInfoByName($name){
+        if($name)
         return $this->getOne('user_name="'.$name.'"');
     }
     function login($user_name,$password){
@@ -59,5 +60,10 @@ class User extends Mode{
     }
     function checkLogin(){
         return isset($_SESSION['user']['id'])&&$_SESSION['user']['id'];
+    }
+    function resolveUserName($user_name){
+        $info=$this->getInfoByName($user_name);
+        if($info)
+        return Arrays::downArray($info,'user_id');
     }
 }

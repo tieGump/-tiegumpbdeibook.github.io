@@ -254,3 +254,18 @@ ADD INDEX `user_id` (`user_id`) ;
 ALTER TABLE `bdei_review`
 DROP COLUMN `ip`,
 ADD COLUMN `ip`  char(15) NULL AFTER `book_id`;
+
+CREATE TABLE `bdei_disable_ip` (
+`id`  int(11) NULL AUTO_INCREMENT ,
+`ip_address`  char(15) NULL ,
+`start`  int(3) NULL ,
+`end`  int(3) NULL ,
+`add_time`  datetime NULL ,
+PRIMARY KEY (`id`)
+)
+;
+
+ALTER TABLE `bdei_disable_ip`
+ADD COLUMN `one`  int(3) NULL AFTER `ip_address`,
+ADD COLUMN `two`  int(3) NULL AFTER `one`,
+ADD COLUMN `three`  int(3) NULL AFTER `two`;

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: WangTieJun
- * Date: 2015/4/27
- * Time: 17:41
- */
 
 class ConfigBase extends Mode{
     function __construct(){
@@ -18,7 +12,12 @@ class ConfigBase extends Mode{
     }
     function update($post){
         foreach($post as $key=>$value){
-            $str_sql='U';
+            $str_sql='UPDATE '.$this->_table.' SET config_value='.$value.' WHERE config_unique_name="'.$key.'"';
+            $this->_db->query($str_sql);
         }
+    }
+    function getOneValue($name){
+        $info=$this->getOne("config_unique_name='$name'");
+        return $info['config_value'];
     }
 }
