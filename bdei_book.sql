@@ -297,3 +297,11 @@ MODIFY COLUMN `ip`  char(15) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEF
 DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci;
 
 
+ALTER TABLE `bdei_book_extend`
+ADD COLUMN `book_catalog_desc`  text CHARACTER SET utf8 COLLATE utf8_general_ci NULL AFTER `book_desc`;
+
+ALTER TABLE `bdei_book`
+MODIFY COLUMN `category_id`  tinyint(1) NULL DEFAULT NULL AFTER `book_author`,
+ADD COLUMN `category_extend_id`  tinyint(1) NULL AFTER `category_id`;
+
+

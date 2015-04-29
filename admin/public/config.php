@@ -12,13 +12,14 @@ define('TPL_CACHE_DIR',BASE_DIR.'tpl_cache/');//模板缓存路径
 define('IS_ADMIN',1);//定义是后台
 define('TPL_C',ROOT.'/tpl_c/');//模板生成路径
 define('SMARTY_TPL_DIR',PUBLIC_DIR.'smarty/');//smarty路径
-define('UPLOAD_DIR','/var/www/html/usitrip');//上传路径F:\Work\newSite\usiadmin\staff_train\upload
+define('UPLOAD_DIR',BASE_DIR.'upload/');//上传路径
+define('PAGE_BASE','/admin');
 //目录定义结束
 
 //数据库信息开始
 define('DB_SERVER', 'localhost');						//数据库地址
 define('DB_SERVER_USERNAME', 'root');				//数据库用户名
-define('DB_SERVER_PASSWORD', '');	//数据库密码
+define('DB_SERVER_PASSWORD', '123456');	//数据库密码
 define('DB_DATABASE', 'bdei_book');	//默认选择的数据库名称
 //数据库信息结束
 

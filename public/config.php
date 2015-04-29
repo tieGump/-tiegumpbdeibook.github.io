@@ -12,7 +12,8 @@ define('TPL_CACHE_DIR',BASE_DIR.'tpl_cache/');//模板缓存路径
 define('IS_ADMIN',0);//定义不是后台
 define('TPL_C',dirname(dirname(BASE_DIR)).'/tpl_c/');//模板生成路径
 define('SMARTY_TPL_DIR',PUBLIC_DIR.'smarty/');//smarty路径
-define('UPLOAD_DIR','/var/www/html/usitrip');//上传路径F:\Work\newSite\usiadmin\staff_train\upload
+define('UPLOAD_DIR','/var/www/html/usitrip');//上传路径
+define('PAGE_BASE','');
 //目录定义结束
 
 //数据库信息开始

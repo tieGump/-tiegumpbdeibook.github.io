@@ -24,36 +24,38 @@
     <table id="rounded-corner">
         <thead>
         <tr>
+            <th>ID</th>
             <th>书名</th>
             <th>作者</th>
+            <th>分类号</th>
             <th>ISBN</th>
             <th>出版社</th>
-            <th>关键字</th>
-            <th>主题词</th>
             <th>加入日期</th>
-            <th>目录</th>
+            <th>类型</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
         </thead>
         <tfoot>
         <tr>
-            <td colspan="12">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</td>
+            <td colspan="12">{$book_list.page}</td>
         </tr>
         </tfoot>
         <tbody>
-        <tr class="odd">
-            <td><input type="checkbox" name="" /></td>
-            <td>Box Software</td>
-            <td>Lorem ipsum dolor sit amet consectetur</td>
-            <td>45$</td>
-            <td>10/04/2011</td>
-            <td>web design</td>
-            <td>Alex</td>
-            <td><a href="#"><img src="images/edit.png" alt="" title="" border="0" /></a></td>
-            <td><a href="#"><img src="images/trash.gif" alt="" title="" border="0" /></a></td>
+        {foreach from=$book_list.info item=v key=k}
+        <tr class="{if $k%2 eq 0}odd{else}even{/if}">
+            <td>{$v.book_id}</td>
+            <td>{$v.book_name}</td>
+            <td>{$v.book_author}</td>
+            <td>{$v.book_classification}</td>
+            <td>{$v.book_isbn}</td>
+            <td>{$v.book_press}</td>
+            <td>{$v.add_time}</td>
+            <td>{$book_type[$v.category_id]}</td>
+            <td><a href="/admin/book/edit/book_id/{$v.book_id}"><img src="{$tpl}resources/images/edit.png" alt="" title="" border="0" /></a></td>
+            <td><a href="/admin/book/delete/book_id/{$v.book_id}" onclick="if(confirm('您确定要删除吗？'))return true;else return false;"><img src="{$tpl}resources/images/trash.gif" alt="" title="" border="0" /></a></td>
         </tr>
-
+        {/foreach}
         </tbody>
     </table>
 </body>

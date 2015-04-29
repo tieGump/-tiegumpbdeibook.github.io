@@ -6,7 +6,11 @@ class Book extends Mode{
         $this->_table_id='book_id';
         parent::__construct();
     }
-
+    function getOneInfo($book_id){
+        $base_info=$this->getOne($book_id);
+        $extend_info=$this->_db->getOne('bdei_book_extend','book_id='.$book_id);
+        return array_merge($base_info,$extend_info);
+    }
     /**
      * 新增或者更新
      * @param $post
@@ -14,22 +18,30 @@ class Book extends Mode{
      * @return mixed
      */
     function addAndUpdate($post,$id=''){
+        $post['book_classification']=trim($post['book_classification']);
         $data['book_name']=$post['book_name'];
         $data['book_author']=$post['book_author'];
         $data['book_press']=$post['book_press'];
-        $data['book_isbn']=$post['book_name'];
-//        $data['save_place']=$post['save_place'];保存位置
-//        $data['book_cover']=$post['book_cover'];封面
+        $data['book_isbn']=$post['book_isbn'];
+        $data['save_place']=$post['save_place'];//保存位置
+        $data['book_cover']=$post['book_cover'];//封面
         $data['status']=$post['status'];
         $data['book_classification']=$post['book_classification'];
-        $data['book_classification_word']=$post['book_classification_word'];
+        $data['book_classification_word']=ucfirst($post['book_classification'][0]);
         $data['add_time']=date('Y-m-d H:i:s');
         $data['category_id']=$post['category_id'];
+        if($post['category_id']==2){
+            $data['category_extend_id']=$post['category_sound_id'];
+        }
+        if($post['category_id']==3){
+            $data['category_extend_id']=$post['category_video_id'];
+        }
         $data['save_place']=$post['save_place'];
         $data['status']=$post['status'];
         $data_desc['book_keyword']=$post['book_keyword'];
         $data_desc['book_key_words']=$post['book_key_words'];
         $data_desc['book_desc']=$post['book_desc'];
+        $data_desc['book_catalog_desc']=$post['book_catalog_desc'];
         if($id){
             $this->changeOne($data,(int)$id);
             $where = $this->createWhere($id);
@@ -58,13 +70,13 @@ class Book extends Mode{
      * @return mixed
      */
     function getIndexList($post=array(),$order_by='',$limit=''){
-        $where=$this->createWhere($post);
+        $where=$this->createMyWhere($post);
         $str_sql='SELECT '.$this->_fields .' FROM '.$this->_table.' WHERE '.$where.$this->createOrderBy($order_by);
         if($limit){
             $str_sql.=' LIMIT '.$limit;
             return $this->_db->doSelect($str_sql);
         }
-        return $this->getPageList($str_sql);
+        return $this->getPageList($str_sql,2);
     }
 
     /**
@@ -72,7 +84,7 @@ class Book extends Mode{
      * @param $info
      * @return string
      */
-    function createWhere($info){
+    function createMyWhere($info){
         $where='1';
         if(isset($info['book_name'])&&$info['book_name']){
             $where.=' AND book_name LIKE "%'.$info['book_name'].'%"';
@@ -142,15 +154,59 @@ class Book extends Mode{
         $info=$this->getOne($id);
         return $info['book_name'];
     }
+
     /**
      * 删除
      * @param $id
+     * @return int
      */
     function dropOne($id){
         $this->delete($id);
         $this->_db->delete('bdei_book_extend', 'book_id='.(int)$id);
+        return $this->_db->getQueryNumber();
     }
     static function getSearchType(){
         return array(1=>'书籍名称',2=>'作者',3=>'分类号',4=>'主题词','5'=>'关键字');
+    }
+    static function getBookType(){
+        return array(1=>'普通图书',2=>'有声资源',3=>'视频资源');
+    }
+
+    /**
+     * 有声资源类型
+     */
+    static function getSoundType(){
+        return array(1=>'古典诗词曲赋',2=>'中国历史典故',3=>'中国古典文学',4=>'中国近代美文',5=>'世界文学大系',6=>'中外科幻文化',7=>'中外经典童话',8=>'中外侦探小说');
+    }
+
+    /**
+     * 视频资源类型
+     */
+    static function getVideoType(){
+        return array(1=>'科技探索篇',2=>'经典战争篇',3=>'成语故事篇',4=>'视频教程篇',5=>'教学资源篇',6=>'经典名著篇',7=>'电视电影篇',8=>'卡通动漫篇');
+    }
+    function getAZtype(){
+        $data['A']='马恩列毛邓';
+        $data['B']='哲学、宗教 ';
+        $data['C']='社会科学总论';
+        $data['D']='政治、法律';
+        $data['E']='军事';
+        $data['F']='经济';
+        $data['G']='文教、科学、体育 ';
+        $data['H']='语言、文字';
+        $data['I']='文学 ';
+        $data['J']='艺术';
+        $data['K']='历史、地理';
+        $data['N']='自然科学总论';
+        $data['O']='数理科学和化学';
+        $data['Q']='生物科学';
+        $data['R']='医药、卫生';
+        $data['S']='农业科学';
+        $data['T']='工业技术';
+        $data['U']='交通运输';
+        $data['V']='航空、航天';
+        $data['X']='环境、安全科学';
+        $data['Z']='综合性图书';
+        return $data;
     }
 }

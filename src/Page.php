@@ -75,22 +75,22 @@ class Page{
             return;
         }elseif($this->_page_cout>1&&$this->_page_cout<=$this->_str_len){//不存在省略号的结果
             for($i=1;$i<=$this->_page_cout;$i++){
-                $str_return.='<a '.($this->_page==$i?'class="page_checked"':'href="'.$this->getUrl($i).'"').'>'.$i.'</a>';
+                $str_return.='<li '.($this->_page==$i?'class="active"':'').'>'.($this->_page==$i?$i:'<a href="'.$this->getUrl($i).'">'.$i.'</a>').'</li>';
             }
         }else{//存在省略号的结果
             $arr=$this->countBeginEnd();
             for($i=$arr['begin'];$i<=$arr['end'];$i++){
-                $str_return.='<a '.($this->_page==$i?'class="page_checked"':'href="'.$this->getUrl($i).'"').'>'.$i.'</a>';
+                $str_return.='<li '.($this->_page==$i?'class="active"':'').'>'.($this->_page==$i?$i:'<a href="'.$this->getUrl($i).'">'.$i.'</a>').'</li>';
             }
             switch ($arr['place']){
                 case 'front' :
-                    $str_return.='<a class="more">...</a>';
+                    $str_return.='<li><a>...</a></li>';
                     break;
                 case 'mid':
-                    $str_return='<a class="more">...</a>'.$str_return.'<a class="more">...</a>';
+                    $str_return='<li><a>...</a></li>'.$str_return.'<li><a>...</a></li>';
                     break;
                 case 'behind':
-                    $str_return='<a class="more">...</a>'.$str_return;
+                    $str_return='<li><a>...</a></li>'.$str_return;
                     break;
                 default: new Exception('生成页面的分页信息的时候有错');
             }
@@ -98,15 +98,15 @@ class Page{
 
         //添加前一一页，下一页
         if($this->_page==1)
-            $str_return='<a class="prev">&lt;&nbsp;前一页</a>'.$str_return;
+            $str_return='<li class="previous-off">&lt;&nbsp;前一页</li>'.$str_return;
         else
-            $str_return='<a href="'.$this->getUrl($this->_page-1).')" class="prev">&lt;&nbsp;前一页</a>'.$str_return;
+            $str_return='<li class="previous"><a href="'.$this->getUrl($this->_page-1).'" class="prev">&lt;&nbsp;前一页</a></li>'.$str_return;
         if($this->_page==$this->_page_cout){
-            $str_return.='<a class="next">后一页&nbsp;&gt;</a>';
+            $str_return.='<li class="next-off">后一页&nbsp;&gt;</li>';
         }else{
-            $str_return.='<a href="'.$this->getUrl($this->_page+1).')" class="next">后一页&nbsp;&gt;</a>';
+            $str_return.='<li class="next"><a href="'.$this->getUrl($this->_page+1).'" class="next">后一页&nbsp;&gt;</a></li>';
         }
-        return $str_return;
+        return '<ul id="pagination-clean">'.$str_return.'</ul>';
     }
 
     /**计算开始结束的标记
@@ -145,7 +145,7 @@ class Page{
             }
         }
         $return.='/page/'.$page_num;
-        return '/usiadmin/staff_train'.$return;
+        return PAGE_BASE.$return;
     }
 }
 ?>

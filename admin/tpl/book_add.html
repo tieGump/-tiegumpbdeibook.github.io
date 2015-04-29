@@ -2,58 +2,103 @@
 <div id="tab1" class="tabcontent">
     <h3>新增图书</h3>
 
-    <form method="post" action="">
+    <form method="post" action="/admin/book/doAdd" enctype="multipart/form-data">
         <div class="form">
-
+        <input type="hidden" name="book_id" value="{$book_info.book_id}">
             <div class="form_row">
                 <label>图书名称:</label>
-                <input type="text" class="form_input" name="book_name"/>
+                <input type="text" class="form_input" name="book_name" value="{$book_info.book_name}"/>
             </div>
             <div class="form_row">
                 <label>图书作者:</label>
-                <input type="text" class="form_input" name="book_author"/>
+                <input type="text" class="form_input" name="book_author" value="{$book_info.book_author}"/>
             </div>
             <div class="form_row">
                 <label>图书类型:</label>
-                <select class="form_select" name="category_id">
-                    <option>Select one</option>
+                <select class="form_select1" name="category_id" id="category_id" >
+                    {foreach from=$book_type item=v key=k}
+                    <option value="{$k}" {if $book_info.category_id eq $k}selected{/if}>{$v}</option>
+                    {/foreach}
+                </select>
+                <select class="form_select1" name="category_video_id" {if $book_info.category_id neq 3}style="display: none"{/if} id="category_video_id">
+                    {foreach from=$book_video_type item=v key=k}
+                    <option value="{$k}" {if $book_info.category_extend_id eq $k}selected{/if}>{$v}</option>
+                    {/foreach}
+                </select>
+                <select class="form_select1" name="category_sound_id" {if $book_info.category_id neq 2}style="display: none"{/if} id="category_sound_id">
+                    {foreach from=$book_sound_type item=v key=k}
+                    <option value="{$k}" {if $book_info.category_extend_id eq $k}selected{/if}>{$v}</option>
+                    {/foreach}
                 </select>
             </div>
             <div class="form_row">
                 <label>出版社:</label>
-                <input type="text" class="form_input" name="book_press"/>
+                <input type="text" class="form_input" name="book_press" value="{$book_info.book_press}"/>
             </div>
             <div class="form_row">
                 <label>ISBN号码:</label>
-                <input type="text" class="form_input" name="book_isbn"/>
+                <input type="text" class="form_input" name="book_isbn" value="{$book_info.book_isbn}"/>
             </div>
             <div class="form_row">
                 <label>分类号:</label>
-                <input type="text" class="form_input" name="book_classification"/>
+                <input type="text" class="form_input" name="book_classification" value="{$book_info.book_classification}"/>
             </div>
             <div class="form_row">
                 <label>图书关键字:</label>
-                <input type="text" class="form_input" name="book_keyword"/>
+                <input type="text" class="form_input" name="book_keyword" value="{$book_info.book_keyword}"/>
             </div>
             <div class="form_row">
                 <label>图书主题词:</label>
-                <input type="text" class="form_input" name="book_key_words"/>
+                <input type="text" class="form_input" name="book_key_words" value="{$book_info.book_key_words}"/>
             </div>
             <div class="form_row">
                 <label>图书书本描述:</label>
-                <textarea class="form_textarea" name="book_desc"></textarea>
+                <textarea class="form_textarea" name="book_desc">{$book_info.book_desc}</textarea>
             </div>
 
             <div class="form_row">
-                <label>Email:</label>
-                <input type="text" class="form_input" name=""/>
+                <label>图书目录:</label>
+                <textarea class="form_textarea" name="book_catalog_desc">{$book_info.book_catalog_desc}</textarea>
             </div>
             <div class="form_row">
+                <label>封面地址:</label>
+                <input type="text" class="form_input" name="book_cover" value="{$book_info.book_cover}" style="width: 200px"/>({$upload_dir}目录下)
+            </div>
+            <div class="form_row">
+                <label>上传封面:</label>
+                <input type="file" name="book_cover_file"/>
+            </div>
+            <div class="form_row">
+                <label>链接地址:</label>
+                <input type="text" class="form_input" name="save_place" value="{$book_info.save_place}" style="width: 200px"/>({$upload_dir}目录下)
+            </div>
+            <div class="form_row">
+                <label>上传文件:</label>
+                <input type="file" name="book_file" />
+            </div>
+            <div class="form_row">
+                <input type="reset" class="form_submit" value="reset"/>
                 <input type="submit" class="form_submit" value="Submit"/>
             </div>
             <div class="clear"></div>
         </div>
     </form>
 </div>
+<script type="text/javascript">
+    $('#category_id').change(function(){
+        if($(this).val()==1){
+            $('#category_sound_id').attr('style','display:none');
+            $('#category_video_id').attr('style','display:none');
+        }
+        if($(this).val()==2){
+            $('#category_sound_id').attr('style','');
+            $('#category_video_id').attr('style','display:none');
+        }
+        if($(this).val()==3){
+            $('#category_sound_id').attr('style','display:none');
+            $('#category_video_id').attr('style','');
+        }
+    });
+</script>
 </body>
 </html>

@@ -10,27 +10,21 @@ class File
      * @param $file
      * @return array|string
      */
-    function uploadFile($file)
+    function uploadFile($file, $dir = '')
     {
-        $file=$file['files'];
-//        print_r($file);
-        $return='';
-        if(is_array($file['name'])){
-            $return=array();
-            foreach($file['name'] as $key=>$value){
-                if($file['error'][$key]>0){
-                    $return[]='';
-                }else{
 
-                    $file_name=$file["name"][$key];
-                    $file_name = iconv('UTF-8','GBK',$file_name);
-                    $tmp=explode('.',$file_name);
-                    $ext_name=isset($tmp[1])?$tmp[1]:'';
-                    $file_name=string2ascii($file_name,'_').'.'.$ext_name;
-                    move_uploaded_file($file["tmp_name"][$key], UPLOAD_DIR."/UserFiles/".$file_name);
-                    $return[]=$file_name;
-                }
-            }
+        $return = '';
+        if ($file['error'] == 0) {
+
+            $file_name = $file["name"];
+            print_r(UPLOAD_DIR . $dir . $file_name);
+            $file_name = iconv('UTF-8', 'GBK', $file_name);
+//                    $tmp=explode('.',$file_name);
+//                    $ext_name=isset($tmp[1])?$tmp[1]:'';
+//                    $file_name=string2ascii($file_name,'_').'.'.$ext_name;
+            move_uploaded_file($file["tmp_name"], UPLOAD_DIR . $dir . $file_name);
+            $return = $dir . $file_name;
+
         }
         return $return;
     }
@@ -53,12 +47,12 @@ class File
 //        $filename = tep_db_output(ascii2string($file_name_base[0], '_'));
 //        $realpath = preg_replace('/(' . preg_quote('/', '/') . ')+/', '/',  $file_path);
 //        $extension_name = strtolower(preg_replace('/.+\.+/', '', basename($realpath)));
-        if(!$file_info)
+        if (!$file_info)
             return;
 
-        $extension_name=$file_info['file_type'];
-        $filename=$file_info['file_name'];
-        $realpath=$file_info['file_path'];
+        $extension_name = $file_info['file_type'];
+        $filename = $file_info['file_name'];
+        $realpath = $file_info['file_path'];
         switch ($extension_name) {
             case 'xls': //直接浏览xls文件
 
@@ -93,19 +87,20 @@ class File
      * @param $realpath
      * @param string $output_name
      */
-    public static function ouput($realpath, $output_name=''){
-        if(!file_exists($realpath)){
-            die('No find '.$realpath);
+    public static function ouput($realpath, $output_name = '')
+    {
+        if (!file_exists($realpath)) {
+            die('No find ' . $realpath);
         }
-        if($output_name==''){
-            $output_name = $realpath;	//输出的文件名
+        if ($output_name == '') {
+            $output_name = $realpath;    //输出的文件名
         }
         //$output_name = basename($output_name);
-        if(strpos($output_name,'/')!==false){
-            $output_name = preg_replace('/.*\//','',$output_name);
+        if (strpos($output_name, '/') !== false) {
+            $output_name = preg_replace('/.*\//', '', $output_name);
         }
-        if(strpos($output_name,'\\')!==false){
-            $output_name = preg_replace('/.*'.preg_quote('\\').'/','',$output_name);
+        if (strpos($output_name, '\\') !== false) {
+            $output_name = preg_replace('/.*' . preg_quote('\\') . '/', '', $output_name);
         }
 
         $mtime = ($mtime = filemtime($realpath)) ? $mtime : gmtime();
@@ -117,8 +112,8 @@ class File
 
         @apache_setenv('no-gzip', 1);
         @ini_set('zlib.output_compression', 0);
-        $fileext  = substr(strrchr($realpath,'.'),1);
-        header('Content-Type: '.$fileext);
+        $fileext = substr(strrchr($realpath, '.'), 1);
+        header('Content-Type: ' . $fileext);
         header("Content-Type: application/force-download");
         header('Content-Type: application/octet-stream');
         header("Content-Type: application/download");
@@ -154,10 +149,11 @@ class File
      * @param string $val
      * @return int
      */
-    private static function return_bytes($val) {
+    private static function return_bytes($val)
+    {
         $val = trim($val);
-        $last = strtolower($val[strlen($val)-1]);
-        switch($last) {
+        $last = strtolower($val[strlen($val) - 1]);
+        switch ($last) {
             // The 'G' modifier is available since PHP 5.1.0
             case 'g':
                 $val *= 1024;
@@ -167,5 +163,66 @@ class File
                 $val *= 1024;
         }
         return $val;
+    }
+
+    /**
+     * 取得文件真实类型
+     * @param $filename
+     * @return string
+     * @date   2014-6-26
+     */
+    public static function getFileType($filename)
+    {
+        if (!file_exists($filename)) return '';
+        $file = fopen($filename, "rb");
+        $bin = fread($file, 2); //只读2字节
+        fclose($file);
+        $strInfo = @unpack("C2chars", $bin);
+        $typeCode = intval($strInfo['chars1'] . $strInfo['chars2']);
+        switch ($typeCode) {
+            case 7790:
+                $fileType = 'exe';
+                break;
+            case 7784:
+                $fileType = 'midi';
+                break;
+            case 8297:
+                $fileType = 'rar';
+                break;
+            case 255216:
+                $fileType = 'jpg';
+                break;
+            case 7173:
+                $fileType = 'gif';
+                break;
+            case 6677:
+                $fileType = 'bmp';
+                break;
+            case 13780:
+                $fileType = 'png';
+                break;
+            case 9168:
+                $fileType = 'ini';
+                break;
+            case 3780:
+                $fileType = 'pdf';
+                break;
+            case 208207:
+                $fileType = 'doc';
+                break;
+            case 8075:
+                $fileType = 'zip';
+                break;
+            case 6980:
+                $fileType = 'mdi';
+                break;
+            case 6787:
+                $fileType = 'swf';
+                break;
+            default:
+                $fileType = '';
+            //echo 'unknown';
+        }
+        return $fileType;
     }
 }

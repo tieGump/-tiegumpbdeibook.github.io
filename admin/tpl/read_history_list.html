@@ -1,0 +1,31 @@
+
+<body style="background: white;">
+<h1>阅读历史排行</h1>
+    <h2>列表</h2>
+    <table id="rounded-corner">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>书籍名称</th>
+            <th>书籍作者</th>
+            <th>阅读量</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <td colspan="12">{$book_list.page}</td>
+        </tr>
+        </tfoot>
+        <tbody>
+        {foreach from=$book_list.info item=v key=k}
+        <tr class="{if $k%2 eq 0}odd{else}even{/if}">
+            <td>{$v.book_id}</td>
+            <td>{$v.book_name}</td>
+            <td>{$v.book_author}</td>
+        </tr>
+        {/foreach}
+
+        </tbody>
+    </table>
+</body>
+</html>

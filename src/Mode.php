@@ -96,6 +96,7 @@ abstract class Mode
         } elseif (is_string($id_string)) {
             $where = $id_string;
         }
+
         return $where;
     }
 

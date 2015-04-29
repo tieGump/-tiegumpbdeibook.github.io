@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2015-04-20 13:34:42
+<?php /* Smarty version Smarty-3.1.17, created on 2015-04-29 10:05:12
          compiled from "F:\Web\bdei_book\admin\tpl\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:6501552f5e72731e31-66926718%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9bf024b193fba9c8d4b9f979c68a0483b259a917' => 
     array (
       0 => 'F:\\Web\\bdei_book\\admin\\tpl\\index.html',
-      1 => 1429508081,
+      1 => 1430272571,
       2 => 'file',
     ),
   ),
@@ -46,15 +46,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 
             <div class="sidebar" id="sidebar">
-                <h2>基本设置</h2>
+                <h2>游客管理</h2>
 
                 <ul>
-                    <li><a href="#" class="selected">Main page</a></li>
-                    <li><a href="#">Template settings</a></li>
-                    <li><a href="#">Add page</a></li>
-                    <li><a href="#">Edit section</a></li>
-                    <li><a href="#">Templates</a></li>
-                    <li><a href="#">Clients</a></li>
+                    <li><a href="/admin/configBase" class="selected">系统信息编辑</a></li>
+                    <li><a href="/admin/customer">注册用户管理</a></li>
+                    <li><a href="/admin/disableIP">IP访问控制</a></li>
+                    <li><a href="/admin/readHistory">阅读历史排行</a></li>
+                    <li><a href="/admin/reviews">读者评论管理</a></li>
+                    <li><a href="/admin/searchHistory">搜索记录管理</a></li>
                 </ul>
 
                 <h2>图书管理</h2>
@@ -69,18 +69,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
                 <ul>
                     <li><a href="/admin/user">用户管理</a></li>
-                    <li><a href="/admin/user/permission">用户权限管理</a></li>
-                    <li><a href="/admin/user/add">增加用户</a></li>
+                    <li><a href="/admin/user/addUser">增加用户</a></li>
                     <li><a href="/admin/user/changePassword">修改密码</a></li>
                     <li><a href="/admin/group">用户组管理</a></li>
-                    <li><a href="/admin/group/permission">用户组权限管理</a></li>
+                    <li><a href="/admin/group/add">新增用户组</a></li>
                 </ul>
 
-                <h2>Text Section</h2>
+                <h2>百得图书系统介绍</h2>
 
                 <div class="sidebar_section_text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.
+                    百得图书系统介绍百得图书系统介绍百得图书系统介绍百得图书系统介绍百得图书系统介绍百得图书系统介绍
                 </div>
 
             </div>
@@ -90,8 +88,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </div>
         <!--end of center_content-->
 
-        <div class="footer">
-            Panelo - Free Admin Collect from <a href="http://www.mycodes.net/" title="源码之家" target="_blank">源码之家</a>
+        <div class="footer" style="text-align:center;">
+            Copyright(C) 2000-2016. All rights reserved.
         </div>
 
     </div>
@@ -105,9 +103,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             ifm.height = subWeb.body.scrollHeight;
         }
     }
-    $('ul li a').click(function(){
+    $('#sidebar ul li a').click(function(){
         var href=$(this).attr('href');
         $('#right_content_iframe').attr('src',href);
+        $('#sidebar ul li a').attr('class','');
+        $(this).attr('class','selected');
         return false;
     });
 </script>
