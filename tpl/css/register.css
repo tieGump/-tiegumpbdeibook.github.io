@@ -1,0 +1,123 @@
+.btlj {
+	FONT-SIZE: 13px; COLOR: #ffffff; TEXT-DECORATION: none; LINE-HEIGHT: 20px
+}
+A.btlj:link {
+	FONT-SIZE: 13px; COLOR: #ffffff; TEXT-DECORATION: none; LINE-HEIGHT: 20px
+}
+A.btlj:hover {
+	FONT-SIZE: 13px; COLOR: #ffffff; TEXT-DECORATION: underline; LINE-HEIGHT: 20px
+}
+.bian {
+	FONT-SIZE: 1px; LINE-HEIGHT: 1px
+}
+.rs {
+	FONT-SIZE: 14px; COLOR: #1857b6; TEXT-DECORATION: none
+}
+.shij {
+	FONT-SIZE: 12px; COLOR: #ffffff; FILTER: DropShadow(Color=#000000, OffX=2, OffY=1); TEXT-DECORATION: none; LINE-HEIGHT: 15px
+}
+.hslj {
+	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none; LINE-HEIGHT: 15px
+}
+A.hslj:link {
+	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none; LINE-HEIGHT: 15px
+}
+A.hslj:hover {
+	FONT-SIZE: 12px; COLOR: #ff0000; TEXT-DECORATION: underline; LINE-HEIGHT: 15px
+}
+.biaok {
+	FONT-SIZE: 12px; BORDER-TOP: #000000 1px ridge; HEIGHT: 18px; BORDER-RIGHT: #000000 1px ridge; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #000000 1px ridge; COLOR: #000000; BORDER-LEFT: black 1px ridge
+}
+.xlbk {
+	FONT-SIZE: 12px; BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; COLOR: #000000; BORDER-LEFT: #000000 1px solid
+}
+.wfg {
+	FONT-SIZE: 13px; VERTICAL-ALIGN: middle; COLOR: #000000; FILTER: Glow(Color=ffffff, Strength=5); TEXT-DECORATION: none; LETTER-SPACING: 0.2mm; LINE-HEIGHT: 20px
+}
+.biaokt {
+	FONT-SIZE: 12px; BORDER-TOP: #1c62ca 1px ridge; HEIGHT: 20px; BORDER-RIGHT: #1c62ca 1px ridge; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #1c62ca 1px ridge; COLOR: #000000; TEXT-ALIGN: center; BORDER-LEFT: #1c62ca 1px ridge; LINE-HEIGHT: 17px
+}
+.hs {
+	FONT-SIZE: 13px; COLOR: #000000; TEXT-DECORATION: none; LINE-HEIGHT: 15px
+}
+.dhslj {
+	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none; LINE-HEIGHT: 18px
+}
+A.dhslj:link {
+	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none
+}
+A.dhslj:hover {
+	FONT-SIZE: 12px; COLOR: #ff0000; TEXT-DECORATION: underline
+}
+.bslj {
+	FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: none; LINE-HEIGHT: 15px
+}
+A.bslj:link {
+	FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: none; LINE-HEIGHT: 15px
+}
+A.bslj:hover {
+	FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: underline; LINE-HEIGHT: 15px
+}
+.hfont {
+	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none; LINE-HEIGHT: 14px
+}
+A.hfont:link {
+	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none; LINE-HEIGHT: 15px
+}
+A.hfont:hover {
+	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: underline
+}
+.zztx {
+	FONT-SIZE: 13px; VERTICAL-ALIGN: middle; COLOR: #1b74e0; FILTER: Glow(Color=ffffff, Strength=3)DropShadow(Color=#1353A2, OffX=2, OffY=1); TEXT-DECORATION: none; LETTER-SPACING: 0.5mm; LINE-HEIGHT: 20px
+}
+.zclj {
+	FONT-SIZE: 14px; COLOR: #ffffff; TEXT-DECORATION: none; BACKGROUND-COLOR: #407cc5
+}
+A.zclj:link {
+	FONT-SIZE: 14px; COLOR: #ffffff; TEXT-DECORATION: none; BACKGROUND-COLOR: #407cc5
+}
+A.zclj:hover {
+	FONT-SIZE: 14px; COLOR: #ff0000; TEXT-DECORATION: none; BACKGROUND-COLOR: #f2f7fd
+}
+.an {
+	FONT-SIZE: 13px; BORDER-TOP: #000000 1px inset; HEIGHT: 23px; BORDER-RIGHT: #000000 1px inset; BORDER-BOTTOM: #000000 1px inset; BORDER-LEFT: #000000 1px inset; BACKGROUND-COLOR: #75a0d5
+}
+.rslj {
+	FONT-SIZE: 12px; COLOR: #0033ff; TEXT-DECORATION: none
+}
+A.rslj:link {
+	FONT-SIZE: 12px; COLOR: #0033ff; TEXT-DECORATION: none
+}
+A.rslj:hover {
+	FONT-SIZE: 12px; COLOR: #0033ff; TEXT-DECORATION: underline
+}
+.xan {
+	FONT-SIZE: 12px; BORDER-TOP: #000000 1px inset; HEIGHT: 18px; BORDER-RIGHT: #000000 1px inset; BORDER-BOTTOM: #000000 1px inset; COLOR: #000000; BORDER-LEFT: #000000 1px inset; LINE-HEIGHT: 15px; BACKGROUND-COLOR: #75a0d5
+}
+.xlkt {
+	FONT-SIZE: 12px; BORDER-TOP: #1c62ca 1px ridge; BORDER-RIGHT: #1c62ca 1px ridge; BORDER-BOTTOM: #1c62ca 1px ridge; BORDER-LEFT: #1c62ca 1px ridge
+}
+.adminkt {
+	FONT-SIZE: 12px; BORDER-TOP: #000000 1px outset; HEIGHT: 20px; BORDER-RIGHT: #cccccc 1px outset; BORDER-BOTTOM: #cccccc 1px outset; BORDER-LEFT: #000000 1px outset
+}
+.heis {
+	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none
+}
+.antwo {
+	FONT-SIZE: 12px; BORDER-TOP: 1px ridge; HEIGHT: 22px; BORDER-RIGHT: 1px ridge; BORDER-BOTTOM: 1px ridge; BORDER-LEFT: 1px ridge; BACKGROUND-COLOR: #cccccc
+}
+.hand {
+	CURSOR: hand; FONT-SIZE: 12px; COLOR: #0000cc; TEXT-DECORATION: none
+}
+.yjxw {
+	FONT-SIZE: 13px; COLOR: #000000; TEXT-DECORATION: none; LINE-HEIGHT: 20px
+}
+.xwlj {
+	FONT-SIZE: 13px; COLOR: #0000cc; TEXT-DECORATION: underline
+}
+A.xwlj:link {
+	FONT-SIZE: 13px; COLOR: #0000cc; TEXT-DECORATION: underline
+}
+A.xwlj:hover {
+	FONT-SIZE: 13px; COLOR: #0000cc; TEXT-DECORATION: none
+}

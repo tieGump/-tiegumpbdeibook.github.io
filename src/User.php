@@ -56,7 +56,13 @@ class User extends Mode{
     function login($user_name,$password){
         $info=$this->getInfoByName($user_name);
         $login=new Login;
-        return $login->checkLogin($password,$info['user_pwd']);
+        if($login->checkLogin($password,$info['user_pwd'])){
+            $_SESSION['user']['id']=$info['user_id'];
+            $_SESSION['user']['name']=$info['user_name'];
+            return true;
+        }else{
+            return false;
+        }
     }
     function checkLogin(){
         return isset($_SESSION['user']['id'])&&$_SESSION['user']['id'];

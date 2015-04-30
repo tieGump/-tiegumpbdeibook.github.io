@@ -14,6 +14,7 @@ abstract class Action {
     protected $_data=array();
     protected $_smarty;
     protected $_tpl;
+    protected $_message;
     function __construct(){
         require SMARTY_TPL_DIR.'/Smarty.class.php';
         require SMARTY_TPL_DIR.'/SmartyBC.class.php';
@@ -28,6 +29,7 @@ abstract class Action {
         $this->_smarty->left_delimiter = "{";
         $this->_smarty->right_delimiter = "}";
         $this->createCssUrl();
+        $this->_message=new Message();
 //        $this->_smarty->allow_php_tag=true;
 
 
@@ -48,7 +50,7 @@ abstract class Action {
             $str.='../';
         }
         $this->dir=$str;
-        $this->tpl=$str.'tpl/';
+        $this->tpl=$str='tpl/';
     }
     /**实现魔术set函数 对data进行赋值
      * @param $name
@@ -66,6 +68,10 @@ abstract class Action {
      * 析构函数，实现smarty对模板赋值
      */
     function __destruct(){
+        $file_name=str_replace('.html','',$this->_tpl);
+        if(is_file($this->tpl.'css/'.$file_name.'.css')){
+            $this->_data['base_css']=$this->tpl.'css/'.$file_name.'.css';
+        }
         $this->get=$_GET;
         foreach($this->_data as $key=>$value){
             $this->_smarty->assign($key,$value);

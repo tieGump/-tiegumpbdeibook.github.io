@@ -114,7 +114,7 @@ class Book extends Mode{
      */
     function createOrderBy($order_by){
         if($order_by)
-            return $order_by;
+            return ' ORDER BY '.$order_by;
         return ' ORDER BY book_id DESC';
     }
 

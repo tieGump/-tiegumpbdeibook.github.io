@@ -1,0 +1,90 @@
+TD IMG {
+    DISPLAY: block
+}
+.STYLE1 {
+    FONT-SIZE: 12px
+}
+.STYLE1 {
+    COLOR: #ff9900
+}
+.ctt {
+    BORDER-TOP: #064ca1 0px solid; HEIGHT: auto; BORDER-RIGHT: #064ca1 1px solid; BORDER-BOTTOM: #064ca1 1px solid; PADDING-BOTTOM: 6px; TEXT-ALIGN: left; PADDING-TOP: 6px; PADDING-LEFT: 6px; CLEAR: both; BORDER-LEFT: #064ca1 1px solid; PADDING-RIGHT: 6px
+}
+.dis {
+    DISPLAY: block
+}
+* {
+    FONT-SIZE: 12px
+}
+HTML {
+    HEIGHT: 100%; TEXT-ALIGN: center; MARGIN: 0px; WIDTH: 100%; over-flow: hidden
+}
+BODY {
+    HEIGHT: 100%; TEXT-ALIGN: center; MARGIN: 0px; WIDTH: 100%; over-flow: hidden
+}
+UL {
+    LIST-STYLE-TYPE: none; MARGIN: 0px
+}
+.ttl {
+    HEIGHT: 18px
+}
+.ctt {
+    BORDER-TOP: #064ca1 0px solid; HEIGHT: auto; BORDER-RIGHT: #064ca1 1px solid; BORDER-BOTTOM: #064ca1 1px solid; PADDING-BOTTOM: 6px; TEXT-ALIGN: left; PADDING-TOP: 6px; PADDING-LEFT: 6px; CLEAR: both; BORDER-LEFT: #064ca1 1px solid; PADDING-RIGHT: 6px
+}
+.w936 {
+    CLEAR: both; MARGIN: 2px 0px; WIDTH: 635px
+}
+.tb_ {
+    BACKGROUND-IMAGE: url(../images/20070429_b6d924afad052649402dWs8adqAyLtgi.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-COLOR: #ffffff
+}
+.tb_ UL {
+    HEIGHT: 24px
+}
+.tb_ LI {
+    CURSOR: pointer; HEIGHT: 24px; FLOAT: left; LINE-HEIGHT: 1.9; WIDTH: 94px
+}
+.normaltab {
+    BACKGROUND-IMAGE: url(../images/20070429_1bd9c293199c87ac974auuJXlsPMeKDq.gif); BACKGROUND-REPEAT: no-repeat; COLOR: #1f3a87
+}
+.hovertab {
+    BACKGROUND-IMAGE: url(../images/20070429_55976880c7b020703a18yOxpDn5WBaHd.gif); BACKGROUND-REPEAT: no-repeat; FONT-WEIGHT: bold; COLOR: #1f3a87
+}
+.dis {
+    DISPLAY: block
+}
+.undis {
+    DISPLAY: none
+}
+.STYLE1 {
+    COLOR: #333333
+}
+.STYLE5 {
+
+}
+.STYLE7 {
+    FONT-SIZE: 14px; FONT-WEIGHT: bold; COLOR: #cccc00
+}
+A:link {
+    COLOR: #333333; TEXT-DECORATION: none
+}
+A:hover {
+    COLOR: #0099ff; TEXT-DECORATION: none
+}
+.STYLE8 {
+    FONT-SIZE: 13px; COLOR: #ff6600
+}
+.STYLE10 {
+    FONT-SIZE: 13px; FONT-WEIGHT: bold; COLOR: #ff6600
+}
+.STYLE11 {
+    COLOR: #0033ff
+}
+.STYLE12 {
+    FONT-SIZE: 13px; FONT-WEIGHT: bold; COLOR: #0099ff
+}
+A:visited {
+    COLOR: #333333; TEXT-DECORATION: none
+}
+A:active {
+    TEXT-ALIGN: left; TEXT-DECORATION: none
+}

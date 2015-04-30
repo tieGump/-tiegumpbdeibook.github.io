@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0035)http://210.79.110.128:8081/reg.html -->
+<HTML>
+<HEAD>
+    <META content="IE=5.0000" http-equiv="X-UA-Compatible">
+    <TITLE>新读者注册</TITLE>
+    <SCRIPT language=JavaScript>
+        document.oncontextmenu = new Function("event.returnValue=false;"); //禁止右键功能,单击右键将无任何反应
+
+    </SCRIPT>
+
+    <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+    <LINK
+            rel=stylesheet type=text/css href="新读者注册_files/liball.css">
+    <STYLE type=text/css>.STYLE3 {
+        FONT-SIZE: 12px;
+        COLOR: #0066ff
+    }
+
+    .STYLE4 {
+        FONT-SIZE: 12px;
+        COLOR: #333333
+    }
+
+    .STYLE9 {
+        COLOR: #ff0000
+    }
+    </STYLE>
+
+    <SCRIPT type=text/javascript>
+        function checks() {
+            if (checkreg.readername.value == "") {
+                alert("用户名不能为空");
+                document.checkreg.readername.focus();
+                return false;
+            }
+            if (checkreg.readername.value.length < 3) {
+                alert("用户名不能小于3个字符!");
+                checkreg.readername.focus();
+                return (false);
+            }
+            if (checkreg.password.value == "") {
+                alert("密码不能为空");
+                document.checkreg.password.focus();
+                return false;
+            }
+            if (checkreg.password.value.length < 6) {
+                alert("密码不能少于6个字符!");
+                checkreg.password.focus();
+                return (false);
+            }
+            if (checkreg.password.value != checkreg.password2.value) {
+                alert("您输入的密码与确认密码不符!");
+                checkreg.password.select();
+                checkreg.password.focus();
+                checkreg.password2.value = "";
+                return (false);
+            }
+            if (checkreg.name.value == "") {
+                alert("姓名不能为空。");
+                document.checkreg.name.focus();
+                return false;
+            }
+            if (checkreg.question.value == "") {
+                alert("密码提示问题不能为空。");
+                document.checkreg.question.focus();
+                return false;
+            }
+            if (checkreg.answer.value == "") {
+                alert("密码找回答案不能为空。");
+                document.checkreg.answer.focus();
+                return false;
+            }
+            return true;
+        }
+    </SCRIPT>
+
+    <META name=GENERATOR content="MSHTML 10.00.9200.17296">
+</HEAD>
+<BODY topMargin=8>
+<FORM id=checkreg onsubmit="return checks();" method=post name=checkreg
+      action=readerreg.asp>
+    <TABLE borderColor=#ffffff height=205 cellSpacing=0 borderColorDark=#ffffff
+           cellPadding=1 width=465 align=center borderColorLight=#cccccc border=0>
+        <TBODY>
+        <TR>
+            <TD height=24 width=88><SPAN class=STYLE3>用户名：</SPAN></TD>
+            <TD width=160><LABEL><INPUT tabIndex=1 id=readername
+                                        style="HEIGHT: 20px; WIDTH: 160px" maxLength=15 name=readername>
+            </LABEL></TD>
+            <TD width=203>
+                <DIV class=STYLE4><SPAN class=STYLE9>*</SPAN>不少于3个字符或超过15个字符。</DIV>
+            </TD>
+        </TR>
+        <TR>
+            <TD height=24><SPAN class=STYLE3>登陆密码：</SPAN></TD>
+            <TD><INPUT tabIndex=2 id=password style="HEIGHT: 20px; WIDTH: 160px"
+                       maxLength=14 type=password name=password> </LABEL></TD>
+            <TD class=STYLE4 rowSpan=2><SPAN
+                    class=STYLE9>*</SPAN>最少6个字符，不超过14个字符。
+            </TD>
+        </TR>
+        <TR>
+            <TD height=24><SPAN class=STYLE3>重复密码：</SPAN></TD>
+            <TD><INPUT tabIndex=3 id=password2 style="HEIGHT: 20px; WIDTH: 160px"
+                       maxLength=14 type=password name=password2> </LABEL></TD>
+        </TR>
+        <TR>
+            <TD height=24><SPAN class=STYLE3>姓名：</SPAN></TD>
+            <TD><INPUT tabIndex=4 id=name style="HEIGHT: 20px; WIDTH: 160px"
+                       maxLength=8 name=name> </LABEL></TD>
+            <TD class=STYLE4><SPAN class=STYLE9>*</SPAN>建议填写您的真实姓名。</TD>
+        </TR>
+        <TR>
+            <TD height=23><SPAN class=STYLE3>性别：</SPAN></TD>
+            <TD><LABEL><SELECT tabIndex=5 id=sex size=1 name=sex>
+                <OPTION
+                        selected>男
+                </OPTION>
+                <OPTION>女</OPTION>
+            </SELECT> </LABEL></TD>
+            <TD class=STYLE4><SPAN class=STYLE9>*</SPAN>选择您的性别。</TD>
+        </TR>
+        <TR>
+            <TD height=24><SPAN class=STYLE3>密码提示问题：</SPAN></TD>
+            <TD><INPUT tabIndex=6 id=question style="HEIGHT: 20px; WIDTH: 160px"
+                       maxLength=25 name=question></TD>
+            <TD class=STYLE4 rowSpan=2><SPAN
+                    class=STYLE9>*</SPAN>密码忘记时找回密码的唯一凭据。
+            </TD>
+        </TR>
+        <TR>
+            <TD height=24><SPAN class=STYLE3>密码找回答案：</SPAN></TD>
+            <TD>
+                <DIV align=left><INPUT tabIndex=7 id=answer
+                                       style="HEIGHT: 20px; WIDTH: 160px" maxLength=20 name=answer></DIV>
+            </TD>
+        </TR>
+        <TR>
+            <TD colSpan=3>
+                <DIV align=center>
+                    <DIV class=reg_center>
+                        <DIV align=left><SPAN class=STYLE4>　　　　　　　</SPAN> <INPUT class=reg_input type=reset value=重置> 　　
+                            <INPUT class=reg_input type=submit value=提交> 　　　　　　　　　<SPAN
+                                    class=zztx><SPAN
+                                    class=STYLE9>*</SPAN>为必填项。</SPAN></DIV>
+                    </DIV>
+                </DIV>
+            </TD>
+        </TR>
+        </TBODY>
+    </TABLE>
+</FORM>
+</BODY>
+</HTML>

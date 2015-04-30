@@ -19,14 +19,6 @@ class IndexAction extends Action{
      * 首页显示
      */
     function indexAction(){
-//        print_r($_SESSION);
-        $this->unshowbread=true;
-        $user=new User();
-        $this->user_name=$user->getPublicNameFromId($_SESSION['admin']['id']);
-        $aui=new AutoUserInfo();
-        $aui->updateUser();
-        $aui->updateGroup();
-//        =$_SESSION['admin']['publicname'];
-        $this->_tpl='index.tpl.html';
+        $this->_tpl='index.html';
     }
 }

@@ -8,33 +8,26 @@ class LoginAction extends Action{
     /**
      * 检查登录的
      */
-    function sessionAction(){
-        if($_POST['session']){
-//	        $_POST['session'] = str_replace('\"','"',$_POST['session']);
-            $_SESSION = json_decode($_POST['session'],true);
-            if(isset($_SESSION['admin'])){
-                echo 1;
-//                header("Location: /usiadmin/staff_train/index/index");
-            }else{
-                echo 2;
-//                header("Location: /usiadmin/index.php");
-            }
-//
-        }
-    }
-
-    /**
-     * 跳到登录页面
-     */
-    function upAction(){
+    function indexAction(){
         $this->_tpl='login.html';
     }
-
+    function doLogin(){
+        $user_name=$_POST['user_name'];
+        $password=$_POST['password'];
+        $user=new User();
+        if($user->login($user_name,$password)){
+            $this->user_name=$_SESSION['user']['name'];
+            $this->_tpl='login_in.html';
+        }else{
+            $this->_message->addSession('用户名或密码错误');
+            redirect('/login');
+        }
+    }
     /**
      * 登出
      */
     function offAction(){
         unset($_SESSION);
-        die('成功登出');
+        redirect('/login');
     }
 }
