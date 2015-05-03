@@ -14,7 +14,7 @@ A.btlj:hover {
 	FONT-SIZE: 14px; COLOR: #1857b6; TEXT-DECORATION: none
 }
 .shij {
-	FONT-SIZE: 12px; COLOR: #ffffff; FILTER: DropShadow(Color=#000000, OffX=2, OffY=1); TEXT-DECORATION: none; LINE-HEIGHT: 15px
+	FONT-SIZE: 12px; COLOR: #ffffff;  TEXT-DECORATION: none; LINE-HEIGHT: 15px
 }
 .hslj {
 	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none; LINE-HEIGHT: 15px
@@ -32,7 +32,7 @@ A.hslj:hover {
 	FONT-SIZE: 12px; BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; COLOR: #000000; BORDER-LEFT: #000000 1px solid
 }
 .wfg {
-	FONT-SIZE: 13px; VERTICAL-ALIGN: middle; COLOR: #000000; FILTER: Glow(Color=ffffff, Strength=5); TEXT-DECORATION: none; LETTER-SPACING: 0.2mm; LINE-HEIGHT: 20px
+	FONT-SIZE: 13px; VERTICAL-ALIGN: middle; COLOR: #000000;  TEXT-DECORATION: none; LETTER-SPACING: 0.2mm; LINE-HEIGHT: 20px
 }
 .biaokt {
 	FONT-SIZE: 12px; BORDER-TOP: #1c62ca 1px ridge; HEIGHT: 20px; BORDER-RIGHT: #1c62ca 1px ridge; VERTICAL-ALIGN: middle; BORDER-BOTTOM: #1c62ca 1px ridge; COLOR: #000000; TEXT-ALIGN: center; BORDER-LEFT: #1c62ca 1px ridge; LINE-HEIGHT: 17px
@@ -68,7 +68,7 @@ A.hfont:hover {
 	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: underline
 }
 .zztx {
-	FONT-SIZE: 13px; VERTICAL-ALIGN: middle; COLOR: #1b74e0; FILTER: Glow(Color=ffffff, Strength=3)DropShadow(Color=#1353A2, OffX=2, OffY=1); TEXT-DECORATION: none; LETTER-SPACING: 0.5mm; LINE-HEIGHT: 20px
+	FONT-SIZE: 13px; VERTICAL-ALIGN: middle; COLOR: #1b74e0; DropShadow(Color=#1353A2, OffX=2, OffY=1); TEXT-DECORATION: none; LINE-HEIGHT: 20px
 }
 .zclj {
 	FONT-SIZE: 14px; COLOR: #ffffff; TEXT-DECORATION: none; BACKGROUND-COLOR: #407cc5

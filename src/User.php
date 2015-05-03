@@ -72,4 +72,11 @@ class User extends Mode{
         if($info)
         return Arrays::downArray($info,'user_id');
     }
+    function changePassword($user_name,$password){
+        echo $user_name,$password;
+        $login=new Login();
+        $password=$login->createPassword($password);
+        $this->changeOneFiled('user_pwd',$password,'user_name="'.$user_name.'"');
+        return $this->_db->getQueryNumber();
+    }
 }

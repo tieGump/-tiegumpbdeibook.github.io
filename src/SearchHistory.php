@@ -7,11 +7,13 @@ class SearchHistory extends Mode{
         parent::__construct();
     }
     function addSearch($search_info,$type){
-        $data['search']=$search_info;
+        if(!$search_info)
+            return;
+        $data['search_value']=$search_info;
         $data['search_type']=$type;
         $data['search_time']=date('Y-m-d H:i:s');
         $data['ip']=get_client_ip();
-        $data['user_id']=isset($_SESSION['user']['id'])?$_SESSION['user']['id']:'';
+        $data['user_id']=isset($_SESSION['user']['id'])?$_SESSION['user']['id']:0;
         return $this->addOne($data);
     }
     function getList($user_id='',$search_value='',$user_name=''){
@@ -30,5 +32,9 @@ class SearchHistory extends Mode{
         }
         $str_sql='SELECT '.$this->_fields.' FROM '.$this->_table.' WHERE '.$where.' ORDER BY '.$this->_table_id.' DESC';
         return $this->getPageList($str_sql);
+    }
+    function getTopSearch(){
+        $str_sql='SELECT search_value,COUNT(search_id) as search_total,search_type FROM bdei_search_history GROUP BY search_value ORDER BY search_total DESC LIMIT 20';
+        return $this->_db->doSelect($str_sql);
     }
 }

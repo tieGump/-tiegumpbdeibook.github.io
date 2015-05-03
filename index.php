@@ -10,7 +10,7 @@ ini_set("display_errors", '1');
 define('ROOT', substr(dirname(__FILE__), 0).'/');
 
 require 'public/config.php';
-date_default_timezone_set(SITE_TIMEZONE);
+
 
 require PUBLIC_DIR.'/function.php';
 require SRC_DIR.'/Cop.php';

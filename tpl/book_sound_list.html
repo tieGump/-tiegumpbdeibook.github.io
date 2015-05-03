@@ -1,0 +1,136 @@
+{include file="head.html"}
+
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=940 align=center><!-- fwtable fwsrc="Soundbook.png" fwpage="页面 1" fwbase="soundbook.gif" fwstyle="Dreamweaver" fwdocid = "289861556" fwnested="0" -->
+<TBODY>
+<TR>
+    <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=11
+             height=1></TD>
+    <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=206
+             height=1></TD>
+    <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=16
+             height=1></TD>
+    <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=691
+             height=1></TD>
+    <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=16
+             height=1></TD>
+    <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+             height=1></TD></TR>
+<TR>
+    <TD vAlign=top colSpan=5><IMG id=soundbook_r1_c1 border=0
+                                  name=soundbook_r1_c1 alt="" src="{$tpl}images/soundbook_r1_c1.gif"
+                                  width=940 height=39></TD>
+    <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+             height=39></TD></TR>
+<TR>
+    <TD background={$tpl}images/soundbook_r2_c1.gif>&nbsp;</TD>
+    <TD background={$tpl}images/soundbook_r2_c2.gif>&nbsp;</TD>
+    <TD background={$tpl}images/soundbook_r2_c3.gif>&nbsp;</TD>
+    <TD background={$tpl}images/soundbook_r2_c2.gif><SPAN class=STYLE16>　◎ 
+      当前位置&gt;&gt;有声图书系列{if $sound_type_name}&gt;&gt;<SPAN class=fl> </SPAN>{$sound_type_name}</SPAN>{/if}</TD>
+    <TD background={$tpl}images/soundbook_r2_c5.gif>&nbsp;</TD>
+    <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+             height=13></TD></TR>
+<TR>
+<TD background={$tpl}images/soundbook_r2_c1.gif>&nbsp;</TD>
+<TD vAlign=top background={$tpl}images/soundbook_r2_c2.gif>
+    <TABLE border=0 width=205 height=225>
+        <TBODY>
+        {foreach from=$sound_type item=v key=k}
+        <TR>
+            <TD height=25 width=28>&nbsp;</TD>
+            <TD width=23><IMG src="{$tpl}images/S{$k}.gif" width=16
+                              height=16></TD>
+            <TD width=140><SPAN class=STYLE1><A
+                    href="/book/sound/book_type/{$k}">{$v}</A></SPAN></TD></TR>
+            {/foreach}
+
+        </TBODY></TABLE></TD>
+<TD background={$tpl}images/soundbook_r2_c3.gif>&nbsp;</TD>
+<TD vAlign=top background={$tpl}images/soundbook_r2_c2.gif>
+<DIV class=fl><SPAN class=bian><A id='ok' name='ok'></A></SPAN>
+<TABLE border=0 cellSpacing=0 cellPadding=2 width=623 align=center>
+    <TBODY>
+    <TR>
+        <TD class=STYLE15 height=12 vAlign=bottom
+            width=270>共有{$book_list.page.row_number}条记录，共{$book_list.page.page_total}页，目前为第<FONT
+                color=#cc0000>{$book_list.page.page}</FONT>页</TD>
+        <TD height=12 vAlign=bottom width=345 align=right>
+            <DIV align=right><SPAN class=STYLE16>
+            &nbsp;<A href="#">[刷新]</A>&nbsp;<A
+                        href="{$book_list.page.previous.url}">[上一页]</A>&nbsp;<A
+                        href="{$book_list.page.next.url}">[下一页]</A>&nbsp;<A
+                        href="{$book_list.page.page_begin.url}">[首页]</A>&nbsp;<A
+                        href="{$book_list.page.page_end.url}">[尾页]</A>
+            </SPAN></DIV></TD></TR></TBODY></TABLE>
+<HR style="COLOR: #6699ff" SIZE=1>
+
+<TABLE border=1 cellSpacing=0 borderColor=#000000 borderColorLight=#000000
+       borderColorDark=#ffffff cellPadding=1 width=626 align=center>
+<TBODY>
+<TR>
+    <TD class=orangeb height=8 width="38%">
+        <DIV class=STYLE11 align=center>题名</DIV></TD>
+    <TD class=orangeb height=8 width="23%">
+        <DIV class=STYLE11 align=center>作者</DIV></TD>
+    <TD class=orangeb height=8 width="11%">
+        <DIV class=STYLE11 align=center><STRONG>浏览次数</STRONG></DIV></TD>
+    <TD class=STYLE11 width="20%">
+        <DIV align=center>加入时间</DIV></TD>
+    <TD class=orangeb height=8 width="8%">
+        <DIV class=STYLE11 align=center><STRONG>操作</STRONG></DIV></TD></TR>
+{foreach from=$book_list.info item=v}
+<TR>
+    <TD height=8 width="38%">
+        <DIV class=zl align=left>
+            <DIV class=STYLE16 align=left>{$v.book_name}</DIV></DIV></TD>
+    <TD height=8 width="23%">
+        <DIV align=center>
+            <DIV class=STYLE16 align=left>{if $v.book_author}{$v.book_author}{else}作者不详{/if}</DIV></DIV></TD>
+    <TD height=8 width="11%">
+        <DIV align=center>
+            <DIV class=STYLE16 align=center>{$v.book_number}&nbsp;</DIV></DIV></TD>
+    <TD height=8 width="20%">
+        <DIV class=STYLE16 align=center>{$v.add_time}</DIV></TD>
+    <TD onMouseOver="this.style.color='blue';"
+        onmouseout="this.style.color='#333333';" height=8 width="8%">
+        <DIV onClick="javascript:winopen('Soundopen.asp?id=1381')"
+             align=center><A class=STYLE16 target=_blank>视听</A></DIV></TD></TR>
+{/foreach}
+</TBODY></TABLE>
+</DIV>
+<HR style="COLOR: #6699ff" SIZE=1>
+
+<TABLE border=0 cellSpacing=0 cellPadding=3 width=621 align=center>
+    <TBODY>
+    <TR>
+        <TD class=STYLE15 width=153>页次:<FONT
+                color=#cc0000>{$book_list.page.page}</FONT>/{$book_list.page.page_total},每页:<FONT
+                color=#cc0000>{$book_list.page.page_per_number}</FONT>条</TD>
+        <TD class=STYLE15 width=456 align=right><A {if $book_list.page.previous.url}href="{$book_list.page.previous.url}"{/if}>&lt;&lt;</A>
+        {foreach from=$book_list.page.page_info item=v}
+        {if $v.checked}
+        <FONT color=#cc0000><B>{$v.page}</B></FONT>
+        {else}
+        <A href="{$v.url}">[{$v.page}]</A>
+        {/if}
+        {/foreach}
+        <A {if $book_list.page.next.url}href="{$book_list.page.next.url}"{/if}>&gt;&gt;</A>
+    </TD></TR></TBODY></TABLE>　 </TD>
+<TD background={$tpl}images/soundbook_r2_c5.gif>&nbsp;</TD>
+<TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+         height=294></TD></TR>
+<TR>
+    <TD><IMG id=soundbook_r4_c1 border=0 name=soundbook_r4_c1 alt=""
+             src="{$tpl}images/soundbook_r4_c1.gif" width=11 height=14></TD>
+    <TD><IMG id=soundbook_r4_c2 border=0 name=soundbook_r4_c2 alt=""
+             src="{$tpl}images/soundbook_r4_c2.gif" width=206 height=14></TD>
+    <TD><IMG id=soundbook_r4_c3 border=0 name=soundbook_r4_c3 alt=""
+             src="{$tpl}images/soundbook_r4_c3.gif" width=16 height=14></TD>
+    <TD><IMG id=soundbook_r4_c4 border=0 name=soundbook_r4_c4 alt=""
+             src="{$tpl}images/soundbook_r4_c4.gif" width=691 height=14></TD>
+    <TD><IMG id=soundbook_r4_c5 border=0 name=soundbook_r4_c5 alt=""
+             src="{$tpl}images/soundbook_r4_c5.gif" width=16 height=14></TD>
+    <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+             height=14></TD></TR></TBODY></TABLE>
+</TABLE>
+{include file="foot.html"}

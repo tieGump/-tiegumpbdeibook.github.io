@@ -1,0 +1,33 @@
+<body style="background: white;">
+<div id="tab1" class="tabcontent">
+    <h3>{if $one_info}修改{else}新增{/if}软件下载</h3>
+
+    <form method="post" action="/admin/soft/doChange" enctype="multipart/form-data" name="my_form">
+        <div class="form">
+    <input name="ip_id" type="hidden" value="{$one_info.soft_id}">
+            <div class="form_row">
+                <label>软件名称:</label>
+                <input type="text" class="form_input" name="soft_name" value="{$one_info.soft_name}"/>
+            </div>
+            <div class="form_row">
+                <label>软件图片:</label>
+                {$upload_url}cover/<input type="text" class="form_input" name="soft_pic" value="{$one_info.soft_pic}" />
+            </div>
+            <div class="form_row">
+                <label>软件图片:</label>
+                <input type="file" class="form_file" name="soft_cover" value="{$one_info.end}" />
+            </div>
+            <div class="form_row">
+                <label>软件存放地址:</label>
+                {$upload_url}exe/<input type="text" class="form_input" name="soft_save_place" value="{$one_info.soft_save_place}" />
+            </div>
+
+            <div class="form_row">
+                <input type="submit" class="form_submit" value="Submit"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

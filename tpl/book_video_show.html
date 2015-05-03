@@ -1,0 +1,124 @@
+
+
+<SCRIPT language=javascript>
+    Real='document.RAOCX.'
+    function DoPlay()
+    {eval(Real+'DoPlay()');}
+    function DoStop()
+    {eval(Real+'DoStop()');}
+    function DoPlayPause()
+    {eval(Real+'DoPlayPause()');}
+    function SetFullScreen()
+    {
+        eval(Real+'SetFullScreen()');
+        fullscreen=true;
+        DoPlayPause();
+        DoPlay();
+    }
+    function GetFullScreen()
+    {
+        if(eval(Real+'GetFullScreen()'))
+            return true;
+        else
+            return false;
+    }
+</SCRIPT>
+<script>
+    function shutwin(){opener=null;self.close();}
+</script>
+<script language="JavaScript">
+    <!--
+
+    var Real1;
+    Real1='MediaPlayer1.';
+    var Mute=false;
+    var CanSetPos=true;
+    var SetPosStart=false;
+    var SetVolStart=false;
+    var loop, timer, initialised;
+    var speed=50;
+    var oldwidth=566,oldheight=502;
+
+
+    function DoFull()
+    {
+        eval(Real1+'DisplaySize=3');
+    }
+
+
+    NetShowServer = "" ;
+
+
+    function LoadVideo(c1,c2) {
+        if (c1=="") return;
+        video_filename = c1;
+
+        MusicPlayer.Cancel()
+        timer=window.setTimeout("video_play()",2000)
+    }
+    function video_play(fn) {
+        var mName = mPath + video_filename;
+        MusicPlayer.Open(mName)
+    }
+
+    var mPath = NetShowServer + "";
+    function winSizer(){
+        windowWidth = window.screen.availWidth;
+        windowHeight = window.screen.availHeight;
+        window.moveTo(0,0);
+        window.resizeTo(windowWidth,windowHeight);
+    }
+
+    //-->
+</script>
+
+
+<object classid="clsid:CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA" name="player" width="373" height="290" align="absbottom" id="RAOCX">
+    <param name="_ExtentX" value="9869">
+    <param name="_ExtentY" value="7726">
+    <param name="AUTOSTART" value="-1">
+    <param name="SHUFFLE" value="0">
+    <param name="PREFETCH" value="0">
+    <param name="NOLABELS" value="-1">
+    <param name="SRC" value="books/media/movie/科技探索/B0005.rmvb">
+    <param name="CONTROLS" value="Imagewindow">
+    <param name="CONSOLE" value="clip1">
+    <param name="LOOP" value="0">
+    <param name="NUMLOOP" value="0">
+    <param name="CENTER" value="0">
+    <param name="MAINTAINASPECT" value="0">
+    <param name="BACKGROUNDCOLOR" value="#000000">
+</object><br>
+<object ID="RP2" CLASSID="clsid:CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA" WIDTH="373" HEIGHT="50">
+    <param name="_ExtentX" value="9869">
+    <param name="_ExtentY" value="741">
+    <param name="AUTOSTART" value="-1">
+    <param name="SHUFFLE" value="0">
+    <param name="PREFETCH" value="0">
+    <param name="NOLABELS" value="-1">
+    <param name="SRC" value="books/media/movie/科技探索/B0005.rmvb">
+    <param name="CONTROLS" value="ControlPanel,StatusBar">
+    <param name="CONSOLE" value="clip1">
+    <param name="LOOP" value="0">
+    <param name="NUMLOOP" value="0">
+    <param name="CENTER" value="0">
+    <param name="MAINTAINASPECT" value="0">
+    <param name="BACKGROUNDCOLOR" value="#000000"></object>
+<br>
+<a href="#" title="全屏幕欣赏，按ESC键还原。" style="color:#FFFFFF;font-size:12px" onclick=SetFullScreen()>全屏播放</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:shutwin();" style="color:#FFFFFF;font-size:12px">关闭窗口</a>
+
+<title>向火星进军</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<style type="text/css">
+    <!--
+    body {
+        background-color: #333333;
+    }
+    -->
+</style><BODY topmargin="0">
+
+<br>
+
+
+</BODY>

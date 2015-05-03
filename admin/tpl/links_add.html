@@ -1,0 +1,24 @@
+<body style="background: white;">
+<div id="tab1" class="tabcontent">
+    <h3>{if $one_info}修改{else}新增{/if}友情链接</h3>
+
+    <form method="post" action="/admin/links/dochange">
+        <div class="form">
+    <input name="links_id" type="hidden" value="{$one_info.links_id}">
+            <div class="form_row">
+                <label>链接名称：</label>
+                <input type="text" class="form_input" name="links_name" value="{$one_info.links_name}"/>
+            </div>
+            <div class="form_row">
+                <label>链接地址：</label>
+                <input type="text" class="form_input" name="links_url" value="{$one_info.links_url}" />
+            </div>
+            <div class="form_row">
+                <input type="submit" class="form_submit" value="Submit"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

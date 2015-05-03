@@ -104,6 +104,12 @@ class Book extends Mode{
         if(isset($info['book_classification_word'])&&$info['book_classification_word']){
             $where.=' AND book_classification_word ="'.$info['book_classification_word'].'"';
         }
+        if(isset($info['book_id'])&&$info['book_id']){
+            $where.=' AND book_id IN ('.$info['book_id'].')';
+        }
+        if(isset($info['category_extend_id'])&&$info['category_extend_id']){
+            $where.=' AND category_extend_id ='.$info['category_extend_id'];
+        }
         return $where;
     }
 
@@ -126,14 +132,28 @@ class Book extends Mode{
      */
     function indexSearch($type,$value){
         switch($type){
-            case 'name':
+            case '1':
                 $data['book_name']=$value;
                 break;
-            case 'author':
+            case '2':
                 $data['book_author']=$value;
                 break;
-            case 'class':
+            case '3':
                 $data['book_classification']=$value;
+                break;
+            case '4':
+                $str_sql='SELECT book_id FROM bdei_book_extend WHERE book_key_words LIKE "%'.$value.'%"';
+                $info=$this->_db->doSelect($str_sql);
+                $info=Arrays::downArray($info,'book_id');
+                if($info)
+                $data['book_id']=join(',',$info);
+                break;
+            case '5':
+                $str_sql='SELECT book_id FROM bdei_book_extend WHERE book_keyword LIKE "%'.$value.'%"';
+                $info=$this->_db->doSelect($str_sql);
+                $info=Arrays::downArray($info,'book_id');
+                if($info)
+                    $data['book_id']=join(',',$info);
                 break;
             default : $data['book_name']=$value;
                 break;
@@ -146,9 +166,16 @@ class Book extends Mode{
      * @param $word
      * @return mixed
      */
-    function getAZlist($word){
+    function getAZlist($word,$hot='',$limit=''){
+        $info=array();
+        if($word)
         $info=array('book_classification_word'=>$word);
-        return $this->getIndexList($info);
+        $info['category_id']=1;
+        $order_by='';
+        if($hot){
+            $order_by=' read_number DESC';
+        }
+        return $this->getIndexList($info,$order_by,$limit);
     }
     function getNameById($id){
         $info=$this->getOne($id);
@@ -177,6 +204,12 @@ class Book extends Mode{
      */
     static function getSoundType(){
         return array(1=>'古典诗词曲赋',2=>'中国历史典故',3=>'中国古典文学',4=>'中国近代美文',5=>'世界文学大系',6=>'中外科幻文化',7=>'中外经典童话',8=>'中外侦探小说');
+    }
+    static function getSoundTypeImage(){
+        return array(1=>'1(1).jpg',2=>'2(1).jpg',3=>'3(1).jpg',4=>'4(1).jpg',5=>'5(1).jpg',6=>'6(1).jpg',7=>'7(1).jpg',8=>'8(1).jpg');
+    }
+    static function getVideoTypeImage(){
+        return array(1=>'1(2).jpg',2=>'2(2).jpg',3=>'3(2).jpg',4=>'4(2).jpg',5=>'5(2).jpg',6=>'6(2).jpg',7=>'7(2).jpg',8=>'8(2).jpg');
     }
 
     /**
@@ -208,5 +241,17 @@ class Book extends Mode{
         $data['X']='环境、安全科学';
         $data['Z']='综合性图书';
         return $data;
+    }
+    function getTotal(){
+        $str_sql='SELECT category_id,COUNT(book_id) as count_total FROM bdei_book GROUP BY category_id';
+        $info=$this->_db->doSelect($str_sql);
+        $type=$this->getBookType();
+        $total=0;
+        foreach($info as $value){
+            $return[$value['category_id']]=array('total'=>$value['count_total'],'name'=>$type[$value['category_id']]);
+            $total+=$value['count_total'];
+        }
+        $return['total']=$total;
+        return $return;
     }
 }

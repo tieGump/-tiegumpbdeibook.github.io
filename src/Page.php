@@ -28,7 +28,7 @@ class Page{
     public function get(){
         $str_sql=$this->_str_sql.' LIMIT '.(($this->_page-1)*$this->_page_num).','.$this->_page_num;
         $return['info']=$this->_db->doSelect($str_sql);
-        $return['page']=$this->createArrayList();
+        $return['page']=IS_ADMIN?$this->createArrayList():$this->createIndex();
         return $return;
     }
 
@@ -107,6 +107,53 @@ class Page{
             $str_return.='<li class="next"><a href="'.$this->getUrl($this->_page+1).'" class="next">后一页&nbsp;&gt;</a></li>';
         }
         return '<ul id="pagination-clean">'.$str_return.'</ul>';
+    }
+    function createIndex(){
+        $str_return=array();
+        if($this->_page_cout<2){//返回空
+            return;
+        }elseif($this->_page_cout>1&&$this->_page_cout<=$this->_str_len){//不存在省略号的结果
+            for($i=1;$i<=$this->_page_cout;$i++){
+                $str_return[]=array('url'=>$this->getUrl($i),'page'=>$i,'checked'=>$this->_page==$i?true:false);
+            }
+        }else{//存在省略号的结果
+            $arr=$this->countBeginEnd();
+            for($i=$arr['begin'];$i<=$arr['end'];$i++){
+                $str_return[]=array('url'=>$this->getUrl($i),'page'=>$i,'checked'=>$this->_page==$i?true:false);
+            }
+            switch ($arr['place']){
+                case 'front' :
+                    $str_return[]=array('url'=>'','page'=>'','checked'=>'');
+                    break;
+                case 'mid':
+                    $str_return[]=array('url'=>'','page'=>'','checked'=>'');
+                    array_unshift($str_return,array('url'=>'','page'=>'','checked'=>''));
+                    break;
+                case 'behind':
+                    array_unshift($str_return,array('url'=>'','page'=>'','checked'=>''));
+                    break;
+                default: new Exception('生成页面的分页信息的时候有错');
+            }
+        }
+
+        //添加前一一页，下一页
+        if($this->_page==1)
+            $return['previous']=array('url'=>'','page'=>'&lt;&nbsp;前一页','checked'=>true);
+        else
+            $return['previous']=array('url'=>$this->getUrl($this->_page-1),'page'=>'&lt;&nbsp;前一页','checked'=>false);
+        if($this->_page==$this->_page_cout){
+            $return['next']=array('url'=>'','page'=>'后一页&nbsp;&gt;','checked'=>true);
+        }else{
+            $return['next']=array('url'=>$this->getUrl($this->_page+1),'page'=>'后一页&nbsp;&gt;','checked'=>false);
+        }
+        $return['page_begin']=array('url'=>$this->getUrl(1),'page'=>'首页','checked'=>false);
+        $return['page_end']=array('url'=>$this->getUrl($this->_page_cout),'page'=>'尾页','checked'=>false);
+        $return['page_info']=$str_return;
+        $return['page']=$this->_page;
+        $return['page_total']=$this->_page_cout;
+        $return['row_number']=$this->_row_num;
+        $return['page_per_number']=$this->_page_num;
+        return $return;
     }
 
     /**计算开始结束的标记

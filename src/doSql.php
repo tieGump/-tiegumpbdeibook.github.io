@@ -67,8 +67,12 @@ class doSql
         if ($value) {
             $this->_optimize[] = $table;
             $str_sql = 'INSERT INTO ' . $table . ' SET ' . $value;
-            $this->query($str_sql);
-            return $this->getInsertId();
+            if($this->query($str_sql)){
+                return $this->getInsertId();
+            }else{
+                return false;
+            }
+
         }
     }
 
@@ -141,8 +145,8 @@ class doSql
     {
         $hand = mysql_query($str_sql, $this->_db_hand);
         if ($error = mysql_error()) {
-            echo $str_sql.'<br />'.$error;
-            exit;
+            trigger_error($str_sql."\r\n".$error);
+            return false;
         } else {
             return $hand;
         }

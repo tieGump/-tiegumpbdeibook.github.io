@@ -113,6 +113,18 @@ abstract class Mode
     }
 
     /**
+     * 获取列表
+     * @param string $limit
+     * @return array
+     */
+    function getList($limit=''){
+        $str_sql='SELECT '.$this->_fields.' FROM '.$this->_table;
+        if($limit){
+            $str_sql.=' LIMIT '.(int)$limit;
+        }
+        return $this->_db->doSelect($str_sql);
+    }
+    /**
      * 检查isset
      * @param $checkInfo
      * @return bool

@@ -1,0 +1,81 @@
+<style>
+    <!--
+    .c {  font-family: '宋体'; font-size: 9pt; font-style: normal; line-height: 12pt; font-weight: normal; font-variant: normal; text-decoration: none }
+    -->
+</style>
+<script language="JavaScript">
+    // document.oncontextmenu=new Function("event.returnValue=false;"); //禁止右键功能,单击右键将无任何反应
+
+</script>
+<script type="text/javascript">
+    function checks()
+    {
+        if (zhaohui.pass.value=="")
+        {
+            alert("密码不能为空,请重新输入。");
+            document.zhaohui.pass.focus();
+            return false;
+        }
+        if (zhaohui.pass.value.length < 6)
+        {
+            alert("密码不能少于6个字符!");
+            zhaohui.pass.focus();
+            return false;
+        }
+        if (zhaohui.pass.value !=zhaohui.rpass.value)
+        {
+            alert("两次密码不相同,请重新输入。");
+            document.zhaohui.rpass.focus();
+            return false;
+        }
+        return true;
+    }
+</script>
+
+
+<body topmargin="0" leftmargin="0" rightmargin="00" bottommargin="0" marginwidth="0" marginheight="0">
+
+<form action="/login/changePassword" method="POST" name="zhaohui" id="zhaohui" onSubmit="return checks();">
+    <div align="center">
+        <center>
+            <center>
+
+                <p align="center">　</p>
+                <p align="center"><font style="font-size: 9pt">取回密码 - 最后一步</font></p>
+                <table border="0" cellspacing="1" cellpadding="0" width="554" height="64" bgcolor="#DADADA" style="font-size: 9pt; font-family: 宋体" id="table1">
+                    <tr>
+                        <td width="143" height="25" bgcolor="#EBEBEB">
+                            <p align="right"><font size="2" class="c">您的用户名是&nbsp; </font></p>
+                        </td>
+                        <td height="25" bgcolor="#FFFFFF">
+                            &nbsp;test
+                            <input type="hidden" name="name" size="27" maxlength="27" value="test"></td>
+                    </tr>
+                    <tr>
+                        <td width="143" height="25" bgcolor="#EBEBEB">
+                            <p align="right">请输入您的新密码&nbsp; </p>
+                        </td>
+                        <td height="25" bgcolor="#FFFFFF">
+                            &nbsp;<input type="password" name="pass" size="27" maxlength="16" style="font-size: 9pt; color: #000000; padding-top: 3px">
+                            <font size="2" class="c"><font color="#CC0000"> **</font></font>
+                            (请牢记您的密码！切勿再忘！)
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td width="143" height="25" bgcolor="#EBEBEB">
+                            <p align="right">请确认您的新密码&nbsp; </p>
+                        </td>
+                        <td height="25" bgcolor="#FFFFFF">
+                            &nbsp;<input type="password" name="rpass" size="27" maxlength="16" style="font-size: 9pt; color: #000000; padding-top: 3px">
+                            <font size="2" class="c"><font color="#CC0000"> **</font></font>
+                            (请仔细确认！) </td>
+                    </tr>
+                </table>
+                <br>
+
+                <font size="3" class="c" color="#000000">
+                    <input type="submit" name="Submit" value="确认" style="font-size: 9pt; color: #000000; padding-top: 3px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></center>
+        </center>
+    </div></form>
+
+<p>

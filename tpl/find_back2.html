@@ -1,0 +1,70 @@
+
+<script language="JavaScript">
+    //document.oncontextmenu=new Function("event.returnValue=false;"); //禁止右键功能,单击右键将无任何反应
+
+</script>
+
+<html>
+<head>
+    <title>取回密码 - 第二步</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        <!--
+        body,table { font-size: 9pt; font-family: '宋体' }
+        input {  font-size: 9pt; color: #000000;  padding-top: 3px }
+        .c {  font-family: '宋体'; font-size: 9pt; font-style: normal; line-height: 12pt; font-weight: normal; font-variant: normal; text-decoration: none }
+        --></style>
+</head>
+
+<body text="#000000" link="#000080" alink="#800000" vlink="#000080" topmargin="0" leftmargin="0" bgcolor="#FFFFFF">
+
+<form action="/login/findPasswordThree" method="POST">
+    <ul>
+        <div align="center" >
+            <center>
+                <center>
+
+                    <p align="center">　</p>
+                    <p align="center">取回密码 - 第二步</p>
+                    <table border="0" cellspacing="1" cellpadding="0" width="554" height="64" bgcolor="#DADADA" style="font-size: 9pt; font-family: 宋体" id="table1">
+                        <tr>
+                            <td width="143" height="25" bgcolor="#EBEBEB">
+                                <p align="right"><font size="2" class="c">您的用户名是&nbsp; </font></p>
+                            </td>
+                            <td height="25" bgcolor="#FFFFFF">
+                                &nbsp;test
+                                <input type="hidden" name="name" size="27" maxlength="27" value="test "></td>
+                        </tr>
+                        <tr>
+                            <td width="143" height="25" bgcolor="#EBEBEB">
+                                <p align="right">您的密码提示问题是&nbsp; </p>
+                            </td>
+                            <td height="25" bgcolor="#FFFFFF">
+                                {$question}</td>
+                        </tr>
+                        <tr>
+                            <td width="143" height="25" bgcolor="#EBEBEB">
+                                <p align="right">请输入您的提示答案&nbsp; </p>
+                            </td>
+                            <td height="25" bgcolor="#FFFFFF">
+                                &nbsp;<input type="text" name="aq" size="27" maxlength="27"><font size="2" class="c"><font color="#CC0000"> **</font></font>
+                                (例如：张三) </td>
+                        </tr>
+                    </table>
+                    <br>
+
+                    <br>
+
+                    <font size="3" class="c" color="#000000">
+                        <input type="submit" name="Submit" value="下一步">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></center>
+            </center>
+        </div>
+    </ul>
+    <p align="center">
+
+        <font size="3" class="c" color="#000000">
+            <input type="HIDDEN" name="action" value="RegSubmit">&nbsp; </font>
+</form>
+<p align="center">　</p>
+</body>
+</html>

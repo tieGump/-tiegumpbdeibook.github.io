@@ -50,7 +50,7 @@ abstract class Action {
             $str.='../';
         }
         $this->dir=$str;
-        $this->tpl=$str='tpl/';
+        $this->tpl='/tpl/';
     }
     /**实现魔术set函数 对data进行赋值
      * @param $name
@@ -63,13 +63,22 @@ abstract class Action {
         if($name=='tpl')
             return $this->_data[$name];
     }
-
+    function setSearchType(){
+        $this->search_book_type=Book::getSearchType();
+    }
     /**
      * 析构函数，实现smarty对模板赋值
      */
     function __destruct(){
+        $this->setSearchType();
+        if(!$this->_message->checkFirst()){
+            $this->_data['message']=$this->_message->getSessionMessage();
+            $this->_message->clearSessionMessage();
+        }else{
+            $this->_data['message']='';
+        }
         $file_name=str_replace('.html','',$this->_tpl);
-        if(is_file($this->tpl.'css/'.$file_name.'.css')){
+        if(is_file(TPL_DIR.'css/'.$file_name.'.css')){
             $this->_data['base_css']=$this->tpl.'css/'.$file_name.'.css';
         }
         $this->get=$_GET;

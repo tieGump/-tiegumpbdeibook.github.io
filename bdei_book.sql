@@ -305,3 +305,30 @@ MODIFY COLUMN `category_id`  tinyint(1) NULL DEFAULT NULL AFTER `book_author`,
 ADD COLUMN `category_extend_id`  tinyint(1) NULL AFTER `category_id`;
 
 
+ALTER TABLE `bdei_user`
+MODIFY COLUMN `user_pwd`  char(2) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL AFTER `user_nick`,
+MODIFY COLUMN `user_sex`  char(1) NULL DEFAULT NULL AFTER `user_pwd`;
+
+ALTER TABLE `bdei_user`
+ADD COLUMN `question`  varchar(200) NULL AFTER `group_id`,
+ADD COLUMN `answer`  varchar(200) NULL AFTER `question`;
+ALTER TABLE `bdei_user`
+ADD UNIQUE INDEX `unique_user_name` (`user_name`) ;
+
+CREATE TABLE `bdei_links` (
+`links_id`  tinyint(3) NULL AUTO_INCREMENT ,
+`links_name`  varchar(200) NULL ,
+`links_url`  varchar(200) NULL ,
+PRIMARY KEY (`links_id`)
+)
+;
+CREATE TABLE `bdei_soft` (
+`soft_id`  tinyint(3) NULL AUTO_INCREMENT ,
+`soft_name`  varchar(200) NULL ,
+`soft_pic`  varchar(200) NULL ,
+`soft_save_place`  varchar(200) NULL ,
+PRIMARY KEY (`soft_id`)
+)
+;
+
+

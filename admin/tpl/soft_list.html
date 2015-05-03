@@ -1,0 +1,33 @@
+
+<body style="background: white;">
+<h1>软件下载管理</h1>
+{$message}
+    <h2>列表</h2><a href="/admin/soft/add" class="button green">新增</a>
+    <table id="rounded-corner">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>软件名称</th>
+            <th>软件地址</th>
+            <th>软件图片</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {foreach from=$soft_list item=v key=k}
+        <tr class="{if $k%2 eq 0}odd{else}even{/if}">
+            <td>{$v.soft_id}</td>
+            <td>{$v.soft_name}</td>
+            <td>{$v.soft_save_place}</td>
+            <td>{$v.soft_pic}</td>
+            <td><a href="/admin/soft/edit/soft_id/{$v.soft_id}"><img src="{$tpl}resources/images/edit.png" alt="" title="" border="0" /></a></td>
+            <td><a href="/admin/soft/delete/soft_id/{$v.soft_id}" onclick="if(confirm('您确定要删除吗？'))return true;else return false;"><img src="{$tpl}resources/images/trash.gif" alt="" title="" border="0" /></a></td>
+        </tr>
+        {/foreach}
+
+        </tbody>
+    </table>
+</body>
+</html>

@@ -14,12 +14,14 @@ class Cop {
      */
     static public function start(){
         //注册AUTOLOAD方法
-
+        date_default_timezone_set('Asia/Shanghai');
         spl_autoload_register('Cop::autoload');
         // 设定错误和异常处理
-        register_shutdown_function('Cop::fatalError');
-        set_error_handler('Cop::appError');
         set_exception_handler('Cop::appException');
+        set_error_handler('Cop::appError');
+        register_shutdown_function('Cop::fatalError');
+
+
         $info=self::getPathInfo();
         $mod=new $info['mod'];
         $action=$info['action'].'Action';
@@ -138,6 +140,7 @@ class Cop {
                 break;
             default:
                 $errorStr = "[$errno] $errstr ".$errfile." 第 $errline 行.";
+                self::halt($errorStr);
                 break;
         }
     }
@@ -145,6 +148,7 @@ class Cop {
     // 致命错误捕获
     static public function fatalError() {
         if ($e = error_get_last()) {
+
             switch($e['type']){
                 case E_ERROR:
                 case E_PARSE:
@@ -182,7 +186,10 @@ class Cop {
                 exit(iconv('UTF-8','gbk',$e['message']).PHP_EOL.'FILE: '.$e['file'].'('.$e['line'].')'.PHP_EOL.$e['trace']);
             }
         } else {
-
+            if(is_array($error)){
+                $error=join(';',$error);
+            }
+            file_put_contents(SRC_LOG.'runing.log',$error."\r\n",FILE_APPEND);
         }
     }
 

@@ -31,7 +31,7 @@ class BookAction extends Action{
     function editAction(){
         $book=new Book();
         $book_id=(int)$_GET['book_id'];
-        $this->book_info=$book->getOneInfo($book_id);
+        $this->book_info=$tmp=$book->getOneInfo($book_id);
         $this->upload_dir = UPLOAD_DIR;
         $this->book_type=Book::getBookType();
         $this->book_video_type=Book::getVideoType();
