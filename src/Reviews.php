@@ -16,7 +16,8 @@ class Reviews extends Mode{
         return $this->addOne($data);
     }
     function getUserList($user_id){
-        $info=$this->getList('',$user_id);
+        $str_sql='SELECT b.book_id,b.book_name,b.book_author,r.review_time,r.review_id FROM bdei_book b,bdei_review r WHERE b.book_id=r.book_id AND  r.user_id='.$user_id;
+        return $this->getPageList($str_sql);
         return $info;
     }
     function getBookList($book_id){

@@ -3,6 +3,8 @@
 .STYLE1 { FONT-SIZE: 12px }
 .STYLE9 { FONT-SIZE: 14px; FONT-WEIGHT: bold }
 A:link { COLOR: #ff6600; TEXT-DECORATION: none }
+.head_link A:link { COLOR: #ff6600; TEXT-DECORATION: none }
+.head_link A:visited { COLOR: #ff6600; TEXT-DECORATION: none }
 A:visited { COLOR: #ff6600; TEXT-DECORATION: none }
 A:hover { COLOR: #0066ff; TEXT-DECORATION: none }
 A:active { TEXT-DECORATION: none }

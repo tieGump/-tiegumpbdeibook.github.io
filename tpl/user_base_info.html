@@ -1,0 +1,223 @@
+{include file='head.html'}
+<STYLE type=text/css>TD IMG {
+    DISPLAY: block
+}
+
+A:visited {
+    COLOR: #333333; TEXT-DECORATION: none
+}
+.Pmenu {
+    FONT-SIZE: 14px; COLOR: #333333
+}
+.STYLE1 {
+    FONT-SIZE: 14px
+}
+A:link {
+    COLOR: #333333; TEXT-DECORATION: none
+}
+A:hover {
+    COLOR: #0099ff; TEXT-DECORATION: underline
+}
+A:active {
+    TEXT-DECORATION: none
+}
+</STYLE>
+<TABLE cellSpacing=0 cellPadding=0 width=940 align=center border=0><!-- fwtable fwsrc="perofmdlib.png" fwpage="页面 1" fwbase="Perofmdlib.gif" fwstyle="Dreamweaver" fwdocid = "289861556" fwnested="0" -->
+    <TBODY>
+    <TR>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=11
+                 height=1></TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=175
+                 height=1></TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=15
+                 height=1></TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=726
+                 height=1></TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=13
+                 height=1></TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+                 height=1></TD></TR>
+    <TR>
+        <TD rowSpan=2 colSpan=3><IMG id=Perofmdlib_r1_c1 border=0
+                                     name=Perofmdlib_r1_c1 alt="" src="{$tpl}images/Perofmdlib_r1_c11.gif"
+                                     width=201 height=31></TD>
+        <TD colSpan=2><IMG id=Perofmdlib_r1_c4 border=0 name=Perofmdlib_r1_c4
+                           alt="" src="{$tpl}images/Perofmdlib_r1_c4.gif" width=739 height=12></TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+                 height=12></TD></TR>
+    <TR>
+        <TD background={$tpl}images/Perofmdlib_r4_c2.gif rowSpan=4>
+            <TABLE height=499 cellSpacing=0 cellPadding=0 width=707 border=0>
+                <TBODY>
+                <TR>
+                    <TD vAlign=top width=701>
+                        <P><SPAN class=STYLE15>当前位置</SPAN><SPAN
+                                class=STYLE17>&gt;&gt;个人管理&gt;&gt;我的资料</SPAN><SPAN class=fl> </SPAN></P>
+                        <DIV class=fl>
+                            <HR style="COLOR: #6699ff" SIZE=1>
+                        </DIV>
+                        <TABLE height=246 width="100%" border=0>
+                            <TBODY>
+                            <TR>
+                                <TD height=242 vAlign=top>
+                                    <FORM id=checkreg onsubmit="return checks();" method=post
+                                          name=checkreg action=perof_zlsave.asp>
+                                        <TABLE height=168 cellSpacing=0 width=592 align=center border=0>
+                                            <TBODY>
+                                            <TR>
+                                                <TD width=76><SPAN class=STYLE17>姓名：</SPAN></TD>
+                                                <TD width=227><LABEL><INPUT tabIndex=1 id=readername
+                                                                            style="HEIGHT: 18px; WIDTH: 170px" maxLength=15 value=test
+                                                                            name=readername> <SPAN class=STYLE9>*</SPAN></LABEL></TD>
+                                                <TD class=STYLE17 width=80>性别：</TD>
+                                                <TD width=201><LABEL><SELECT tabIndex=2 id=sex
+                                                                             style="HEIGHT: 18px; WIDTH: 60px" name=sex>" <OPTION
+                                                        selected>男</OPTION><OPTION>女</OPTION></SELECT> <SPAN
+                                                        class=STYLE9>*</SPAN></LABEL></TD></TR>
+                                            <TR>
+                                                <TD class=STYLE17>登录密码：</TD>
+                                                <TD><LABEL><INPUT tabIndex=3 id=password
+                                                                  style="HEIGHT: 18px; WIDTH: 170px" maxLength=18 type=password
+                                                                  value=123456 name=password> <SPAN
+                                                        class=STYLE9>*</SPAN></LABEL></TD>
+                                                <TD class=STYLE17>重复密码：</TD>
+                                                <TD><LABEL><INPUT tabIndex=4 id=password2
+                                                                  style="HEIGHT: 18px; WIDTH: 170px" maxLength=18 type=password
+                                                                  value=123456 name=regtime> <SPAN
+                                                        class=STYLE9>*</SPAN></LABEL></TD></TR>
+                                            <TR>
+                                                <TD class=STYLE17>部门：</TD>
+                                                <TD><LABEL><INPUT tabIndex=5 id=department
+                                                                  style="HEIGHT: 18px; WIDTH: 170px" maxLength=15
+                                                                  name=department> </LABEL></TD>
+                                                <TD class=STYLE17>联系电话：</TD>
+                                                <TD><INPUT tabIndex=6 id=phone
+                                                           style="HEIGHT: 18px; WIDTH: 170px" maxLength=25
+                                                           name=phone></TD></TR>
+                                            <TR>
+                                                <TD class=STYLE17>生日：</TD>
+                                                <TD><LABEL><INPUT tabIndex=7 id=Birthday
+                                                                  style="HEIGHT: 18px; WIDTH: 170px" maxLength=15 name=Birthday>
+                                                </LABEL></TD>
+                                                <TD class=STYLE17>证件号码：</TD>
+                                                <TD><LABEL><INPUT tabIndex=8 id=zhenghao
+                                                                  style="HEIGHT: 18px; WIDTH: 170px" maxLength=20 name=zhenghao>
+                                                </LABEL></TD></TR>
+                                            <TR>
+                                                <TD class=STYLE17>联系地址：</TD>
+                                                <TD><LABEL><INPUT tabIndex=9 id=dizhi
+                                                                  style="HEIGHT: 18px; WIDTH: 170px" maxLength=35 name=dizhi>
+                                                </LABEL></TD>
+                                                <TD class=STYLE17>电子信箱：</TD>
+                                                <TD><LABEL><SPAN class=STYLE9><INPUT tabIndex=10 id=email
+                                                                                     style="HEIGHT: 18px; WIDTH: 170px" maxLength=25 name=email>
+                  </SPAN></LABEL></TD></TR>
+                                            <TR>
+                                                <TD class=STYLE17>提示问题：</TD>
+                                                <TD><LABEL><INPUT tabIndex=11 id=question
+                                                                  style="HEIGHT: 18px; WIDTH: 170px" maxLength=30 value=t
+                                                                  name=question> <SPAN class=STYLE9>*</SPAN></LABEL></TD>
+                                                <TD><LABEL class=STYLE17>问题答案：</LABEL></TD>
+                                                <TD><LABEL><INPUT tabIndex=12 id=answer
+                                                                  style="HEIGHT: 18px; WIDTH: 170px" maxLength=25 name=answer>
+                                                </LABEL></TD></TR>
+                                            <TR>
+                                                <TD>&nbsp;</TD>
+                                                <TD colSpan=3>
+                                                    <DIV align=right>
+                                                        <P align=left>&nbsp;</P>
+                                                        <P align=left><SPAN class=STYLE17><SPAN class=zztx><SPAN
+                                                                class=STYLE9>*</SPAN></SPAN>为必填项,为防止他人偷看到问题答案，答案将不显示，不更改请留空。</SPAN>
+                                                            <INPUT class=reg_input type=reset value=重置> <INPUT class=reg_input type=submit value=更新>
+                                                        </P></DIV></TD></TR></TBODY></TABLE>
+                                        <DIV class=fl>
+                                            <HR style="COLOR: #6699ff" SIZE=1>
+                                        </DIV>
+                                        <P>&nbsp;</P></FORM></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+        <TD background={$tpl}images/Perofmdlib_r2_c5.gif rowSpan=4>&nbsp;</TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+                 height=19></TD></TR>
+    <TR>
+        <TD background={$tpl}images/Perofmdlib_r5_c1.gif rowSpan=3>&nbsp;</TD>
+        <TD class=Pmenu vAlign=top background={$tpl}images/Perofmdlib_r4_c2.gif
+            rowSpan=3>
+            <TABLE borderColor=#ffffff height=197 cellSpacing=0 width=174 border=0>
+                <TBODY>
+                <TR>
+                    <TD height=8 colSpan=3>&nbsp;</TD></TR>
+                <TR>
+                    <TD width=25>&nbsp;</TD>
+                    <TD width=23>
+                        <DIV align=center><IMG src="{$tpl}images/gif_45_003.gif" width=20
+                                               height=20></DIV></TD>
+                    <TD width=120><A
+                            href="/user"
+                            target=_self>个人资料</A></TD></TR>
+                <TR>
+                    <TD>&nbsp;</TD>
+                    <TD>
+                        <DIV align=center><IMG src="{$tpl}images/gif_45_004.gif" width=20
+                                               height=20></DIV></TD>
+                    <TD><A
+                            href="/user/bookmark">书签管理</A></TD></TR>
+                <TR>
+                    <TD>&nbsp;</TD>
+                    <TD>
+                        <DIV align=center><IMG src="{$tpl}images/gif_45_017.gif" width=20
+                                               height=20></DIV></TD>
+                    <TD><A
+                            href="/user/reviews">个人评论</A></TD></TR>
+                <TR>
+                    <TD>&nbsp;</TD>
+                    <TD>
+                        <DIV align=center><IMG src="{$tpl}images/13.gif" width=20
+                                               height=20></DIV></TD>
+                    <TD><A
+                            href="/user/readHistory">浏览历史</A></TD></TR>
+                <TR>
+                    <TD>&nbsp;</TD>
+                    <TD class=Pmenu>
+                        <DIV align=center><IMG src="{$tpl}images/gif_46_108.gif" width=20
+                                               height=20></DIV></TD>
+                    <TD><A
+                            href="/user/searchHistory">查询记录</A></TD></TR>
+                <TR>
+                    <TD>&nbsp;</TD>
+                    <TD>
+                        <DIV align=center><IMG src="{$tpl}images/gif_45_031.gif" width=20
+                                               height=20></DIV></TD>
+                    <TD><SPAN class=STYLE1><A
+                            href="/login/off"
+                            target=_self>注销登陆</A></SPAN></TD></TR>
+                <TR>
+                    <TD height=17>&nbsp;</TD>
+                    <TD>&nbsp;</TD>
+                    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P></TD>
+        <TD background={$tpl}images/Perofmdlib_r5_c3.gif rowSpan=2>&nbsp;</TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+                 height=165></TD></TR>
+    <TR>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+                 height=76></TD></TR>
+    <TR>
+        <TD background={$tpl}images/Perofmdlib_r5_c3.gif>&nbsp;</TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+                 height=11></TD></TR>
+    <TR>
+        <TD><IMG id=Perofmdlib_r6_c1 border=0 name=Perofmdlib_r6_c1 alt=""
+                 src="{$tpl}images/Perofmdlib_r6_c1.gif" width=11 height=17></TD>
+        <TD><IMG id=Perofmdlib_r6_c2 border=0 name=Perofmdlib_r6_c2 alt=""
+                 src="{$tpl}images/Perofmdlib_r6_c2.gif" width=175 height=17></TD>
+        <TD><IMG id=Perofmdlib_r6_c3 border=0 name=Perofmdlib_r6_c3 alt=""
+                 src="{$tpl}images/Perofmdlib_r6_c3.gif" width=15 height=17></TD>
+        <TD><IMG id=Perofmdlib_r6_c4 border=0 name=Perofmdlib_r6_c4 alt=""
+                 src="{$tpl}images/Perofmdlib_r6_c4.gif" width=726 height=17></TD>
+        <TD><IMG id=Perofmdlib_r6_c5 border=0 name=Perofmdlib_r6_c5 alt=""
+                 src="{$tpl}images/Perofmdlib_r6_c5.gif" width=13 height=17></TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+                 height=17></TD></TR></TBODY></TABLE>
+{include file='foot.html'}
