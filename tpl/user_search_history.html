@@ -1,0 +1,207 @@
+{include file='head.html'}
+<STYLE type=text/css>TD IMG {
+    DISPLAY: block
+}
+
+A:visited {
+    COLOR: #333333; TEXT-DECORATION: none
+}
+.Pmenu {
+    FONT-SIZE: 14px; COLOR: #333333
+}
+.STYLE1 {
+    FONT-SIZE: 14px
+}
+A:link {
+    COLOR: #333333; TEXT-DECORATION: none
+}
+A:hover {
+    COLOR: #0099ff; TEXT-DECORATION: underline
+}
+A:active {
+    TEXT-DECORATION: none
+}
+</STYLE>
+<TABLE cellSpacing=0 cellPadding=0 width=940 align=center border=0><!-- fwtable fwsrc="perofmdlib.png" fwpage="页面 1" fwbase="Perofmdlib.gif" fwstyle="Dreamweaver" fwdocid = "289861556" fwnested="0" -->
+    <TBODY>
+    <TR>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=11
+                 height=1></TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=175
+                 height=1></TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=15
+                 height=1></TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=726
+                 height=1></TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=13
+                 height=1></TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+                 height=1></TD></TR>
+    <TR>
+        <TD rowSpan=2 colSpan=3><IMG id=Perofmdlib_r1_c1 border=0
+                                     name=Perofmdlib_r1_c1 alt="" src="{$tpl}images/Perofmdlib_r1_c11.gif"
+                                     width=201 height=31></TD>
+        <TD colSpan=2><IMG id=Perofmdlib_r1_c4 border=0 name=Perofmdlib_r1_c4
+                           alt="" src="{$tpl}images/Perofmdlib_r1_c4.gif" width=739 height=12></TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+                 height=12></TD></TR>
+    <TR>
+        <TD background={$tpl}images/Perofmdlib_r4_c2.gif rowSpan=4>
+            <TABLE height=499 cellSpacing=0 cellPadding=0 width=707 border=0>
+                <TBODY>
+                <TR>
+                    <TD vAlign=top width=701>
+                        <P><SPAN class=STYLE15>当前位置</SPAN><SPAN
+                                class=STYLE17>&gt;&gt;个人管理&gt;&gt;历史查询记录</SPAN><SPAN class=fl> </SPAN></P>
+                        <DIV class=fl>
+                            <TABLE cellSpacing=0 cellPadding=2 width=667 align=center border=0>
+                                <TBODY>
+                                <TR>
+                                    <TD class=STYLE1 height=12 vAlign=bottom
+                                        width=236>共有4条记录，共1页，目前为第<FONT color=#cc0000>1</FONT>页</TD>
+                                    <TD height=12 vAlign=bottom width=425 align=right>
+                                        <DIV align=right>
+                                            <DIV align=right><SPAN class=STYLE8>&nbsp;<A
+                                                    href="http://210.79.110.128:8081/mysearch.asp?Curpage=1">[刷新]</A>&nbsp;<A
+                                                    href="http://210.79.110.128:8081/mysearch.asp?Curpage=0">[上一页]</A>&nbsp;<A
+                                                    href="http://210.79.110.128:8081/mysearch.asp?Curpage=2">[下一页]</A>&nbsp;<A
+                                                    href="http://210.79.110.128:8081/mysearch.asp?Curpage=1">[首页]</A>&nbsp;<A
+                                                    href="http://210.79.110.128:8081/mysearch.asp?Curpage=1#ok">[尾页]</A></SPAN></DIV><SPAN
+                                                class=STYLE8><A
+                                                href="http://210.79.110.128:8081/mysearch.asp?Curpage=1"></A></SPAN></DIV></TD></TR></TBODY></TABLE>
+                            <HR style="COLOR: #6699ff" SIZE=1>
+
+                            <TABLE borderColor=#000000 cellSpacing=0 borderColorDark=#ffffff
+                                   cellPadding=1 width=668 align=center borderColorLight=#000000 border=1>
+                                <TBODY>
+                                <TR>
+                                    <TD class=orangeb height=8 width="10%">
+                                        <DIV class="orangeb STYLE1" align=center>编号</DIV></TD>
+                                    <TD class=orangeb height=8 width="41%">
+                                        <DIV class=STYLE11 align=center>关键字</DIV></TD>
+                                    <TD class=orangeb width="20%">
+                                        <DIV align=center><STRONG class=STYLE11>搜索日期</STRONG></DIV></TD>
+                                    <TD class=orangeb height=8 width="20%">
+                                        <DIV class=STYLE11 align=center>操作IP地址</DIV></TD>
+                                    <TD class=orangeb height=8 width="9%">
+                                        <DIV class=STYLE11 align=center><STRONG>操作</STRONG></DIV></TD></TR>
+                                {foreach from=$search_history_list.info item=v}
+                                <TR>
+                                    <TD height=8 width="10%">
+                                        <DIV class=zl align=left>{$v.search_id} </DIV></TD>
+                                    <TD height=8 width="41%">
+                                        <DIV align=center>
+                                            <DIV class=zl align=left>{$v.search_value}&nbsp;</DIV></DIV></TD>
+                                    <TD height=8 width="20%"><SPAN class=zl>{$v.search_time}</SPAN></TD>
+                                    <TD height=8 width="20%">
+                                        <DIV align=center>
+                                            <DIV class=zl align=center>&nbsp;{$v.ip}</DIV></DIV></TD>
+                                    <TD height=8>
+                                        <DIV align=center><A
+                                                href="/user/deleteSearchHistory/s_h_id/{$v.search_id}"
+                                                target=_blank><IMG border=0 src="{$tpl}images/Del.gif" width=50
+                                                                   height=20></A></DIV></TD></TR>
+                                {/foreach}
+                                </TBODY></TABLE></DIV><A
+                            href="http://210.79.110.128:8081/alldown.asp?id=" target=_self></A>
+                        <HR style="COLOR: #6699ff" SIZE=1>
+
+                        <TABLE cellSpacing=0 cellPadding=3 width=660 align=center border=0>
+                            <TBODY>
+                            <TR>
+                                <TD class=STYLE1 width=148>页次:<FONT
+                                        color=#cc0000>1</FONT>/1,每页:<FONT color=#cc0000>8</FONT>条 </TD>
+                                <TD class=STYLE1 width=500 align=right>页数：<A
+                                        href="http://210.79.110.128:8081/mysearch.asp?Curpage=0">&lt;&lt;</A>
+                                    <FONT color=#cc0000><B>1</B></FONT> </TD></TR></TBODY></TABLE>　
+                        <TABLE width="100%" border=0>
+                            <TBODY>
+                            <TR>
+                                <TD>&nbsp;</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+        <TD background={$tpl}images/Perofmdlib_r2_c5.gif rowSpan=4>&nbsp;</TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+                 height=19></TD></TR>
+    <TR>
+        <TD background={$tpl}images/Perofmdlib_r5_c1.gif rowSpan=3>&nbsp;</TD>
+        <TD class=Pmenu vAlign=top background={$tpl}images/Perofmdlib_r4_c2.gif
+            rowSpan=3>
+            <TABLE borderColor=#ffffff height=197 cellSpacing=0 width=174 border=0>
+                <TBODY>
+                <TR>
+                    <TD height=8 colSpan=3>&nbsp;</TD></TR>
+                <TR>
+                    <TD width=25>&nbsp;</TD>
+                    <TD width=23>
+                        <DIV align=center><IMG src="{$tpl}images/gif_45_003.gif" width=20
+                                               height=20></DIV></TD>
+                    <TD width=120><A
+                            href="/user"
+                            target=_self>个人资料</A></TD></TR>
+                <TR>
+                    <TD>&nbsp;</TD>
+                    <TD>
+                        <DIV align=center><IMG src="{$tpl}images/gif_45_004.gif" width=20
+                                               height=20></DIV></TD>
+                    <TD><A
+                            href="/user/bookmark">书签管理</A></TD></TR>
+                <TR>
+                    <TD>&nbsp;</TD>
+                    <TD>
+                        <DIV align=center><IMG src="{$tpl}images/gif_45_017.gif" width=20
+                                               height=20></DIV></TD>
+                    <TD><A
+                            href="/user/reviews">个人评论</A></TD></TR>
+                <TR>
+                    <TD>&nbsp;</TD>
+                    <TD>
+                        <DIV align=center><IMG src="{$tpl}images/13.gif" width=20
+                                               height=20></DIV></TD>
+                    <TD><A
+                            href="/user/readHistory">浏览历史</A></TD></TR>
+                <TR>
+                    <TD>&nbsp;</TD>
+                    <TD class=Pmenu>
+                        <DIV align=center><IMG src="{$tpl}images/gif_46_108.gif" width=20
+                                               height=20></DIV></TD>
+                    <TD><A
+                            href="/user/searchHistory">查询记录</A></TD></TR>
+                <TR>
+                    <TD>&nbsp;</TD>
+                    <TD>
+                        <DIV align=center><IMG src="{$tpl}images/gif_45_031.gif" width=20
+                                               height=20></DIV></TD>
+                    <TD><SPAN class=STYLE1><A
+                            href="/login/off"
+                            target=_self>注销登陆</A></SPAN></TD></TR>
+                <TR>
+                    <TD height=17>&nbsp;</TD>
+                    <TD>&nbsp;</TD>
+                    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P></TD>
+        <TD background={$tpl}images/Perofmdlib_r5_c3.gif rowSpan=2>&nbsp;</TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+                 height=165></TD></TR>
+    <TR>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+                 height=76></TD></TR>
+    <TR>
+        <TD background={$tpl}images/Perofmdlib_r5_c3.gif>&nbsp;</TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+                 height=11></TD></TR>
+    <TR>
+        <TD><IMG id=Perofmdlib_r6_c1 border=0 name=Perofmdlib_r6_c1 alt=""
+                 src="{$tpl}images/Perofmdlib_r6_c1.gif" width=11 height=17></TD>
+        <TD><IMG id=Perofmdlib_r6_c2 border=0 name=Perofmdlib_r6_c2 alt=""
+                 src="{$tpl}images/Perofmdlib_r6_c2.gif" width=175 height=17></TD>
+        <TD><IMG id=Perofmdlib_r6_c3 border=0 name=Perofmdlib_r6_c3 alt=""
+                 src="{$tpl}images/Perofmdlib_r6_c3.gif" width=15 height=17></TD>
+        <TD><IMG id=Perofmdlib_r6_c4 border=0 name=Perofmdlib_r6_c4 alt=""
+                 src="{$tpl}images/Perofmdlib_r6_c4.gif" width=726 height=17></TD>
+        <TD><IMG id=Perofmdlib_r6_c5 border=0 name=Perofmdlib_r6_c5 alt=""
+                 src="{$tpl}images/Perofmdlib_r6_c5.gif" width=13 height=17></TD>
+        <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
+                 height=17></TD></TR></TBODY></TABLE>
+{include file='foot.html'}

@@ -50,6 +50,7 @@ abstract class Action {
             $str.='../';
         }
         $this->dir=$str;
+        $this->tpl=$str=$str.'tpl/';
         $this->tpl='/tpl/';
     }
     /**实现魔术set函数 对data进行赋值

@@ -32,6 +32,7 @@
             <th>出版社</th>
             <th>加入日期</th>
             <th>类型</th>
+            <th>首页推荐</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
@@ -52,6 +53,12 @@
             <td>{$v.book_press}</td>
             <td>{$v.add_time}</td>
             <td>{$book_type[$v.category_id]}</td>
+            <td>
+                {if $v.index_show}<a href="/admin/book/setIndex/book_id/{$v.book_id}"><img src="{$tpl}resources/images/icon_status_red_light.gif" /></a><img src="{$tpl}resources/images/icon_status_green.gif" />
+                {else}
+                <img src="{$tpl}resources/images/icon_status_red.gif" /><a href="/admin/book/setIndex/book_id/{$v.book_id}"><img src="{$tpl}resources/images/icon_status_green_light.gif" /></a>
+                {/if}
+            </td>
             <td><a href="/admin/book/edit/book_id/{$v.book_id}"><img src="{$tpl}resources/images/edit.png" alt="" title="" border="0" /></a></td>
             <td><a href="/admin/book/delete/book_id/{$v.book_id}" onclick="if(confirm('您确定要删除吗？'))return true;else return false;"><img src="{$tpl}resources/images/trash.gif" alt="" title="" border="0" /></a></td>
         </tr>
