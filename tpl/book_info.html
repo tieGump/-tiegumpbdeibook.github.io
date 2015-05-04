@@ -1,4 +1,31 @@
 {include file="head.html"}
+<SCRIPT language=javascript>
+function winSizer(){
+	windowWidth = window.screen.availWidth;
+	windowHeight = window.screen.availHeight;
+	window.moveTo(0,0);
+	window.resizeTo(windowWidth,windowHeight);
+}
+
+function winopen(bookurl)
+{
+   newwin=window.open("","","scrollbars")
+   if (document.all)
+   {
+        newwin.moveTo(0,0)
+        newwin.resizeTo(screen.availWidth,screen.availHeight)
+    }
+    newwin.location=bookurl
+}
+
+  function   btnClick(btnName)   
+  {       
+  if   (event.keyCode==13)   
+  {   btnName.click();   
+      return   true;   
+  }   
+  }  
+</SCRIPT>
 <TABLE border=0 cellSpacing=0 cellPadding=0 width=940 align=center><!-- fwtable fwsrc="serch.png" fwpage="页面 1" fwbase="Bookminute.gif" fwstyle="Dreamweaver" fwdocid = "289861556" fwnested="0" -->
 <TBODY>
 <TR>
@@ -42,14 +69,14 @@
                     <TR>
                         <TD height=25 width=67><SPAN class=STYLE3>书名：</SPAN><BR></TD>
                         <TD class=STYLE1
-                            colSpan=4>&nbsp;ASP.NET.2.0.XML.高级编程(第3版)<BR></TD></TR>
+                            colSpan=4>{$book_info.book_name}<BR></TD></TR>
                     <TR>
                         <TD class=STYLE3 bgColor=#ffffd9 height=25 width=67>作者：</TD>
                         <TD class=STYLE1 bgColor=#ffffd9 height=25
-                            width=349>&nbsp;(美)Thiru Thangarathinam著；肖奕，曹俊译</TD>
+                            width=349>{$book_info.book_author}</TD>
                         <TD class=STYLE3 bgColor=#ffffd9 width=67>浏览次数：</TD>
                         <TD class=STYLE1 bgColor=#ffffd9 width=56><SPAN
-                                class=STYLE1>&nbsp;14</SPAN></TD>
+                                class=STYLE1>{$v.read_number}</SPAN></TD>
                         <TD class=STYLE1 rowSpan=6 width=152>
                             <TABLE border=0 width=120>
                                 <TBODY>
@@ -60,67 +87,42 @@
                                             <TBODY>
                                             <TR>
                                                 <TD vAlign=center align=middle><IMG border=1
-                                                                                    src="{$tpl}images/1.ASP.NET.2.0.XML.高级编程(第3版).jpg"
+                                                                                    src="{$book_info.book_cover}"
                                                                                     width=120 height=140> </TD></TR></TBODY></TABLE></TD>
-                                    <TD width=17>&nbsp;</TD></TR></TBODY></TABLE><A
-                                href="http://210.79.110.128:8081/ArticleShow.asp?ArticleID=1"></A></TD></TR>
+                                    <TD width=17>&nbsp;</TD></TR></TBODY></TABLE></TD></TR>
                     <TR>
                         <TD class=STYLE3 height=25 width=67>ISBN：</TD>
-                        <TD class=STYLE1 height=23>&nbsp;7-302-13214-3</TD>
+                        <TD class=STYLE1 height=23>{$book_info.book_isbn}</TD>
                         <TD class=STYLE3 height=23>资源格式：</TD>
-                        <TD class=STYLE1 height=23>&nbsp;PDF</TD></TR>
+                        <TD class=STYLE1 height=23>{$book_info.book_type}</TD></TR>
                     <TR bgColor=#ffffd9>
                         <TD class=STYLE3 height=25 width=67>出版社：</TD>
                         <TD class=STYLE1 height=2><SPAN
-                                class=STYLE1>&nbsp;清华大学出版社</SPAN></TD>
+                                class=STYLE1>{$book_info.book_press}</SPAN></TD>
                         <TD class=STYLE3 height=2>分类号：</TD>
                         <TD class=STYLE1 height=2><SPAN
-                                class=STYLE1>&nbsp;TP393.09</SPAN></TD></TR>
+                                class=STYLE1>{$book_info.book_classification}</SPAN></TD></TR>
                     <TR>
                         <TD class=STYLE3 height=25 width=67>关键字：</TD>
                         <TD class=STYLE1 height=17 colSpan=3><SPAN
-                                class=STYLE1>&nbsp;</SPAN></TD></TR>
+                                class=STYLE1>{$book_info.book_keyword};</SPAN></TD></TR>
                     <TR>
                         <TD class=STYLE3 bgColor=#ffffd9 height=25 width=67>主题词：</TD>
                         <TD class=STYLE1 bgColor=#ffffd9 height=22 colSpan=3><SPAN
-                                class=STYLE1>&nbsp;</SPAN></TD></TR>
+                                class=STYLE1>{$book_info.book_key_words}</SPAN></TD></TR>
                     <TR>
                         <TD height=25 width=67 &nbsp;>
                             <P class=STYLE3>加入日期：</P></TD>
                         <TD class=STYLE1 height=22 colSpan=3><SPAN
-                                class=STYLE1>&nbsp;2009/4/5</SPAN></TD></TR>
+                                class=STYLE1>{$book_info.add_time}</SPAN></TD></TR>
                     <TR>
                         <TD class=STYLE3 bgColor=#ffffd9 height=25 width=67>目录：</TD>
                         <TD class=STYLE1 bgColor=#ffffd9 height=2 width=630
-                            colSpan=4><SPAN class=STYLE1>&nbsp;第1章 XML介绍　1.1 XML入门　　1.1.1
-                  自描述数据　　1.1.2 基本术语　　1.1.3 XML文档的组成部分　1.2 XML技术　　1.2.1 DTD 
-                  　　1.2.2 XDR 　　1.2.3 XSD 　　1.2.4 XSLT 　　1.2.5 XML DOM 　　1.2.6 
-                  XPath 　　1.2.7 SAX 　　1.2.8 XLink和XPointer 　　1.2.9 XQuery 　1.3 
-                  XML的优势　1.4 小结第2章 ASP.NET 2.0介绍　2.1 ASP.NET 2.0的功能　　2.1.1 
-                  开发人员的效率　　2.1.2 控制和管理　　2.1.3 速度和性能　2.2 小结第3章 .NET 
-                  Framework中的XML类　3.1 .NET Framework 2.0对XML的支持　　3.1.1 .NET 
-                  Framework 2.0对XML支持的设计目的　　3.1.2 XML命名空间　　3.1.3 XML解析　　3.1.4 
-                  编写XML 　　3.1.5 XPath支持　　3.1.6 XML模式对象模型　　3.1.7 理解XML验证　　3.1.8 
-                  用XSLT转换XML数据　　3.1.9 XML串行化　　3.1.10 XML Web服务　　3.1.11 
-                  XML和ADO.NET 　　3.1.12 ASP.NET配置　3.2 小结第4章 
-                  用XmlReader和XmlWriter读写XML数据　4.1 XML的读取器和书写器　4.2 
-                  使用XmlReader类读取XML 　　4.2.1 XmlReader简介　　4.2.2 
-                  使用XmlReader类读取XML数据的步骤　4.3 写入XML数据　4.4 小结第5章 XML数据验证　5.1 
-                  XML验证　　5.1.1 .NET Framework 2.0支持的验证类型　　5.1.2 
-                  使用XSD模式验证XML数据　　5.1.3 模式的缓存　　5.1.4 XML DOM验证　　5.1.5 
-                  使用内嵌模式验证XML 　　5.1.6 使用DTD 　　5.1.7 使用Visual Studio 
-                  2005创建XML模式　　5.1.8 .NET模式对象模型(SOM) 　　5.1.9 
-                  通过程序从XML文件推断XSD模式　…… 第7章 用XSLT转换XML数据第8章 XML和ADO.NET 第9章 
-                  显示XML数据第10章 SQL Server 2005的XML集成第11章 使用ASP.NET 2.0和SQL Server 
-                  2005构建飞机订票系统第12章 XML串行化第13章 XML Web服务第14章 ASP.NET 2.0配置第15章 
-                  用XML Web服务构建Shopping Assistant</SPAN></TD></TR>
+                            colSpan=4><SPAN class=STYLE1>{$book_info.book_catalog_desc}</SPAN></TD></TR>
                     <TR>
                         <TD class=STYLE3 height=23 width=67>内容介绍：</TD>
                         <TD class=STYLE1 height=0 width=630
-                            colSpan=4>&nbsp;本书是第一本综合介绍XML和ASP.NET
-                            2.0的书籍，讲述了XML的多种功能以及将其应用于Web应用程序开发的技巧。深入讲解了在.NET平台中实现XML的一些关键类，通过学习这些类，您将获得许多有价值的知识，包括XPath和XSLT、ADO.NET对XML的支持以及如何使用XML显示数据等。
-                            您还将学习更多有关SQL Server 2005的XML特性、XML串行化以及XML
-                            Web服务的知识。另外，还将学习如何使用XML提高应用程序的效率和性能。本书提供的两个有用示例演示了使用ASP.NET</TD></TR>
+                            colSpan=4>{$book_info.book_desc}</TD></TR>
                     <TR>
                         <TD class=STYLE3 height=0 colSpan=5>
                             <TABLE border=0 width="100%">
@@ -128,27 +130,27 @@
                                 <TR>
                                     <TD width="1%">&nbsp;</TD>
                                     <TD width="14%"><A
-                                            href="javascript:winopen('bookopen.asp?id=1')"><IMG
+                                            href="javascript:winopen('/book/read/book_id/{$book_info.book_id}')"><IMG
                                             border=0
                                             src="{$tpl}images/Readbook.gif"
                                             width=80 height=24></A></TD>
                                     <TD width="14%"><A
-                                            href="http://210.79.110.128:8081/addbookmark.asp?id=1"><IMG
+                                            href="/book/addBookMark/book_id/{$book_info.book_id}"><IMG
                                             border=0
                                             src="{$tpl}images/addSQ.gif"
                                             width=80 height=24></A></TD>
                                     <TD width="14%"><A
-                                            href="http://210.79.110.128:8081/library/mdlibjs.asp?bookname=ASP.NET.2.0.XML.高级编程(第3版)"><IMG
+                                            href="#"><IMG
                                             border=0
                                             src="{$tpl}images/Findpbook.gif"
                                             width=80 height=24></A></TD>
                                     <TD width="14%"><A
-                                            href="http://210.79.110.128:8081/Bookminute.asp?id=1#fbpl"><IMG
+                                            href="/book/info/book_id/{$info.book_id}#fbpl"><IMG
                                             border=0
                                             src="{$tpl}images/tocom.gif"
                                             width=80 height=24></A></TD>
                                     <TD width="43%"><A
-                                            href="javascript:window.external.addFavorite(window.location.href,'ASP.NET.2.0.XML.高级编程(第3版)--->详细信息');"><IMG
+                                            href="javascript:window.external.addFavorite(window.location.href,'{$book_info.book_name}');"><IMG
                                             border=0 alt=""
                                             src="{$tpl}images/AddFav.gif"
                                             width=80
@@ -163,10 +165,11 @@
 <TABLE border=0 cellSpacing=0 borderColorLight=#000000
        borderColorDark=#ffffff cellPadding=1 width="97%" align=right>
 <TBODY>
+{foreach from=$book_list item=v}
 <TR>
     <TD height=20>
         <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=7">C＃字符串和正则表达式参考
+                href="/book/info/book_id/{$v.book_id}">{$v.book_name}
         </A></DIV>
         <DIV class=STYLE16 align=center>
             <DIV align=left></DIV></DIV>
@@ -174,270 +177,8 @@
             <DIV align=center></DIV></DIV>
         <DIV align=center></DIV>
         <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=41">C＃字符串和正则表达式参考
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=61">Flash.ActionS
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=213">数字信号处理选择指南
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=8">Microsoft.C＃.
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=21">Windows应用高级编程
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=62">Flash8动画设计制作入
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=17">SQL.21.日自学通
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=5">C＃应用程序开发全程演练—
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=46">CorelDRAW11中文
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=4">C＃软件项目开发全程剖析—
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=6">C＃与.NET技术平台实战
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=3">C＃技术内幕
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=28">C＃编程思想
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=30">ActionScript.
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=22">你必须知道的.NET
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=42">C＃应用程序开发全程演练—
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=23">ASP.NET.2.0.入
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=1">ASP.NET.2.0.X
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=47">CorelDRAW特效制作
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=51">C语言程序设计案例教程
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=58">Excel2003全能培训
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=2">C＃程序员参考手册
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=32">asp.net 程式设计基
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR>
-<TR>
-    <TD height=20>
-        <DIV class=STYLE16 align=left target="_blank"><A
-                href="http://210.79.110.128:8081/Bookminute.asp?id=36">ASP与XML 高级编程
-        </A></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=left></DIV></DIV>
-        <DIV class=STYLE16 align=center>
-            <DIV align=center></DIV></DIV>
-        <DIV align=center></DIV>
-        <DIV align=center></DIV></TD></TR></TBODY></TABLE>
+		{/foreach}
+</TBODY></TABLE>
 <P></P></TD>
 <TD background={$tpl}images/Bookminute_r2_c5.gif
     rowSpan=2>&nbsp;</TD>
@@ -463,8 +204,7 @@
                            align=center>
                         <TBODY>
                         <TR>
-                            <TD class=STYLE17 height=12 vAlign=bottom width=352>共有1条评论
-                                共1页，目前为第<FONT color=#cc0000>1</FONT>页</TD>
+                            <TD class=STYLE17 height=12 vAlign=bottom width=352>共有{$review_list.page.row_number}条记录，共{$review_list.page.page_total}页，目前为第<FONT color=#cc0000>{$review_list.page.page}</FONT>页</TD>
                             <TD height=12 vAlign=bottom width=315
                                 align=right>&nbsp;</TD></TR></TBODY></TABLE>
                     <HR style="COLOR: #6699ff" SIZE=1>
@@ -473,39 +213,51 @@
                            borderColorLight=#000000 borderColorDark=#ffffff cellPadding=1
                            width="100%" align=center>
                         <TBODY>
+						{foreach from=$review_list.info item=v}
                         <TR>
                             <TD class=orangeb height=8 width="66%"><SPAN
-                                    class=STYLE16><FONT color=#cc0000>test:说</FONT></SPAN></TD>
+                                    class=STYLE16><FONT color=#cc0000>{$v.user_name}:说</FONT></SPAN></TD>
                             <TD class=zl height=8 width="14%">
                                 <DIV align=left><FONT
-                                        color=#cc0000>IP:27.38.60.186</FONT></DIV></TD>
+                                        color=#cc0000>IP:{$v.ip}</FONT></DIV></TD>
                             <TD class=zl width="2%">
                                 <DIV class=STYLE18 align=right>|</DIV></TD>
                             <TD class=zl height=8 width="18%">
-                                <DIV align=right><FONT color=#cc0000>2015/5/2
-                                    16:09:00</FONT></DIV></TD></TR>
+                                <DIV align=right><FONT color=#cc0000>{$v.review_time}</FONT></DIV></TD></TR>
+									
                         <TR>
                             <TD class=zl height=8 colSpan=4>
-                                <P><FONT color=#333333>testtest</FONT></P>
+                                <P><FONT color=#333333>{$v.review_content}</FONT></P>
                                 <HR
                                         style="BORDER-BOTTOM: #cccccc 1px dashed; BORDER-LEFT: #cccccc 1px dashed; BORDER-TOP: #cccccc 1px dashed; BORDER-RIGHT: #cccccc 1px dashed"
                                         id=line SIZE=1 noShade>
-                            </TD></TR></TBODY></TABLE>
+                            </TD></TR>
+							{/foreach}
+							</TBODY></TABLE>
                     <TABLE border=0 cellSpacing=0 cellPadding=3 width="100%"
                            align=center>
                         <TBODY>
                         <TR>
-                            <TD class=STYLE17 width=173>页次:<FONT
-                                    color=#cc0000>1</FONT>/1,每页:<FONT color=#cc0000>5</FONT>条 </TD>
+                            <TD class=STYLE17 width=173>页次:<FONT color=#cc0000>{$review_list.page.page}</FONT>/{$review_list.page.page_total},每页:<FONT color=#cc0000>{$review_list.page.page_per_number}</FONT>条 </TD>
                             <TD class=STYLE17 width=530 align=right>
-                                <DIV align=right>页数：<A
-                                        href="http://210.79.110.128:8081/Bookminute.asp?id=1&amp;Curpage=0#pl">&lt;&lt;</A>
-                                    <FONT color=#cc0000><B>1</B></FONT> </DIV></TR></TBODY></TABLE>
-                    <FORM method=post name=form1 action=Comments.asp?id=1>
+                                <DIV align=right>页数：
+                                    <A {if $review_list.page.previous.url}href="{$review_list.page.previous.url}"{/if}>&lt;&lt;</A>
+                                    {foreach from=$review_list.page.page_info item=v}
+                                    {if $v.checked}
+                                    <FONT color=#cc0000><B>{$v.page}</B></FONT>
+                                    {else}
+                                    <A href="{$v.url}">[{$v.page}]</A>
+                                    {/if}
+                                    {/foreach}
+                                    <A {if $review_list.page.next.url}href="{$review_list.page.next.url}"{/if}>&gt;&gt;</A></DIV></TR></TBODY></TABLE>
+                    <FORM method=post name=form1 action="/book/addReview">
                         <TABLE border=0 width="100%">
                             <TBODY>
                             <TR>
-                                <TD height=43 width=565><TEXTAREA id=txt1 onkeypress=btnClick(Submit) cols=85 name=txt1></TEXTAREA></TD>
+                                <TD height=43 width=565>
+								<input type="hidden" name="book_id" value="{$book_info.book_id}" />
+								<TEXTAREA id=txt1 onkeypress=btnClick(Submit) cols=85 name=reviews_content></TEXTAREA>
+								</TD>
                                 <TD width=140>
                                     <DIV align=center><INPUT value=提交评论 type=submit name=Submit>
                                     </DIV></TD></TR></TBODY></TABLE></FORM>

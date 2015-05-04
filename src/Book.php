@@ -8,6 +8,9 @@ class Book extends Mode{
     }
     function getOneInfo($book_id){
         $base_info=$this->getOne($book_id);
+        $tmp=explode('.',$base_info['save_place']);
+        $base_info['book_type']=strtoupper(end($tmp));
+        $base_info['book_cover']=(substr($base_info['book_cover'],0,7)=='http://'||substr($base_info['book_cover'],0,8)=='https://')?$base_info['book_cover']:UPLOAD_DIR.$base_info['book_cover'];
         $extend_info=$this->_db->getOne('bdei_book_extend','book_id='.$book_id);
         return array_merge($base_info,$extend_info);
     }
@@ -104,16 +107,14 @@ class Book extends Mode{
         if(isset($info['book_classification_word'])&&$info['book_classification_word']){
             $where.=' AND book_classification_word ="'.$info['book_classification_word'].'"';
         }
-<<<<<<< HEAD
         if(isset($info['book_id'])&&$info['book_id']){
             $where.=' AND book_id IN ('.$info['book_id'].')';
         }
         if(isset($info['category_extend_id'])&&$info['category_extend_id']){
             $where.=' AND category_extend_id ='.$info['category_extend_id'];
-=======
+        }
         if(isset($info['index_show'])&&$info['index_show']){
             $where.=' AND index_show = 1';
->>>>>>> 9fe1784895e3704d8f5791626fd4443a55d7f087
         }
         return $where;
     }
@@ -247,7 +248,6 @@ class Book extends Mode{
         $data['Z']='综合性图书';
         return $data;
     }
-<<<<<<< HEAD
     function getTotal(){
         $str_sql='SELECT category_id,COUNT(book_id) as count_total FROM bdei_book GROUP BY category_id';
         $info=$this->_db->doSelect($str_sql);
@@ -259,13 +259,12 @@ class Book extends Mode{
         }
         $return['total']=$total;
         return $return;
-=======
+    }
     function setIndexShow($book_id){
         $str_sql='UPDATE bdei_book set index_show=(index_show+1)%2 WHERE book_id='.$book_id;
         return $this->_db->query($str_sql);
     }
     function getIndexRecommend(){
         return $this->getIndexList(array('index_show'=>1),'',8);
->>>>>>> 9fe1784895e3704d8f5791626fd4443a55d7f087
     }
 }

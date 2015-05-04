@@ -22,6 +22,8 @@ class ReadHistory extends Mode{
      * @return mixed
      */
     function addRead($book_id){
+        if(!$this->_user_id)
+            return;
         $data['book_id']=$book_id;
         $data['user_id']=$this->_user_id;
         $data['add_time']=date('Y-m-d H:i:s');
@@ -39,4 +41,5 @@ class ReadHistory extends Mode{
         $this->delete('user_id='.$this->_user_id);
 
     }
+
 }

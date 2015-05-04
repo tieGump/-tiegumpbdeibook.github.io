@@ -61,7 +61,7 @@ abstract class Action {
         $this->_data[$name]=$value;
     }
     function __get($name){
-        if($name=='tpl')
+//        if($name=='tpl')
             return $this->_data[$name];
     }
     function setSearchType(){

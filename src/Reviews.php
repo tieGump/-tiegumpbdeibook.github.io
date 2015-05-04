@@ -43,6 +43,6 @@ class Reviews extends Mode{
             }
         }
         $str_sql='SELECT '.$this->_fields.' FROM '.$this->_table.' WHERE '.$where.' ORDER BY '.$this->_table_id.' DESC';
-        return $this->getPageList($str_sql);
+        return $this->getPageList($str_sql,2);
     }
 }

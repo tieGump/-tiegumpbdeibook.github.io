@@ -26,7 +26,7 @@ class LoginAction extends Action{
             $this->_tpl='login_in.html';
         }else{
             $this->_message->addSession('用户名或密码错误');
-            //redirect('/login');
+            redirect('/login');
         }
     }
     function registerAction(){
@@ -89,6 +89,9 @@ EOF;
      */
     function offAction(){
         unset($_SESSION['user']);
+        if(isset($_GET['not_index']))
         redirect('/login');
+        else
+        redirect('/');
     }
 }

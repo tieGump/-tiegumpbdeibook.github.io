@@ -3,23 +3,25 @@
 class UserAction extends Action{
     private $_user_id;
     function __construct(){
+
         parent::__construct();
+        $this->_user_id=$_SESSION['user']['id'];
         if(!$_SESSION['user']['id']){
             echo <<<EOF
 <script>
 alert('您还没有登录！请先登录！！！');
+location.href='/';
 </script>
 EOF;
-            redirect('/');
 
         }
     }
     function indexAction(){
         $user=new User();
-        $this->user_info=$user->getOne($this->_user_id);
+        $this->user_info=$tmp=$user->getOne($this->_user_id);
         $this->_tpl='user_base_info.html';
     }
-    function updateUserInfo(){
+    function updateUserInfoAction(){
         $user=new User();
         $user->register($_POST,$this->_user_id);
         redirect('/user');

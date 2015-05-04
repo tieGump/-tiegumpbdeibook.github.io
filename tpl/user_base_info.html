@@ -61,65 +61,36 @@ A:active {
                             <TR>
                                 <TD height=242 vAlign=top>
                                     <FORM id=checkreg onsubmit="return checks();" method=post
-                                          name=checkreg action=perof_zlsave.asp>
+                                          name=checkreg action="/user/updateUserInfo">
                                         <TABLE height=168 cellSpacing=0 width=592 align=center border=0>
                                             <TBODY>
                                             <TR>
-                                                <TD width=76><SPAN class=STYLE17>姓名：</SPAN></TD>
-                                                <TD width=227><LABEL><INPUT tabIndex=1 id=readername
-                                                                            style="HEIGHT: 18px; WIDTH: 170px" maxLength=15 value=test
-                                                                            name=readername> <SPAN class=STYLE9>*</SPAN></LABEL></TD>
+                                                <TD width=76><SPAN class=STYLE17>用户名：</SPAN></TD>
+                                                <TD width=227><LABEL>{$user_info.user_name} <SPAN class=STYLE9>*</SPAN></LABEL></TD>
                                                 <TD class=STYLE17 width=80>性别：</TD>
-                                                <TD width=201><LABEL><SELECT tabIndex=2 id=sex
-                                                                             style="HEIGHT: 18px; WIDTH: 60px" name=sex>" <OPTION
-                                                        selected>男</OPTION><OPTION>女</OPTION></SELECT> <SPAN
-                                                        class=STYLE9>*</SPAN></LABEL></TD></TR>
+                                                <TD width=201><LABEL><SELECT tabIndex=2 id=sex style="HEIGHT: 18px; WIDTH: 60px" name=user_sex>"
+                                                    <OPTION {if $user_info.user_sex eq '男'}selected{/if}>男</OPTION>
+                                                    <OPTION {if $user_info.user_sex eq '女'}selected{/if}>女</OPTION>
+                                                </SELECT> <SPAN class=STYLE9>*</SPAN>
+                                                </LABEL>
+                                                </TD>
+                                            </TR>
                                             <TR>
                                                 <TD class=STYLE17>登录密码：</TD>
-                                                <TD><LABEL><INPUT tabIndex=3 id=password
-                                                                  style="HEIGHT: 18px; WIDTH: 170px" maxLength=18 type=password
-                                                                  value=123456 name=password> <SPAN
+                                                <TD><LABEL><INPUT tabIndex=3 id=password style="HEIGHT: 18px; WIDTH: 170px" maxLength=18 type=password name=user_pwd> <SPAN
                                                         class=STYLE9>*</SPAN></LABEL></TD>
                                                 <TD class=STYLE17>重复密码：</TD>
-                                                <TD><LABEL><INPUT tabIndex=4 id=password2
-                                                                  style="HEIGHT: 18px; WIDTH: 170px" maxLength=18 type=password
-                                                                  value=123456 name=regtime> <SPAN
+                                                <TD><LABEL><INPUT tabIndex=4 id=password2 style="HEIGHT: 18px; WIDTH: 170px" maxLength=18 type=password name=regtime> <SPAN
                                                         class=STYLE9>*</SPAN></LABEL></TD></TR>
                                             <TR>
-                                                <TD class=STYLE17>部门：</TD>
-                                                <TD><LABEL><INPUT tabIndex=5 id=department
-                                                                  style="HEIGHT: 18px; WIDTH: 170px" maxLength=15
-                                                                  name=department> </LABEL></TD>
-                                                <TD class=STYLE17>联系电话：</TD>
-                                                <TD><INPUT tabIndex=6 id=phone
-                                                           style="HEIGHT: 18px; WIDTH: 170px" maxLength=25
-                                                           name=phone></TD></TR>
-                                            <TR>
-                                                <TD class=STYLE17>生日：</TD>
-                                                <TD><LABEL><INPUT tabIndex=7 id=Birthday
-                                                                  style="HEIGHT: 18px; WIDTH: 170px" maxLength=15 name=Birthday>
-                                                </LABEL></TD>
-                                                <TD class=STYLE17>证件号码：</TD>
-                                                <TD><LABEL><INPUT tabIndex=8 id=zhenghao
-                                                                  style="HEIGHT: 18px; WIDTH: 170px" maxLength=20 name=zhenghao>
-                                                </LABEL></TD></TR>
-                                            <TR>
-                                                <TD class=STYLE17>联系地址：</TD>
-                                                <TD><LABEL><INPUT tabIndex=9 id=dizhi
-                                                                  style="HEIGHT: 18px; WIDTH: 170px" maxLength=35 name=dizhi>
-                                                </LABEL></TD>
-                                                <TD class=STYLE17>电子信箱：</TD>
-                                                <TD><LABEL><SPAN class=STYLE9><INPUT tabIndex=10 id=email
-                                                                                     style="HEIGHT: 18px; WIDTH: 170px" maxLength=25 name=email>
-                  </SPAN></LABEL></TD></TR>
+                                                <TD class=STYLE17>姓名：</TD>
+                                                <TD><LABEL><INPUT tabIndex=5 id=department style="HEIGHT: 18px; WIDTH: 170px" maxLength=15 name="user_nick" value="{$user_info.user_nick}"> </LABEL></TD>
+
                                             <TR>
                                                 <TD class=STYLE17>提示问题：</TD>
-                                                <TD><LABEL><INPUT tabIndex=11 id=question
-                                                                  style="HEIGHT: 18px; WIDTH: 170px" maxLength=30 value=t
-                                                                  name=question> <SPAN class=STYLE9>*</SPAN></LABEL></TD>
+                                                <TD><LABEL><INPUT tabIndex=11 id=question style="HEIGHT: 18px; WIDTH: 170px" maxLength=30 value="{$user_info.question}" name=question> <SPAN class=STYLE9>*</SPAN></LABEL></TD>
                                                 <TD><LABEL class=STYLE17>问题答案：</LABEL></TD>
-                                                <TD><LABEL><INPUT tabIndex=12 id=answer
-                                                                  style="HEIGHT: 18px; WIDTH: 170px" maxLength=25 name=answer>
+                                                <TD><LABEL><INPUT tabIndex=12 id=answer style="HEIGHT: 18px; WIDTH: 170px" maxLength=25 name=answer>
                                                 </LABEL></TD></TR>
                                             <TR>
                                                 <TD>&nbsp;</TD>

@@ -58,17 +58,16 @@ A:active {
                                 <TBODY>
                                 <TR>
                                     <TD class=STYLE1 height=12 vAlign=bottom
-                                        width=236>共有1条记录，共1页，目前为第<FONT color=#cc0000>1</FONT>页</TD>
+                                        width=236>共有{$bookmark_list.page.row_number}条记录，共{$bookmark_list.page.page_total}页，目前为第<FONT color=#cc0000>{$bookmark_list.page.page}</FONT>页</TD>
                                     <TD height=12 vAlign=bottom width=425 align=right>
                                         <DIV align=right>
                                             <DIV align=right><SPAN class=STYLE8>&nbsp;<A
-                                                    href="http://210.79.110.128:8081/mybookmark.asp?Curpage=1">[刷新]</A>&nbsp;<A
-                                                    href="http://210.79.110.128:8081/mybookmark.asp?Curpage=0">[上一页]</A>&nbsp;<A
-                                                    href="http://210.79.110.128:8081/mybookmark.asp?Curpage=2">[下一页]</A>&nbsp;<A
-                                                    href="http://210.79.110.128:8081/mybookmark.asp?Curpage=1">[首页]</A>&nbsp;<A
-                                                    href="http://210.79.110.128:8081/mybookmark.asp?Curpage=1#ok">[尾页]</A></SPAN></DIV><SPAN
-                                                class=STYLE8><A
-                                                href="http://210.79.110.128:8081/mybookmark.asp?Curpage=1"></A></SPAN></DIV></TD></TR></TBODY></TABLE>
+                                                    href="#">[刷新]</A>&nbsp;
+                                                    {if $bookmark_list.page.previous.url}<A href="{$bookmark_list.page.previous.url}">[上一页]</A>&nbsp;{else}[上一页]&nbsp;{/if}
+                                                    {if $bookmark_list.page.next.url}<A href="{$bookmark_list.page.next.url}">[下一页]</A>&nbsp;{else}[下一页]&nbsp;{/if}
+                                                    <A href="{$bookmark_list.page.page_begin.url}">[首页]</A>&nbsp;
+                                                <A  href="{$bookmark_list.page.page_end.url}">[尾页]</A></SPAN></DIV>
+                                                </SPAN></DIV></TD></TR></TBODY></TABLE>
                             <HR style="COLOR: #6699ff" SIZE=1>
 
                             <TABLE borderColor=#000000 cellSpacing=0 borderColorDark=#ffffff
@@ -109,11 +108,18 @@ A:active {
                         <TABLE cellSpacing=0 cellPadding=3 width=660 align=center border=0>
                             <TBODY>
                             <TR>
-                                <TD class=STYLE1 width=148>页次:<FONT
-                                        color=#cc0000>1</FONT>/1,每页:<FONT color=#cc0000>8</FONT>条 </TD>
-                                <TD class=STYLE1 width=500 align=right>页数：<A
-                                        href="http://210.79.110.128:8081/mybookmark.asp?Curpage=0#ok">&lt;&lt;</A>
-                                    <FONT color=#cc0000><B>1</B></FONT> </TD></TR></TBODY></TABLE>　
+                                <TD class=STYLE1 width=148>页次:<FONT color=#cc0000>{$bookmark_list.page.page}</FONT>/{$bookmark_list.page.page_total},每页:<FONT color=#cc0000>{$bookmark_list.page.page_per_number}</FONT>条 </TD>
+                                <TD class=STYLE1 width=500 align=right>页数：
+                                    <A {if $bookmark_list.page.previous.url}href="{$bookmark_list.page.previous.url}"{/if}>&lt;&lt;</A>
+                                    {foreach from=$bookmark_list.page.page_info item=v}
+                                    {if $v.checked}
+                                    <FONT color=#cc0000><B>{$v.page}</B></FONT>
+                                    {else}
+                                    <A href="{$v.url}">[{$v.page}]</A>
+                                    {/if}
+                                    {/foreach}
+                                    <A {if $bookmark_list.page.next.url}href="{$bookmark_list.page.next.url}"{/if}>&gt;&gt;</A>
+                                    </TD></TR></TBODY></TABLE>　
                         <TABLE width="100%" border=0>
                             <TBODY>
                             <TR>

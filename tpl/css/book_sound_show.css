@@ -1,0 +1,27 @@
+TD IMG {
+    DISPLAY: block
+}
+BODY {
+    BACKGROUND-COLOR: #ffffff
+}
+A:link {
+    COLOR: #333333; TEXT-DECORATION: none
+}
+A:visited {
+    COLOR: #333333; TEXT-DECORATION: none
+}
+A:hover {
+    COLOR: #0099ff; TEXT-DECORATION: underline
+}
+A:active {
+    TEXT-DECORATION: none
+}
+.STYLE16 {
+    FONT-SIZE: 12px
+}
+.STYLE16 {
+    COLOR: #ff9900
+}
+.STYLE16 {
+    COLOR: #333333
+}

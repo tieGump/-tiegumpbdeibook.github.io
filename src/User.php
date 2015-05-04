@@ -22,12 +22,12 @@ class User extends Mode{
      */
     function register($post,$id=''){
         $login=new Login();
-        $data['user_name']=$post['user_name'];
+        isset($post['user_name'])&&$post['user_name']? $data['user_name']=$post['user_name']:'';
         $post['user_pwd']?$data['user_pwd']=$login->createPassword($post['user_pwd']):'';
         $data['user_nick']=$post['user_nick'];
         $data['user_sex']=$post['user_sex'];
         $data['question']=$post['question'];
-        $data['answer']=$post['answer'];
+        isset($post['answer'])&&$post['answer']?$data['answer']=$post['answer']:'';
         if($id){
             $this->changeOne($data,$id);
         }else{

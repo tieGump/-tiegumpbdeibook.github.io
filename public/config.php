@@ -14,6 +14,7 @@ define('IS_ADMIN',0);//定义不是后台
 define('TPL_C',BASE_DIR.'tpl_c/');//模板生成路径
 define('SMARTY_TPL_DIR',PUBLIC_DIR.'smarty/');//smarty路径
 define('UPLOAD_DIR','upload/');//上传路径
+define('UPLOAD_DIR_TRUE',BASE_DIR.'upload/');//上传路径
 define('PAGE_BASE','');
 //目录定义结束
 

@@ -1,0 +1,48 @@
+TD IMG {
+    DISPLAY: block
+}
+.STYLE1 {
+    COLOR: #333333; FONT-SIZE: 12px
+}
+.STYLE3 {
+    COLOR: #ff6600; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+BODY {
+    BACKGROUND-COLOR: #ffffff
+}
+.STYLE16 {
+    FONT-SIZE: 12px
+}
+.STYLE16 {
+    COLOR: #ff9900
+}
+.STYLE16 {
+    COLOR: #333333
+}
+A:link {
+    COLOR: #333333; TEXT-DECORATION: none
+}
+A:visited {
+    COLOR: #333333; TEXT-DECORATION: none
+}
+A:hover {
+    COLOR: #0066cc; TEXT-DECORATION: underline
+}
+A:active {
+    TEXT-DECORATION: none
+}
+.STYLE17 {
+    COLOR: #ff9900; FONT-SIZE: 12px
+}
+.STYLE10 {
+    COLOR: #ff3300; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.orangeb {
+    COLOR: #333333; FONT-WEIGHT: bold
+}
+.zl {
+    COLOR: #333333; FONT-SIZE: 12px
+}
+.STYLE18 {
+    COLOR: #999999
+}

@@ -65,16 +65,121 @@ class BookAction extends Action{
         if(!$book_id)
             die('请输入book_id！！！');
         $book=new Book();
+        $book->addOneRead($book_id);
+        $read_history=new ReadHistory();
+        $read_history->addRead($book_id);
         $book_info=$book->getOneInfo($book_id);
-        $book_list=$book->getIndexList(array('category_id'=>$book_info['category_id'],'category_extend_id'=>$book_info['category_extend_id']),' read_number DESC',20);
+        $book_list=$book->getIndexList(array('category_id'=>$book_info['category_id'],'book_classification_word'=>$book_info['book_classification_word']),' read_number DESC',20);
+        $reviews=new Reviews();
+        $this->review_list=$reviews->getBookList($book_id);
         $this->book_info=$book_info;
         $this->book_list=$book_list;
         $this->_tpl='book_info.html';
     }
+    function addReviewAction(){
+        $reviews=new Reviews();
+        $book_id=(int)$_POST['book_id'];
+        if(!$_SESSION['user']['id']){
+            echo <<<EOF
+            <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<script type="text/javascript" charset="utf-8">
+alert('请先登录！！！');
+location.href='/book/info/book_id/$book_id';
+</script>
+EOF;
+        }
+        if($_POST['reviews_content']){
+            $reviews->addReview($_POST['reviews_content'],$book_id);
+            echo <<<EOF
+            <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<script type="text/javascript" charset="utf-8">
+alert('评论成功！！！');
+location.href='/book/info/book_id/$book_id';
+</script>
+EOF;
+        }else{
+            redirect('/book/info/book_id/'.$book_id);
+        }
+
+    }
+    function readAction(){
+        $book_id=(int)$_GET['book_id'];
+        $book=new Book();
+        $book_info=$book->getOneInfo($book_id);
+//        print_r($book_info);
+        $file=UPLOAD_DIR.$book_info['save_place'];
+        $file=iconv('UTF-8','GBK',$file);
+        $file_name=end(explode('/',$book_info['save_place']));
+//        echo $file;
+        if($book_info['book_type']=='PDF'){
+
+            header('Content-type: application/pdf');
+            header('filename='.($file_name));
+            readfile($file);
+        }else{
+//            $file=UPLOAD_DIR_TRUE.$book_info['save_place'];
+            if(is_file($file)) {
+                header("Content-type: text/html;charset=utf-8");
+                header("Content-Type: application/force-download");
+                header("Content-Disposition: attachment; filename=".($file_name));
+                readfile($file);
+                exit;
+            }else{
+                echo '<META content="text/html; charset=utf-8" http-equiv=Content-Type>';
+                echo "文件不存在！";
+                exit;
+            }
+        }
+    }
     function videoInfoAction(){
-        $this->_tpl='book_video_info.html';
+        $book_id=(int)$_GET['book_id'];
+        $book=new Book();
+        $book_info=$book->getOneInfo($book_id);
+//        print_r($book_info);
+        $this->movie_dir=iconv('UTF-8','GBK',UPLOAD_DIR.$book_info['save_place']);
+        $this->_tpl='book_video_show.html';
     }
     function soundInfoAction(){
-        $this->_tpl='book_sound_info.html';
+        $book_id=(int)$_GET['book_id'];
+        $book=new Book();
+        $this->book_info=$book_info=$book->getOneInfo($book_id);
+//        print_r($book_info);
+        $this->book_list=$book->getIndexList(array('category_id'=>$book_info['category_id'],'category_extend_id'=>$book_info['category_extend_id']),' read_number DESC',20);
+        $this->movie_dir=iconv('UTF-8','GBK',UPLOAD_DIR.$book_info['save_place']);
+//        $this->movie_dir=UPLOAD_DIR.$book_info['save_place'];
+        $this->_tpl='book_sound_show.html';
+    }
+    function addBookMarkAction(){
+        $book_id=(int)$_GET['book_id'];
+        if(!$_SESSION['user']['id']){
+            echo <<<EOF
+            <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<script type="text/javascript" charset="utf-8">
+alert('请先登录！！！');
+location.href='/book/info/book_id/$book_id';
+</script>
+EOF;
+        }else{
+            $book_mark=new BookMark();
+            if($book_mark->addMark($_SESSION['user']['id'],$book_id)){
+                echo <<<EOF
+            <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<script type="text/javascript" charset="utf-8">
+alert('书签加入成功！！！');
+location.href='/book/info/book_id/$book_id';
+</script>
+EOF;
+            }else{
+                echo <<<EOF
+            <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<script type="text/javascript" charset="utf-8">
+alert('书签加入失败，请检查是否已加入了您的书签！！！');
+location.href='/book/info/book_id/$book_id';
+</script>
+EOF;
+            }
+
+        }
+
     }
 } 
