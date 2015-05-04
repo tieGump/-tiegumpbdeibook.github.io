@@ -104,6 +104,9 @@ class Book extends Mode{
         if(isset($info['book_classification_word'])&&$info['book_classification_word']){
             $where.=' AND book_classification_word ="'.$info['book_classification_word'].'"';
         }
+        if(isset($info['index_show'])&&$info['index_show']){
+            $where.=' AND index_show = 1';
+        }
         return $where;
     }
 
@@ -208,5 +211,12 @@ class Book extends Mode{
         $data['X']='环境、安全科学';
         $data['Z']='综合性图书';
         return $data;
+    }
+    function setIndexShow($book_id){
+        $str_sql='UPDATE bdei_book set index_show=(index_show+1)%2 WHERE book_id='.$book_id;
+        return $this->_db->query($str_sql);
+    }
+    function getIndexRecommend(){
+        return $this->getIndexList(array('index_show'=>1),'',8);
     }
 }

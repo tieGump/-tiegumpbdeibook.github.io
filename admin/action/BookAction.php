@@ -46,4 +46,10 @@ class BookAction extends Action{
         $book->dropOne((int)$_GET['book_id']);
         $this->indexAction();
     }
+    function setIndexAction(){
+        $book_id=(int)$_GET['book_id'];
+        $book=new Book();
+        $book->setIndexShow($book_id);
+        redirect('/admin/book');
+    }
 } 
