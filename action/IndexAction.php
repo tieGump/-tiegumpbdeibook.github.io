@@ -52,6 +52,12 @@ class IndexAction extends Action{
         //软件下载
         $soft=new DownloadSoft();
         $this->soft_list=$soft->getList(5);
+
+        //首页推荐
+        $this->index_recommend=$book->getIndexRecommend();
+//        print_r($this->index_recommend);
+
+
         $this->upload_dir=UPLOAD_DIR;
         $this->_tpl='index.html';
     }

@@ -137,7 +137,8 @@
                                         href="http://210.79.110.128:8081/books/best/奥秘世界百科全书.pdf"><IMG
                                         border=1 alt=奥秘世界百科全书 src="{$tpl}images/4.jpg" width=117
                                         height=145></A></TD>
-                                <TD width=12>&nbsp;</TD></TR>
+                                <TD width=12>&nbsp;</TD>
+                            </TR>
                             <TR>
                                 <TD height=18>&nbsp;</TD>
                                 <TD class=STYLE1>
@@ -515,7 +516,7 @@
                                 <TD width=72>
                                     <DIV align=left>普通图书：</DIV></TD>
                                 <TD width=122>
-                                    <DIV align=center>{$book_total[1][total]} 册 </DIV></TD>
+                                    <DIV align=center>{$book_total[1].total} 册 </DIV></TD>
                             </TR>
                             <TR>
                                 <TD>&nbsp;</TD>
@@ -524,7 +525,7 @@
                                 <TD>
                                     <DIV align=left>有声图书：</DIV></TD>
                                 <TD>
-                                    <DIV align=center>{$book_total[2][total]} 册</DIV></TD></TR>
+                                    <DIV align=center>{$book_total[2].total} 册</DIV></TD></TR>
                             <TR>
                                 <TD>&nbsp;</TD>
                                 <TD><IMG alt=3 src="{$tpl}images/dot_5.gif" width=16
@@ -532,7 +533,7 @@
                                 <TD>
                                     <DIV align=left>视频资源：</DIV></TD>
                                 <TD>
-                                    <DIV align=center>{$book_total[3][total]} 部</DIV></TD></TR>
+                                    <DIV align=center>{$book_total[3].total} 部</DIV></TD></TR>
                                 <TD height=27 colSpan=3>
                                     <DIV class=STYLE7 align=center>总计： </DIV></TD>
                                 <TD height=27>

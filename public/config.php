@@ -21,13 +21,13 @@ define('PAGE_BASE','');
 //数据库信息开始
 define('DB_SERVER', 'localhost');						//数据库地址
 define('DB_SERVER_USERNAME', 'root');				//数据库用户名
-define('DB_SERVER_PASSWORD', '');	//数据库密码
+define('DB_SERVER_PASSWORD', '123456');	//数据库密码
 //define('DB_SERVER', 'localhost');						//数据库地址
 //define('DB_SERVER_USERNAME', 'usitrip');				//数据库用户名
 //define('DB_SERVER_PASSWORD', '&1231987usitrip897HR');	//数据库密码
 define('DB_DATABASE', 'bdei_book');	//默认选择的数据库名称
 //数据库信息结束
 
-define('IS_BUG',true);//是否是测试
+define('IS_BUG',false);//是否是测试
 define('IS_PHP_CACHE',true);//是否开启PHP缓存
 define('IS_HTML_CACHE',true);//开启HTML缓存
