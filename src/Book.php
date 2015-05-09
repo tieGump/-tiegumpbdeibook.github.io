@@ -45,6 +45,7 @@ class Book extends Mode{
         $data_desc['book_key_words']=$post['book_key_words'];
         $data_desc['book_desc']=$post['book_desc'];
         $data_desc['book_catalog_desc']=$post['book_catalog_desc'];
+        $data_desc['book_info']=$post['book_info'];
         if($id){
             $this->changeOne($data,(int)$id);
             $where = $this->createWhere($id);

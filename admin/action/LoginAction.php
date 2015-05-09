@@ -4,8 +4,6 @@ class LoginAction extends Action{
      * 登录界面
      */
     function upAction(){
-        $login=new Login;
-        echo $login->createPassword('admin');
         $this->_tpl='login.html';
     }
 

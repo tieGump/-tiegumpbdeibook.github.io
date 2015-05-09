@@ -16,6 +16,9 @@ abstract class Action {
     protected $_tpl;
     protected $_message;
     function __construct(){
+        $ip=new DisableIP();
+        if(!$ip->check())
+            die('禁止访问！！！');
         require SMARTY_TPL_DIR.'/Smarty.class.php';
         require SMARTY_TPL_DIR.'/SmartyBC.class.php';
         $this->_smarty=new SmartyBC();

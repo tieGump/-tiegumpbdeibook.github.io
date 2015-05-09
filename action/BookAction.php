@@ -134,18 +134,18 @@ EOF;
     function videoInfoAction(){
         $book_id=(int)$_GET['book_id'];
         $book=new Book();
-        $book_info=$book->getOneInfo($book_id);
-//        print_r($book_info);
+        $this->book_info=$book_info=$book->getOneInfo($book_id);
         $this->movie_dir=iconv('UTF-8','GBK',UPLOAD_DIR.$book_info['save_place']);
         $this->_tpl='book_video_show.html';
     }
     function soundInfoAction(){
+
         $book_id=(int)$_GET['book_id'];
         $book=new Book();
         $this->book_info=$book_info=$book->getOneInfo($book_id);
 //        print_r($book_info);
         $this->book_list=$book->getIndexList(array('category_id'=>$book_info['category_id'],'category_extend_id'=>$book_info['category_extend_id']),' read_number DESC',20);
-        $this->movie_dir=iconv('UTF-8','GBK',UPLOAD_DIR.$book_info['save_place']);
+        $this->movie_dir=UPLOAD_DIR.$book_info['save_place'];
 //        $this->movie_dir=UPLOAD_DIR.$book_info['save_place'];
         $this->_tpl='book_sound_show.html';
     }

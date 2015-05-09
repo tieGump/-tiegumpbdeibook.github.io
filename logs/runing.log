@@ -1,18 +1,567 @@
-[8] Undefined index: admin E:\code\PHPWeb\bdei_book\src\Cop.php 第 70 行.
-[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
-[8] Undefined index: test E:\code\PHPWeb\bdei_book\admin\tpl_c\4d435bd7ef243c3ac9d6d1586e3b773ab6ac4a7e.file.login.html.php 第 45 行.
-[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\4d435bd7ef243c3ac9d6d1586e3b773ab6ac4a7e.file.login.html.php 第 45 行.
-[8] Undefined index: admin E:\code\PHPWeb\bdei_book\src\Cop.php 第 70 行.
-[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
-[8] Undefined index: test E:\code\PHPWeb\bdei_book\admin\tpl_c\4d435bd7ef243c3ac9d6d1586e3b773ab6ac4a7e.file.login.html.php 第 45 行.
-[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\4d435bd7ef243c3ac9d6d1586e3b773ab6ac4a7e.file.login.html.php 第 45 行.
-[8] Undefined index: admin E:\code\PHPWeb\bdei_book\src\Cop.php 第 70 行.
-[2048] Declaration of Administrator::getList() should be compatible with Mode::getList($limit = '') E:\code\PHPWeb\bdei_book\src\Administrator.php 第 10 行.
-[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
-[2048] Declaration of Administrator::getList() should be compatible with Mode::getList($limit = '') E:\code\PHPWeb\bdei_book\src\Administrator.php 第 10 行.
-[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
-[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
-1;Class 'TplAction' not found;E:\code\PHPWeb\bdei_book\src\Cop.php;26
-1;Class 'TplAction' not found;E:\code\PHPWeb\bdei_book\src\Cop.php;26
-[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
-[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[2] filemtime(): stat failed for F:\Web\bdei_book/tpl_c\4a08f1fdbe8dba1c17c3c0f2dfba07cc7f55644d.file.book_video_show.html.php F:\Web\bdei_book\public\smarty\sysplugins\smarty_resource.php 第 744 行.
+Syntax error in template "F:\Web\bdei_book\tpl\book_video_show.html"  on line 6 "{eval(Real+'DoPlay()');}" unknown function "eval";F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_templatecompilerbase.php;6;#0 F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_templateparser.php(2892): Smarty_Internal_TemplateCompilerBase->trigger_template_error('unknown functio...')
+#1 F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_templateparser.php(3093): Smarty_Internal_Templateparser->yy_r154()
+#2 F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_templateparser.php(3191): Smarty_Internal_Templateparser->yy_reduce(154)
+#3 F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_smartytemplatecompiler.php(111): Smarty_Internal_Templateparser->doParse(25, ';')
+#4 F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_templatecompilerbase.php(273): Smarty_Internal_SmartyTemplateCompiler->doCompile('\r\n\r\n<SCRIPT lan...')
+#5 F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_template.php(186): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#6 F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_templatebase.php(149): Smarty_Internal_Template->compileTemplateSource()
+#7 F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_templatebase.php(377): Smarty_Internal_TemplateBase->fetch('book_video_show...', NULL, NULL, NULL, true)
+#8 F:\Web\bdei_book\action\Action.php(91): Smarty_Internal_TemplateBase->display('book_video_show...')
+#9 F:\Web\bdei_book\index.php(17): Action->__destruct()
+#10 F:\Web\bdei_book\index.php(17): Cop::start()
+#11 {main}
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[2] filemtime(): stat failed for F:\Web\bdei_book/tpl_c\4a08f1fdbe8dba1c17c3c0f2dfba07cc7f55644d.file.book_video_show.html.php F:\Web\bdei_book\public\smarty\sysplugins\smarty_resource.php 第 744 行.
+[2] unlink(F:\Web\bdei_book/tpl_c\4a08f1fdbe8dba1c17c3c0f2dfba07cc7f55644d.file.book_video_show.html.php): No such file or directory F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_write_file.php 第 58 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 44 行.
+[8] Undefined index:  F:\Web\bdei_book\action\BookAction.php 第 44 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 45 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined index: book_info F:\Web\bdei_book\tpl_c\67677393a5e73a9df636af5a7d1d857b8da6bcf3.file.book_sound_show.html.php 第 111 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined index:  F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 738 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index:  F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 759 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_templatebase.php(165) : eval()'d code 第 749 行.
+[8] Undefined index:  F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_templatebase.php(165) : eval()'d code 第 759 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_templatebase.php(165) : eval()'d code 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 55 行.
+[8] Undefined index:  F:\Web\bdei_book\action\BookAction.php 第 55 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 56 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 55 行.
+[8] Undefined index:  F:\Web\bdei_book\action\BookAction.php 第 55 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 56 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 44 行.
+[8] Undefined index:  F:\Web\bdei_book\action\BookAction.php 第 44 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 45 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[2048] Declaration of User::getList() should be compatible with Mode::getList($limit = '') F:\Web\bdei_book\src\User.php 第 13 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: az F:\Web\bdei_book\action\BookAction.php 第 24 行.
+[8] Undefined index: az F:\Web\bdei_book\action\BookAction.php 第 25 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 44 行.
+[8] Undefined index:  F:\Web\bdei_book\action\BookAction.php 第 44 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 45 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 55 行.
+[8] Undefined index:  F:\Web\bdei_book\action\BookAction.php 第 55 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 56 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 44 行.
+[8] Undefined index:  F:\Web\bdei_book\action\BookAction.php 第 44 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 45 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8] Undefined index: user F:\Web\bdei_book\action\UserAction.php 第 8 行.
+[8] Undefined index: user F:\Web\bdei_book\action\UserAction.php 第 9 行.
+[2048] Declaration of User::getList() should be compatible with Mode::getList($limit = '') F:\Web\bdei_book\src\User.php 第 13 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[1024] SELECT * FROM bdei_user WHERE 
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 F:\Web\bdei_book\src\doSql.php 第 148 行.
+[2] mysql_fetch_array() expects parameter 1 to be resource, boolean given F:\Web\bdei_book\src\doSql.php 第 123 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: az F:\Web\bdei_book\action\BookAction.php 第 24 行.
+[8] Undefined index: az F:\Web\bdei_book\action\BookAction.php 第 25 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[2048] Declaration of User::getList() should be compatible with Mode::getList($limit = '') F:\Web\bdei_book\src\User.php 第 13 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[2] filemtime(): stat failed for F:\Web\bdei_book/tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php F:\Web\bdei_book\public\smarty\sysplugins\smarty_resource.php 第 744 行.
+[2] unlink(F:\Web\bdei_book/tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php): No such file or directory F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_write_file.php 第 58 行.
+[2] filemtime(): stat failed for F:\Web\bdei_book/tpl_c\657710cb96221423f7b5322d692f7168771a40b8.file.head.html.php F:\Web\bdei_book\public\smarty\sysplugins\smarty_resource.php 第 744 行.
+[2] unlink(F:\Web\bdei_book/tpl_c\657710cb96221423f7b5322d692f7168771a40b8.file.head.html.php): No such file or directory F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_write_file.php 第 58 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_templatebase.php(151) : eval()'d code 第 749 行.
+[2] filemtime(): stat failed for F:\Web\bdei_book/tpl_c\614227b94af4aaee8d3f1e960d59dfd71d16cfc2.file.foot.html.php F:\Web\bdei_book\public\smarty\sysplugins\smarty_resource.php 第 744 行.
+[2] unlink(F:\Web\bdei_book/tpl_c\614227b94af4aaee8d3f1e960d59dfd71d16cfc2.file.foot.html.php): No such file or directory F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_write_file.php 第 58 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[2] filemtime(): stat failed for F:\Web\bdei_book/tpl_c\e8310e743e9a588ec779ccf9365e471cc0055590.file.login.html.php F:\Web\bdei_book\public\smarty\sysplugins\smarty_resource.php 第 744 行.
+[2] unlink(F:\Web\bdei_book/tpl_c\e8310e743e9a588ec779ccf9365e471cc0055590.file.login.html.php): No such file or directory F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_write_file.php 第 58 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[2] filemtime(): stat failed for F:\Web\bdei_book/tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php F:\Web\bdei_book\public\smarty\sysplugins\smarty_resource.php 第 744 行.
+[2] unlink(F:\Web\bdei_book/tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php): No such file or directory F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_write_file.php 第 58 行.
+[2] filemtime(): stat failed for F:\Web\bdei_book/tpl_c\657710cb96221423f7b5322d692f7168771a40b8.file.head.html.php F:\Web\bdei_book\public\smarty\sysplugins\smarty_resource.php 第 744 行.
+[2] unlink(F:\Web\bdei_book/tpl_c\657710cb96221423f7b5322d692f7168771a40b8.file.head.html.php): No such file or directory F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_write_file.php 第 58 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_templatebase.php(151) : eval()'d code 第 749 行.
+[2] filemtime(): stat failed for F:\Web\bdei_book/tpl_c\614227b94af4aaee8d3f1e960d59dfd71d16cfc2.file.foot.html.php F:\Web\bdei_book\public\smarty\sysplugins\smarty_resource.php 第 744 行.
+[2] unlink(F:\Web\bdei_book/tpl_c\614227b94af4aaee8d3f1e960d59dfd71d16cfc2.file.foot.html.php): No such file or directory F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_write_file.php 第 58 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[2] filemtime(): stat failed for F:\Web\bdei_book/tpl_c\e8310e743e9a588ec779ccf9365e471cc0055590.file.login.html.php F:\Web\bdei_book\public\smarty\sysplugins\smarty_resource.php 第 744 行.
+[2] unlink(F:\Web\bdei_book/tpl_c\e8310e743e9a588ec779ccf9365e471cc0055590.file.login.html.php): No such file or directory F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_write_file.php 第 58 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 55 行.
+[8] Undefined index:  F:\Web\bdei_book\action\BookAction.php 第 55 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 56 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[2] filemtime(): stat failed for F:\Web\bdei_book/tpl_c\51c3fa846c0b614c2c81290b0ecc8fb9d65a402a.file.book_sound_list.html.php F:\Web\bdei_book\public\smarty\sysplugins\smarty_resource.php 第 744 行.
+[2] unlink(F:\Web\bdei_book/tpl_c\51c3fa846c0b614c2c81290b0ecc8fb9d65a402a.file.book_sound_list.html.php): No such file or directory F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_write_file.php 第 58 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 55 行.
+[8] Undefined index:  F:\Web\bdei_book\action\BookAction.php 第 55 行.
+[8] Undefined index: book_type F:\Web\bdei_book\action\BookAction.php 第 56 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[2] filemtime(): stat failed for F:\Web\bdei_book/tpl_c\f786eda9caa9ac89305e93afdc0127702d4e009f.file.login_in.html.php F:\Web\bdei_book\public\smarty\sysplugins\smarty_resource.php 第 744 行.
+[2] unlink(F:\Web\bdei_book/tpl_c\f786eda9caa9ac89305e93afdc0127702d4e009f.file.login_in.html.php): No such file or directory F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_write_file.php 第 58 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[2] filemtime(): stat failed for F:\Web\bdei_book/tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php F:\Web\bdei_book\public\smarty\sysplugins\smarty_resource.php 第 744 行.
+[2] unlink(F:\Web\bdei_book/tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php): No such file or directory F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_write_file.php 第 58 行.
+[2] filemtime(): stat failed for F:\Web\bdei_book/tpl_c\657710cb96221423f7b5322d692f7168771a40b8.file.head.html.php F:\Web\bdei_book\public\smarty\sysplugins\smarty_resource.php 第 744 行.
+[2] unlink(F:\Web\bdei_book/tpl_c\657710cb96221423f7b5322d692f7168771a40b8.file.head.html.php): No such file or directory F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_write_file.php 第 58 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_templatebase.php(151) : eval()'d code 第 749 行.
+[2] filemtime(): stat failed for F:\Web\bdei_book/tpl_c\614227b94af4aaee8d3f1e960d59dfd71d16cfc2.file.foot.html.php F:\Web\bdei_book\public\smarty\sysplugins\smarty_resource.php 第 744 行.
+[2] unlink(F:\Web\bdei_book/tpl_c\614227b94af4aaee8d3f1e960d59dfd71d16cfc2.file.foot.html.php): No such file or directory F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_write_file.php 第 58 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[2] filemtime(): stat failed for F:\Web\bdei_book/tpl_c\f786eda9caa9ac89305e93afdc0127702d4e009f.file.login_in.html.php F:\Web\bdei_book\public\smarty\sysplugins\smarty_resource.php 第 744 行.
+[2] unlink(F:\Web\bdei_book/tpl_c\f786eda9caa9ac89305e93afdc0127702d4e009f.file.login_in.html.php): No such file or directory F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_write_file.php 第 58 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[2] filemtime(): stat failed for F:\Web\bdei_book/tpl_c\e8310e743e9a588ec779ccf9365e471cc0055590.file.login.html.php F:\Web\bdei_book\public\smarty\sysplugins\smarty_resource.php 第 744 行.
+[2] unlink(F:\Web\bdei_book/tpl_c\e8310e743e9a588ec779ccf9365e471cc0055590.file.login.html.php): No such file or directory F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_write_file.php 第 58 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+4;syntax error, unexpected '$this' (T_VARIABLE);F:\Web\bdei_book\action\IndexAction.php;61
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 749 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[2048] Declaration of DisableIP::getList() should be compatible with Mode::getList($limit = '') F:\Web\bdei_book\src\DisableIP.php 第 3 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: open_ip F:\Web\bdei_book\src\DisableIP.php 第 57 行.
+[2048] Declaration of ConfigBase::getList() should be compatible with Mode::getList($limit = '') F:\Web\bdei_book\src\ConfigBase.php 第 23 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\public\smarty\sysplugins\smarty_internal_templatebase.php(165) : eval()'d code 第 750 行.
+[2048] Declaration of DisableIP::getList() should be compatible with Mode::getList($limit = '') F:\Web\bdei_book\src\DisableIP.php 第 3 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[2048] Declaration of DisableIP::getList() should be compatible with Mode::getList($limit = '') F:\Web\bdei_book\src\DisableIP.php 第 3 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 750 行.
+[2048] Declaration of DisableIP::getList() should be compatible with Mode::getList($limit = '') F:\Web\bdei_book\src\DisableIP.php 第 3 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[2048] Declaration of DisableIP::getList() should be compatible with Mode::getList($limit = '') F:\Web\bdei_book\src\DisableIP.php 第 3 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 750 行.
+[2048] Declaration of DisableIP::getList() should be compatible with Mode::getList($limit = '') F:\Web\bdei_book\src\DisableIP.php 第 3 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[2048] Declaration of DisableIP::getList() should be compatible with Mode::getList($limit = '') F:\Web\bdei_book\src\DisableIP.php 第 3 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 750 行.
+[2048] Declaration of DisableIP::getList() should be compatible with Mode::getList($limit = '') F:\Web\bdei_book\src\DisableIP.php 第 3 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[2048] Declaration of DisableIP::getList() should be compatible with Mode::getList($limit = '') F:\Web\bdei_book\src\DisableIP.php 第 3 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 750 行.
+[2048] Declaration of DisableIP::getList() should be compatible with Mode::getList($limit = '') F:\Web\bdei_book\src\DisableIP.php 第 3 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26
+[2048] Declaration of DisableIP::getList() should be compatible with Mode::getList($limit = '') F:\Web\bdei_book\src\DisableIP.php 第 3 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+[8] Undefined offset: 2 F:\Web\bdei_book\tpl_c\cc06afb5e9109fa3b549df3018632f138c5ed025.file.index.html.php 第 750 行.
+[2048] Declaration of DisableIP::getList() should be compatible with Mode::getList($limit = '') F:\Web\bdei_book\src\DisableIP.php 第 3 行.
+[8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Web\bdei_book\src\doSql.php 第 53 行.
+[8] Undefined index: message F:\Web\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;F:\Web\bdei_book\src\Cop.php;26

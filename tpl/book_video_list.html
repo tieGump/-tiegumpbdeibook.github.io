@@ -85,12 +85,12 @@
                             <DIV class=STYLE16 align=left>{if $v.book_author}{$v.book_author}{else}作者不详{/if}</DIV></DIV></TD>
                     <TD height=8 width="11%">
                         <DIV align=center>
-                            <DIV class=STYLE16 align=center>{$v.book_number}&nbsp;</DIV></DIV></TD>
+                            <DIV class=STYLE16 align=center>{$v.read_number}&nbsp;</DIV></DIV></TD>
                     <TD height=8 width="20%">
                         <DIV class=STYLE16 align=center>{$v.add_time}</DIV></TD>
                     <TD height=8 width="8%">
                         <DIV onClick="Play('play.asp?id=9');" align=center><A class=STYLE16
-                                                                              href="http://210.79.110.128:8081/SPZX.ASP#">点播</A></DIV></TD></TR>
+                                                                              href="/book/videoInfo/book_id/{$v.book_id}">点播</A></DIV></TD></TR>
                 {/foreach}
                 </TBODY></TABLE></DIV>
         <HR style="COLOR: #6699ff" SIZE=1>

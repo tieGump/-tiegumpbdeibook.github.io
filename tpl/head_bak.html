@@ -1,17 +1,17 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML
-        xmlns="http://www.w3.org/1999/xhtml"><HEAD><META content="IE=7.0000"
-                                                         http-equiv="X-UA-Compatible">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+    <META content="IE=7.0000" http-equiv="X-UA-Compatible">
     <TITLE>mdlibTOP</TITLE>
     <META content="text/html; charset=utf-8" http-equiv=Content-Type>
     <link rel="stylesheet" type="text/css" href="{$tpl}css/head.css" charset="utf-8"/>
     {if $base_css}<link rel="stylesheet" type="text/css" href="{$base_css}" charset="utf-8"/>{/if}
     <script type="text/javascript" src="{$tpl}js/head.js"></script>
-    <!--Fireworks CS3 Dreamweaver CS3 target.  Created Tue Mar 17 19:55:03 GMT+0800 2009-->
-    <META name=GENERATOR content="MSHTML 10.00.9200.17296"></HEAD>
+    <META name=GENERATOR content="MSHTML 10.00.9200.17296">
+</HEAD>
 <BODY topMargin=0 bgColor=#ffffff>
 <DIV>
-    <TABLE cellSpacing=0 cellPadding=0 width=980 align=center border=0><!-- fwtable fwsrc="head.png" fwpage="页面 1" fwbase="head.gif" fwstyle="Dreamweaver" fwdocid = "631801948" fwnested="0" -->
+    <TABLE cellSpacing=0 cellPadding=0 width=980 align=center border=0 class="head_table">
         <TBODY>
         <TR>
             <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=16
@@ -71,14 +71,16 @@
             <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=34
                      height=1></TD>
             <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
-                     height=1></TD></TR>
+                     height=1></TD>
+        </TR>
         <TR>
             <TD rowSpan=3 colSpan=4><IMG id=head_r1_c1 border=0 name=head_r1_c1 alt=""
                                          src="{$tpl}images/head_r1_c1.gif" width=303 height=54></TD>
             <TD colSpan=24><IMG id=head_r1_c5 border=0 name=head_r1_c5 alt=""
                                 src="{$tpl}images/head_r1_c5.gif" width=677 height=29></TD>
             <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
-                     height=29></TD></TR>
+                     height=29></TD>
+        </TR>
         <TR class="head_link">
             <TD rowSpan=4><IMG id=head_r2_c5 border=0 name=head_r2_c5 alt=""
                                src="{$tpl}images/head_r2_c5.gif" width=38 height=42></TD>
@@ -125,7 +127,8 @@
         </TR>
         <TR>
             <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
-                     height=24></TD></TR>
+                     height=24></TD>
+        </TR>
         <TR>
             <TD rowSpan=2 colSpan=4><IMG id=head_r4_c1 border=0 name=head_r4_c1 alt=""
                                          src="{$tpl}images/head_r4_c1.gif" width=303 height=17></TD>
@@ -152,12 +155,14 @@
             <TD rowSpan=2><IMG id=head_r4_c26 border=0 name=head_r4_c26 alt=""
                                src="{$tpl}images/head_r4_c26.gif" width=54 height=17></TD>
             <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
-                     height=1></TD></TR>
+                     height=1></TD>
+        </TR>
         <TR>
             <TD><IMG id=head_r5_c15 border=0 name=head_r5_c15 alt=""
                      src="{$tpl}images/head_r5_c15.gif" width=59 height=16></TD>
             <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
-                     height=16></TD></TR>
+                     height=16></TD>
+        </TR>
         <TR>
             <TD rowSpan=6><IMG id=head_r6_c1 border=0 name=head_r6_c1 alt=""
                                src="{$tpl}images/head_r6_c1.gif" width=16 height=79></TD>
@@ -168,10 +173,11 @@
                                  size=47 value=请输入需要查找的关键字。 name=textfield></TD>
             <TD colSpan=2><IMG id=head_r6_c10 border=0 name=head_r6_c10 alt=""
                                src="{$tpl}images/head_r6_c10.gif" width=19 height=25></TD>
-            <TD colSpan=3><SELECT id=select name=select> <OPTION selected
-                                                                 value=1>题名</OPTION> <OPTION value=2>著者</OPTION> <OPTION
-                    value=3>分类号</OPTION> <OPTION value=4>主题词</OPTION> <OPTION
-                    value=5>关键字</OPTION></SELECT> </TD>
+            <TD colSpan=3><SELECT id=select name=select>
+                {foreach from=$search_book_type item=v key=k}
+                <OPTION value={$k}>{$v}</OPTION>
+                {/foreach}
+            </SELECT></TD>
             <TD colSpan=4><IMG onclick=Searchopen();
                                onmouseover="this.src='{$tpl}images/search.gif'"
                                onmouseout="this.src='{$tpl}images/head_r6_c15.gif'" id=head_r6_c15 border=0
@@ -179,13 +185,14 @@
                                height=25></TD>
             <TD rowSpan=6><IMG id=head_r6_c20 border=0 name=head_r6_c20 alt=""
                                src="{$tpl}images/head_r6_c20.gif" width=7 height=79></TD>
-            <TD colSpan=7><A href="#"
+            <TD colSpan=7><A href=""
                              target=_parent><IMG id=head_r6_c21 border=0 name=head_r6_c21 alt=""
                                                  src="{$tpl}images/head_r6_c21.gif" width=255 height=25></A></TD>
             <TD rowSpan=6><IMG id=head_r6_c28 border=0 name=head_r6_c28 alt=""
                                src="{$tpl}images/head_r6_c28.gif" width=34 height=79></TD>
             <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
-                     height=25></TD></TR>
+                     height=25></TD>
+        </TR>
         <TR>
             <TD rowSpan=5><IMG id=head_r7_c2 border=0 name=head_r7_c2 alt=""
                                src="{$tpl}images/head_r7_c2.gif" width=38 height=54></TD>
@@ -196,22 +203,28 @@
             <TD rowSpan=5 colSpan=7><IMG id=head_r7_c21 border=0 name=head_r7_c21
                                          alt="" src="{$tpl}images/head_r7_c21.gif" width=255 height=54></TD>
             <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
-                     height=6></TD></TR>
+                     height=6></TD>
+        </TR>
         <TR>
-            <TD background={$tpl}images/head_r8_c3.gif colSpan=15 class=head_8>例如：三国演义、茶花女、鲁迅、陶行知、PhotoShop、Java、SQL、Flash……</TD>
+            <TD background={$tpl}images/head_r8_c3.gif colSpan=15><SPAN
+                    class=STYLE8>例如：三国演义、茶花女、鲁迅、陶行知、PhotoShop、Java、SQL、Flash……</SPAN></TD>
             <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
-                     height=20></TD></TR>
+                     height=20></TD>
+        </TR>
         <TR>
             <TD colSpan=16><IMG id=head_r9_c3 border=0 name=head_r9_c3 alt=""
                                 src="{$tpl}images/head_r9_c3.gif" width=621 height=7></TD>
             <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
-                     height=7></TD></TR>
+                     height=7></TD>
+        </TR>
         <TR>
-            <TD colSpan=13 class=head_1>系统公告：本校数字图书馆已正式投入使用，欢迎广大师生注册阅览。</TD>
+            <TD colSpan=13><SPAN
+                    class=STYLE1>系统公告：本校数字图书馆已正式投入使用，欢迎广大师生注册阅览。</SPAN></TD>
             <TD colSpan=3><IMG id=head_r10_c16 border=0 name=head_r10_c16 alt=""
                                src="{$tpl}images/head_r10_c16.gif" width=65 height=15></TD>
             <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
-                     height=15></TD></TR>
+                     height=15></TD>
+        </TR>
         <TR>
             <TD colSpan=16><IMG id=head_r11_c3 border=0 name=head_r11_c3 alt=""
                                 src="{$tpl}images/head_r11_c3.gif" width=621 height=6></TD>
@@ -221,6 +234,3 @@
         </TBODY>
     </TABLE>
 </DIV>
-
-
-
