@@ -87,8 +87,7 @@ alert('请先登录！！！');
 location.href='/book/info/book_id/$book_id';
 </script>
 EOF;
-        }
-        if($_POST['reviews_content']){
+        }elseif($_POST['reviews_content']){
             $reviews->addReview($_POST['reviews_content'],$book_id);
             echo <<<EOF
             <META content="text/html; charset=utf-8" http-equiv=Content-Type>

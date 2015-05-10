@@ -87,7 +87,7 @@ function winopen(bookurl)
                                             <TBODY>
                                             <TR>
                                                 <TD vAlign=center align=middle><IMG border=1
-                                                                                    src="{$book_info.book_cover}"
+                                                                                    src="/{$book_info.book_cover}"
                                                                                     width=120 height=140> </TD></TR></TBODY></TABLE></TD>
                                     <TD width=17>&nbsp;</TD></TR></TBODY></TABLE></TD></TR>
                     <TR>
@@ -234,9 +234,11 @@ function winopen(bookurl)
                             </TD></TR>
 							{/foreach}
 							</TBODY></TABLE>
+                    {if $review_list.page.page_total>0}
                     <TABLE border=0 cellSpacing=0 cellPadding=3 width="100%"
                            align=center>
                         <TBODY>
+
                         <TR>
                             <TD class=STYLE17 width=173>页次:<FONT color=#cc0000>{$review_list.page.page}</FONT>/{$review_list.page.page_total},每页:<FONT color=#cc0000>{$review_list.page.page_per_number}</FONT>条 </TD>
                             <TD class=STYLE17 width=530 align=right>
@@ -249,7 +251,10 @@ function winopen(bookurl)
                                     <A href="{$v.url}">[{$v.page}]</A>
                                     {/if}
                                     {/foreach}
-                                    <A {if $review_list.page.next.url}href="{$review_list.page.next.url}"{/if}>&gt;&gt;</A></DIV></TR></TBODY></TABLE>
+                                    <A {if $review_list.page.next.url}href="{$review_list.page.next.url}"{/if}>&gt;&gt;</A></DIV></TR>
+                        </TBODY>
+                    </TABLE>
+                    {/if}
                     <FORM method=post name=form1 action="/book/addReview">
                         <TABLE border=0 width="100%">
                             <TBODY>

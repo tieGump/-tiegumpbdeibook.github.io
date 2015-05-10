@@ -8,6 +8,7 @@ class UserAction extends Action{
         $this->_user_id=$_SESSION['user']['id'];
         if(!$_SESSION['user']['id']){
             echo <<<EOF
+            <META content="text/html; charset=utf-8" http-equiv=Content-Type>
 <script>
 alert('您还没有登录！请先登录！！！');
 location.href='/';

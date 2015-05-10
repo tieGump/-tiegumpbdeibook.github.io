@@ -63,7 +63,8 @@ class Book extends Mode{
      * @param $book_id
      */
     function addOneRead($book_id){
-        $this->changeOneFiled('read_number=','read_number+1',$book_id);
+        $str_sql='UPDATE '.$this->_table.' SET read_number=read_number+1 WHERE '.$this->_table_id.'='.$book_id;
+        $this->_db->query($str_sql);
     }
 
     /**
@@ -80,7 +81,7 @@ class Book extends Mode{
             $str_sql.=' LIMIT '.$limit;
             return $this->_db->doSelect($str_sql);
         }
-        return $this->getPageList($str_sql,2);
+        return $this->getPageList($str_sql);
     }
 
     /**

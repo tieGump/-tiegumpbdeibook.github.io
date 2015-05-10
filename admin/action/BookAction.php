@@ -16,10 +16,10 @@ class BookAction extends Action{
     }
     function doAddAction(){
         $file=new File();
-        if($book_cover=$file->uploadFile($_FILES['book_cover_file'],'book_cover/')){
+        if($book_cover=$file->uploadFile($_FILES['book_cover_file'],'book/cover/')){
             $_POST['book_cover']=$book_cover;
         }
-        if($book_file=$file->uploadFile($_FILES['book_file'],'book/')){
+        if($book_file=$file->uploadFile($_FILES['book_file'],'book/file')){
             $_POST['save_place']=$book_file;
         }
         $book_id=(int)$_POST['book_id'];

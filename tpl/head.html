@@ -74,7 +74,7 @@
                      height=1></TD></TR>
         <TR>
             <TD rowSpan=3 colSpan=4><IMG id=head_r1_c1 border=0 name=head_r1_c1 alt=""
-                                         src="{$tpl}images/head_r1_c1.gif" width=303 height=54></TD>
+                                         src="{$tpl}images/{$title_img}" width=303 height=54></TD>
             <TD colSpan=24><IMG id=head_r1_c5 border=0 name=head_r1_c5 alt=""
                                 src="{$tpl}images/head_r1_c5.gif" width=677 height=29></TD>
             <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
@@ -102,8 +102,7 @@
                     href="/book/azlist" target=_top>分类浏览</A></SPAN></TD>
             <TD rowSpan=4 colSpan=2><IMG id=head_r2_c20 border=0 name=head_r2_c20
                                          alt="" src="{$tpl}images/head_r2_c20.gif" width=72 height=42></TD>
-            <TD rowSpan=2><A style="cursor:pointer;"><IMG
-                    onclick='javascript:window.external.AddFavorite("http://"+location.host,"多媒体数字图书馆");'
+            <TD rowSpan=2><A style="cursor:pointer;"><IMG style="cursor: pointer" onclick='javascript:window.external.AddFavorite("http://"+location.host,"多媒体数字图书馆");'
                     id=head_r2_c22 border=0 name=head_r2_c22 alt=""
                     src="{$tpl}images/head_r2_c22.gif" width=54 height=25></A></TD>
             <TD rowSpan=4><IMG id=head_r2_c23 border=0 name=head_r2_c23 alt=""
@@ -198,7 +197,7 @@
             <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
                      height=6></TD></TR>
         <TR>
-            <TD background={$tpl}images/head_r8_c3.gif colSpan=15 class=head_8>例如：三国演义、茶花女、鲁迅、陶行知、PhotoShop、Java、SQL、Flash……</TD>
+            <TD background={$tpl}images/head_r8_c3.gif colSpan=15 class=head_8>例如：{$search_example}</TD>
             <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
                      height=20></TD></TR>
         <TR>
@@ -207,7 +206,7 @@
             <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
                      height=7></TD></TR>
         <TR>
-            <TD colSpan=13 class=head_1>系统公告：本校数字图书馆已正式投入使用，欢迎广大师生注册阅览。</TD>
+            <TD colSpan=13 class=head_1>系统公告：{$system_notice}</TD>
             <TD colSpan=3><IMG id=head_r10_c16 border=0 name=head_r10_c16 alt=""
                                src="{$tpl}images/head_r10_c16.gif" width=65 height=15></TD>
             <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1

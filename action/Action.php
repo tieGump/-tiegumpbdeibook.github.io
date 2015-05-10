@@ -33,6 +33,7 @@ abstract class Action {
         $this->_smarty->right_delimiter = "}";
         $this->createCssUrl();
         $this->_message=new Message();
+        $this->getConfig();
 //        $this->_smarty->allow_php_tag=true;
 
 
@@ -70,11 +71,18 @@ abstract class Action {
     function setSearchType(){
         $this->search_book_type=Book::getSearchType();
     }
+    function getConfig(){
+        $config=new ConfigBase();
+        $this->_data['title_img']=$config->getOneValue('title_img');
+        $this->_data['search_example']=$config->getOneValue('search_example');
+        $this->_data['system_notice']=$config->getOneValue('system_notice');
+    }
     /**
      * 析构函数，实现smarty对模板赋值
      */
     function __destruct(){
         $this->setSearchType();
+
         if(!$this->_message->checkFirst()){
             $this->_data['message']=$this->_message->getSessionMessage();
             $this->_message->clearSessionMessage();
