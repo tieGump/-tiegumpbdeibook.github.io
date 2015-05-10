@@ -27,6 +27,7 @@ class User extends Mode{
         $data['user_nick']=$post['user_nick'];
         $data['user_sex']=$post['user_sex'];
         $data['question']=$post['question'];
+        $data['add_time']=date('Y-m-d H:i:s');
         isset($post['answer'])&&$post['answer']?$data['answer']=$post['answer']:'';
         if($id){
             $this->changeOne($data,$id);

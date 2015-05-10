@@ -2878,3 +2878,123 @@ Duplicate entry '6-57' for key 'un_book_user_id' E:\code\PHPWeb\bdei_book\src\do
 1;Class 'AnnounceAction' not found;E:\code\PHPWeb\bdei_book\src\Cop.php;26
 1;Class 'Announce.phpAction' not found;E:\code\PHPWeb\bdei_book\src\Cop.php;26
 1;Class 'Announce.phpAction' not found;E:\code\PHPWeb\bdei_book\src\Cop.php;26
+[8] Undefined index: content E:\code\PHPWeb\bdei_book\admin\action\ReviewsAction.php 第 6 行.
+[8] Undefined index: user_id E:\code\PHPWeb\bdei_book\admin\action\ReviewsAction.php 第 6 行.
+[8] Undefined index: book_id E:\code\PHPWeb\bdei_book\admin\action\ReviewsAction.php 第 6 行.
+[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
+[8] Undefined index: book_name E:\code\PHPWeb\bdei_book\admin\tpl_c\1b6065b8b159e4252573e1e13ad1af642318b1ff.file.review_list.html.php 第 84 行.
+[8] Undefined index: book_name E:\code\PHPWeb\bdei_book\admin\tpl_c\1b6065b8b159e4252573e1e13ad1af642318b1ff.file.review_list.html.php 第 84 行.
+1;Class 'Favicon.icoAction' not found;E:\code\PHPWeb\bdei_book\src\Cop.php;26
+[2048] Declaration of DisableIP::getList() should be compatible with Mode::getList($limit = '') E:\code\PHPWeb\bdei_book\src\DisableIP.php 第 3 行.
+[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;E:\code\PHPWeb\bdei_book\src\Cop.php;26
+[2048] Declaration of User::getList() should be compatible with Mode::getList($limit = '') E:\code\PHPWeb\bdei_book\src\User.php 第 13 行.
+[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
+[8] Undefined index: admin_name E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 74 行.
+[8] Undefined index: group_list E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Undefined index: add_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 78 行.
+[8] Undefined index: last_login_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 80 行.
+[8] Undefined index: admin_name E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 74 行.
+[8] Undefined index: group_list E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Undefined index: add_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 78 行.
+[8] Undefined index: last_login_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 80 行.
+[8] Undefined index: admin_name E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 74 行.
+[8] Undefined index: group_list E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Undefined index: add_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 78 行.
+[8] Undefined index: last_login_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 80 行.
+[8] Undefined index: admin_name E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 74 行.
+[8] Undefined index: group_list E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Undefined index: add_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 78 行.
+[8] Undefined index: last_login_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 80 行.
+1;Class 'Favicon.icoAction' not found;E:\code\PHPWeb\bdei_book\src\Cop.php;26
+[2048] Declaration of Administrator::getList() should be compatible with Mode::getList($limit = '') E:\code\PHPWeb\bdei_book\src\Administrator.php 第 10 行.
+[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
+[2048] Declaration of ConfigBase::getList() should be compatible with Mode::getList($limit = '') E:\code\PHPWeb\bdei_book\src\ConfigBase.php 第 3 行.
+[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;E:\code\PHPWeb\bdei_book\src\Cop.php;26
+[2048] Declaration of User::getList() should be compatible with Mode::getList($limit = '') E:\code\PHPWeb\bdei_book\src\User.php 第 13 行.
+[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
+[8] Undefined index: admin_name E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 74 行.
+[8] Undefined index: group_list E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Undefined index: add_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 78 行.
+[8] Undefined index: last_login_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 80 行.
+[8] Undefined index: admin_name E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 74 行.
+[8] Undefined index: group_list E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Undefined index: add_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 78 行.
+[8] Undefined index: last_login_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 80 行.
+[8] Undefined index: admin_name E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 74 行.
+[8] Undefined index: group_list E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Undefined index: add_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 78 行.
+[8] Undefined index: last_login_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 80 行.
+[8] Undefined index: admin_name E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 74 行.
+[8] Undefined index: group_list E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Undefined index: add_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 78 行.
+[8] Undefined index: last_login_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 80 行.
+1;Class 'Favicon.icoAction' not found;E:\code\PHPWeb\bdei_book\src\Cop.php;26
+[2048] Declaration of Administrator::getList() should be compatible with Mode::getList($limit = '') E:\code\PHPWeb\bdei_book\src\Administrator.php 第 10 行.
+[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
+[2048] Declaration of ConfigBase::getList() should be compatible with Mode::getList($limit = '') E:\code\PHPWeb\bdei_book\src\ConfigBase.php 第 3 行.
+[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;E:\code\PHPWeb\bdei_book\src\Cop.php;26
+[2048] Declaration of User::getList() should be compatible with Mode::getList($limit = '') E:\code\PHPWeb\bdei_book\src\User.php 第 13 行.
+[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
+[8] Undefined index: admin_name E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 74 行.
+[8] Undefined index: group_list E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Undefined index: add_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 78 行.
+[8] Undefined index: last_login_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 80 行.
+[8] Undefined index: admin_name E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 74 行.
+[8] Undefined index: group_list E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Undefined index: add_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 78 行.
+[8] Undefined index: last_login_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 80 行.
+[8] Undefined index: admin_name E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 74 行.
+[8] Undefined index: group_list E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Undefined index: add_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 78 行.
+[8] Undefined index: last_login_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 80 行.
+[8] Undefined index: admin_name E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 74 行.
+[8] Undefined index: group_list E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Undefined index: add_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 78 行.
+[8] Undefined index: last_login_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 80 行.
+1;Class 'Favicon.icoAction' not found;E:\code\PHPWeb\bdei_book\src\Cop.php;26
+[2048] Declaration of User::getList() should be compatible with Mode::getList($limit = '') E:\code\PHPWeb\bdei_book\src\User.php 第 13 行.
+[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
+[8] Undefined index: admin_name E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 74 行.
+[8] Undefined index: group_list E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Undefined index: add_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 78 行.
+[8] Undefined index: last_login_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 80 行.
+[8] Undefined index: admin_name E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 74 行.
+[8] Undefined index: group_list E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Undefined index: add_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 78 行.
+[8] Undefined index: last_login_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 80 行.
+[8] Undefined index: admin_name E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 74 行.
+[8] Undefined index: group_list E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Undefined index: add_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 78 行.
+[8] Undefined index: last_login_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 80 行.
+[8] Undefined index: admin_name E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 74 行.
+[8] Undefined index: group_list E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Trying to get property of non-object E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 76 行.
+[8] Undefined index: add_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 78 行.
+[8] Undefined index: last_login_time E:\code\PHPWeb\bdei_book\admin\tpl_c\cbdfb829f739579868e0127f2f6d55d0d1ffdf2e.file.customer_list.html.php 第 80 行.
+1;Class 'Favicon.icoAction' not found;E:\code\PHPWeb\bdei_book\src\Cop.php;26
+[2048] Declaration of Administrator::getList() should be compatible with Mode::getList($limit = '') E:\code\PHPWeb\bdei_book\src\Administrator.php 第 10 行.
+[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
+[2048] Declaration of ConfigBase::getList() should be compatible with Mode::getList($limit = '') E:\code\PHPWeb\bdei_book\src\ConfigBase.php 第 3 行.
+[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;E:\code\PHPWeb\bdei_book\src\Cop.php;26
+[2048] Declaration of User::getList() should be compatible with Mode::getList($limit = '') E:\code\PHPWeb\bdei_book\src\User.php 第 13 行.
+[8] Undefined index: message E:\code\PHPWeb\bdei_book\src\Message.php 第 26 行.
+1;Class 'Favicon.icoAction' not found;E:\code\PHPWeb\bdei_book\src\Cop.php;26
