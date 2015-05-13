@@ -21,7 +21,6 @@
             <th>用户名称</th>
             <th>用户昵称</th>
             <th>添加时间</th>
-            <th>Edit</th>
             <th>Delete</th>
         </tr>
         </thead>
@@ -37,7 +36,6 @@
             <td>{$v.user_name}</td>
             <td>{$v.user_nick}</td>
             <td>{$v.add_time}</td>
-            <td><a href="/admin/customer/edit/user_id/{$v.user_id}"><img src="{$tpl}resources/images/edit.png" alt="" title="" border="0" /></a></td>
             <td><a href="/admin/customer/delete/user_id/{$v.user_id}" onclick="if(confirm('您确定要删除吗？'))return true;else return false;"><img src="{$tpl}resources/images/trash.gif" alt="" title="" border="0" /></a></td>
         </tr>
         {/foreach}
