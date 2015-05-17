@@ -81,20 +81,36 @@ class BookAction extends Action{
         $book_id=(int)$_POST['book_id'];
         if(!$_SESSION['user']['id']){
             echo <<<EOF
-            <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+           <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
 <script type="text/javascript" charset="utf-8">
 alert('请先登录！！！');
 location.href='/book/info/book_id/$book_id';
 </script>
+</body>
+</html>
 EOF;
         }elseif($_POST['reviews_content']){
             $reviews->addReview($_POST['reviews_content'],$book_id);
             echo <<<EOF
-            <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
 <script type="text/javascript" charset="utf-8">
 alert('评论成功！！！');
 location.href='/book/info/book_id/$book_id';
 </script>
+</body>
+</html>
 EOF;
         }else{
             redirect('/book/info/book_id/'.$book_id);
@@ -152,29 +168,53 @@ EOF;
         $book_id=(int)$_GET['book_id'];
         if(!$_SESSION['user']['id']){
             echo <<<EOF
-            <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
 <script type="text/javascript" charset="utf-8">
 alert('请先登录！！！');
 location.href='/book/info/book_id/$book_id';
 </script>
+</body>
+</html>
 EOF;
         }else{
             $book_mark=new BookMark();
             if($book_mark->addMark($_SESSION['user']['id'],$book_id)){
                 echo <<<EOF
-            <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
 <script type="text/javascript" charset="utf-8">
 alert('书签加入成功！！！');
 location.href='/book/info/book_id/$book_id';
 </script>
+</body>
+</html>
 EOF;
             }else{
                 echo <<<EOF
-            <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
 <script type="text/javascript" charset="utf-8">
 alert('书签加入失败，请检查是否已加入了您的书签！！！');
 location.href='/book/info/book_id/$book_id';
 </script>
+</body>
+</html>
 EOF;
             }
 

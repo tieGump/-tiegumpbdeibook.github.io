@@ -110,7 +110,7 @@ class Page{
     }
     function createIndex(){
         $str_return=array();
-        if($this->_page_cout>=1&&$this->_page_cout<=$this->_str_len){//不存在省略号的结果
+        if($this->_page_cout>=0&&$this->_page_cout<=$this->_str_len){//不存在省略号的结果
             for($i=1;$i<=$this->_page_cout;$i++){
                 $str_return[]=array('url'=>$this->getUrl($i),'page'=>$i,'checked'=>$this->_page==$i?true:false);
             }

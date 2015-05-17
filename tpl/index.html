@@ -92,9 +92,11 @@
         <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
                  height=10></TD></TR>
     <TR>
-        <TD colSpan=2><A href="http://210.79.110.128:8081/library"><IMG
-                id=default_r3_c9 border=0 name=default_r3_c9 alt=""
-                src="{$tpl}images/default_r3_c9.gif" width=141 height=23></A></TD>
+        <TD colSpan=2>
+            <!--<A href="http://210.79.110.128:8081/library"><IMG-->
+                <!--id=default_r3_c9 border=0 name=default_r3_c9 alt=""-->
+                <!--src="{$tpl}images/default_r3_c9.gif" width=141 height=23></A>-->
+        </TD>
         <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
                  height=23></TD></TR>
     <TR>
@@ -118,62 +120,66 @@
                             <TBODY>
                             <TR>
                                 <TD height=126 vAlign=middle width=12>&nbsp;</TD>
-                                <TD width=120><A href="/upload/{$index_recommend[0].save_place}"><IMG
+                                <TD width=120>{if $index_recommend[0]}<A href="/upload/{$index_recommend[0].save_place}"><IMG
                                         border=1 alt='{$index_recommend[0].book_name}' src="/upload/{$index_recommend[0].book_cover}" width=117
-                                        height=145></A></TD>
+                                        height=145></A>{/if}</TD>
                                 <TD width=39>&nbsp;</TD>
-                                <TD width=122><A href="/upload/{$index_recommend[1].save_place}">
-								<IMG border=1 alt={$index_recommend[1].book_name} src="/upload/{$index_recommend[1].book_cover}" width=117 height=145></A>
+                                <TD width=122>{if $index_recommend[1]}<A href="/upload/{$index_recommend[1].save_place}">
+								<IMG border=1 alt={$index_recommend[1].book_name} src="/upload/{$index_recommend[1].book_cover}" width=117 height=145></A>{/if}
 								</TD>
                                 <TD width=38>&nbsp;</TD>
-                                <TD width=119><A href="/upload/{$index_recommend[2].save_place}">
-										<IMG border=1 alt={$index_recommend[2].book_name} src="/upload/{$index_recommend[2].book_cover}" width=117 height=145></A></TD>
+                                <TD width=119>{if $index_recommend[2]}<A href="/upload/{$index_recommend[2].save_place}">
+										<IMG border=1 alt={$index_recommend[2].book_name} src="/upload/{$index_recommend[2].book_cover}" width=117 height=145></A>
+                                {/if}
+                                </TD>
                                 <TD width=39>&nbsp;</TD>
-                                <TD width=119><A href="/upload/{$index_recommend[3].save_place}">
-										<IMG border=1 alt={$index_recommend[3].book_name} src="/upload/{$index_recommend[3].book_cover}" width=117 height=145></A></TD>
+                                <TD width=119>{if $index_recommend[3]}<A href="/upload/{$index_recommend[3].save_place}">
+										<IMG border=1 alt={$index_recommend[3].book_name} src="/upload/{$index_recommend[3].book_cover}" width=117 height=145></A>
+                                {/if}
+                                </TD>
                                 <TD width=12>&nbsp;</TD>
                             </TR>
                             <TR>
                                 <TD height=18>&nbsp;</TD>
                                 <TD class=STYLE1>
-                                    <DIV align=center><A href="/upload/{$index_recommend[0].save_place}" target=_blank>{$index_recommend[0].book_name}</A></DIV></TD>
+                                    <DIV align=center>{if $index_recommend[0]}<A href="/upload/{$index_recommend[0].save_place}" target=_blank>{$index_recommend[0].book_name}</A>{/if}</DIV></TD>
                                 <TD class=STYLE1>&nbsp;</TD>
                                 <TD class=STYLE1>
-                                    <DIV align=center><A href="/upload/{$index_recommend[1].save_place}" target=_blank>{$index_recommend[1].book_name}</A></DIV></TD>
+                                    <DIV align=center>{if $index_recommend[1]}<A href="/upload/{$index_recommend[1].save_place}" target=_blank>{$index_recommend[1].book_name}</A>{/if}</DIV></TD>
                                 <TD class=STYLE1>&nbsp;</TD>
                                 <TD class=STYLE1>
-                                    <DIV align=center><A href="/upload/{$index_recommend[2].save_place}" target=_blank>{$index_recommend[2].book_name}</A></DIV></TD>
+                                    <DIV align=center>{if $index_recommend[2]}<A href="/upload/{$index_recommend[2].save_place}" target=_blank>{$index_recommend[2].book_name}</A>{/if}</DIV></TD>
                                 <TD class=STYLE1>&nbsp;</TD>
                                 <TD class=STYLE1>
-                                    <DIV align=center><A href="/upload/{$index_recommend[3].save_place}" target=_blank>{$index_recommend[3].book_name}</A></DIV></TD>
+                                    <DIV align=center>{if $index_recommend[3]}<A href="/upload/{$index_recommend[3].save_place}" target=_blank>{$index_recommend[3].book_name}</A>{/if}</DIV></TD>
                                 <TD class=STYLE1>&nbsp;</TD></TR>
                             <TR>
                                 <TD height=154>&nbsp;</TD>
-                                <TD><A href="/upload/{$index_recommend[4].save_place}">
-										<IMG border=1 alt={$index_recommend[4].book_name} src="/upload/{$index_recommend[4].book_cover}" width=117 height=145></A></TD>
+                                <TD>{if $index_recommend[4]}<A href="/upload/{$index_recommend[4].save_place}">
+										<IMG border=1 alt={$index_recommend[4].book_name} src="/upload/{$index_recommend[4].book_cover}" width=117 height=145></A>{/if}</TD>
                                 <TD>&nbsp;</TD>
-                                <TD><A href="/upload/{$index_recommend[5].save_place}">
-										<IMG border=1 alt={$index_recommend[5].book_name} src="/upload/{$index_recommend[5].book_cover}" width=117 height=145></A></TD>
+                                <TD>{if $index_recommend[5]}<A href="/upload/{$index_recommend[5].save_place}">
+										<IMG border=1 alt={$index_recommend[5].book_name} src="/upload/{$index_recommend[5].book_cover}" width=117 height=145></A>{/if}</TD>
                                 <TD>&nbsp;</TD>
-                                <TD><A href="/upload/{$index_recommend[6].save_place}">
-										<IMG border=1 alt={$index_recommend[6].book_name} src="/upload/{$index_recommend[6].book_cover}" width=117 height=145></A></TD>
+                                <TD>{if $index_recommend[6]}<A href="/upload/{$index_recommend[6].save_place}">
+										<IMG border=1 alt={$index_recommend[6].book_name} src="/upload/{$index_recommend[6].book_cover}" width=117 height=145></A>{/if}</TD>
                                 <TD>&nbsp;</TD>
-                                <TD><A href="/upload/{$index_recommend[7].save_place}">
-										<IMG border=1 alt={$index_recommend[7].book_name} src="/upload/{$index_recommend[7].book_cover}" width=117 height=145></A></TD>
+                                <TD>{if $index_recommend[7]}<A href="/upload/{$index_recommend[7].save_place}">
+										<IMG border=1 alt={$index_recommend[7].book_name} src="/upload/{$index_recommend[7].book_cover}" width=117 height=145></A>{/if}</TD>
                                 <TD>&nbsp;</TD></TR>
                             <TR>
                                 <TD class=STYLE1>&nbsp;</TD>
                                 <TD class=STYLE1>
-                                    <DIV align=center><A href="/upload/{$index_recommend[4].save_place}" target=_blank>{$index_recommend[4].book_name}</A></DIV></TD>
+                                    <DIV align=center>{if $index_recommend[4]}<A href="/upload/{$index_recommend[4].save_place}" target=_blank>{$index_recommend[4].book_name}</A>{/if}</DIV></TD>
                                 <TD class=STYLE1>&nbsp;</TD>
                                 <TD class=STYLE1>
-                                    <DIV align=center><A href="/upload/{$index_recommend[5].save_place}" target=_blank>{$index_recommend[5].book_name}</A></DIV></TD>
+                                    <DIV align=center>{if $index_recommend[5]}<A href="/upload/{$index_recommend[5].save_place}" target=_blank>{$index_recommend[5].book_name}</A>{/if}</DIV></TD>
                                 <TD class=STYLE1>&nbsp;</TD>
                                 <TD class=STYLE1>
-                                    <DIV align=center><A href="/upload/{$index_recommend[6].save_place}" target=_blank>{$index_recommend[6].book_name}</A></DIV></TD>
+                                    <DIV align=center>{if $index_recommend[6]}<A href="/upload/{$index_recommend[6].save_place}" target=_blank>{$index_recommend[6].book_name}</A>{/if}</DIV></TD>
                                 <TD class=STYLE1>&nbsp;</TD>
                                 <TD class=STYLE1>
-                                    <DIV align=center><A href="/upload/{$index_recommend[7].save_place}" target=_blank>{$index_recommend[7].book_name}</A></DIV></TD>
+                                    <DIV align=center>{if $index_recommend[7]}<A href="/upload/{$index_recommend[7].save_place}" target=_blank>{$index_recommend[7].book_name}</A>{/if}</DIV></TD>
                                 <TD class=STYLE1>&nbsp;</TD></TR></TBODY></TABLE>
                         <DIV align=right></DIV>
                         <DIV align=center></DIV></DIV>
@@ -490,7 +496,7 @@
                                 <TD width=72>
                                     <DIV align=left>普通图书：</DIV></TD>
                                 <TD width=122>
-                                    <DIV align=center>{$book_total[1].total} 册 </DIV></TD>
+                                    <DIV align=center><a href="/book/azlist" target="_blank"> {$book_total[1].total}</a> 册 </DIV></TD>
                             </TR>
                             <TR>
                                 <TD>&nbsp;</TD>
@@ -499,7 +505,7 @@
                                 <TD>
                                     <DIV align=left>有声图书：</DIV></TD>
                                 <TD>
-                                    <DIV align=center>{$book_total[2].total} 册</DIV></TD></TR>
+                                    <DIV align=center><a href="/book/sound" target="_blank"> {$book_total[2].total}</a> 册</DIV></TD></TR>
                             <TR>
                                 <TD>&nbsp;</TD>
                                 <TD><IMG alt=3 src="{$tpl}images/dot_5.gif" width=16
@@ -507,7 +513,7 @@
                                 <TD>
                                     <DIV align=left>视频资源：</DIV></TD>
                                 <TD>
-                                    <DIV align=center>{$book_total[3].total} 部</DIV></TD></TR>
+                                    <DIV align=center><a href="/book/video" target="_blank">{$book_total[3].total}</a> 部</DIV></TD></TR>
                                 <TD height=27 colSpan=3>
                                     <DIV class=STYLE7 align=center>总计： </DIV></TD>
                                 <TD height=27>

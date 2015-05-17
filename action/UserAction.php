@@ -8,13 +8,22 @@ class UserAction extends Action{
         $this->_user_id=$_SESSION['user']['id'];
         if(!$_SESSION['user']['id']){
             echo <<<EOF
-            <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
 <script>
 alert('您还没有登录！请先登录！！！');
 location.href='/';
 </script>
+</body>
+</html>
 EOF;
-
+exit;
         }
     }
     function indexAction(){

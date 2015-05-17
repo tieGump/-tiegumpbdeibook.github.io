@@ -93,8 +93,8 @@
         <DIV class=STYLE16 align=center>{$v.add_time}</DIV></TD>
     <TD onMouseOver="this.style.color='blue';"
         onmouseout="this.style.color='#333333';" height=8 width="8%">
-        <DIV onClick="javascript:winopen('/book/soundInfo/book_id/{$book_info.book_id}')"
-             align=center><A class=STYLE16 target=_blank>视听</A></DIV></TD></TR>
+        <DIV STYLE="cursor: pointer" onClick="javascript:window.open('/book/soundInfo/book_id/{$V.book_id}')"
+             align=center><A class=STYLE16 target=_blank STYLE="cursor: pointer">视听</A></DIV></TD></TR>
 {/foreach}
 </TBODY></TABLE>
 </DIV>
