@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>分类浏览</title>
+    <link rel="stylesheet" href="css/base.css" type="text/css"/>
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="css/chrome.css" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3-min.js"></script>
+    <script type="text/javascript" src="js/jquery.artDialog.js"></script>
+    <script type="text/javascript" src="js/iframeTools.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+
+
+<!--head-->
+<div id="head" class="g-wrap">
+    <div class="h-top">
+        <h1 class="logo fl"><a href="index.html">LOGO</a></h1>
+        <ul class="h-login fr">
+            <li><a href="javascript:;" id="addCollect" class="h-login-ico01">加入收藏</a></li>
+            <li><a href="javascript:;" id="setIndex" class="h-login-ico02">设为首页</a></li>
+            <li><a href="javascript:;" id="admLogin" class="h-login-ico03">管理登陆</a></li>
+        </ul>
+        <ul class="h-nav fr">
+            <li><a href="index.html"><i></i><span>首页</span></a></li>
+            <li><a href="audio-books.html"><i></i><span>有声图书</span></a></li>
+            <li><a href="video-center.html"><i></i><span>视频中心</span></a></li>
+            <li><a href="personal-center.html"><i></i><span>个人中心</span></a></li>
+            <li class="active"><a href="browse.html"><i></i><span>分类浏览</span></a></li>
+        </ul>
+    </div>
+    <div class="h-bottom">
+        <div class="h-search fl">
+            <label>图书搜索：</label>
+            <input type="text" placeholder="请输入要搜索的关键字">
+            <select>
+                <option>题名</option>
+                <option>著者</option>
+                <option>分类号</option>
+                <option>主题词</option>
+                <option>关键字</option>
+            </select>
+            <input type="button" value="搜索">
+        </div>
+    </div>
+</div>
+<!--head end-->
+
+<!--info-->
+<div class="update g-wrap">
+    <p>系统公告：</p>
+    <div class="update-wrap">
+        <ul>
+            <li><a href="javascript:;">1盗墓笔记盗墓笔记盗墓笔记盗墓笔记盗墓笔记</a></li>
+            <li><a href="javascript:;">2盗墓笔记盗墓笔记盗墓笔记盗墓笔记盗墓笔记</a></li>
+            <li><a href="javascript:;">3盗墓笔记盗墓笔记盗墓笔记盗墓笔记盗墓笔记</a></li>
+            <li><a href="javascript:;">4盗墓笔记盗墓笔记盗墓笔记盗墓笔记盗墓笔记</a></li>
+        </ul>
+        <a id="updateUpBtn" href="javascript:;" class="triangle_up"></a>
+        <a id="updateDownBtn" href="javascript:;" class="triangle_down_red"></a>
+    </div>
+
+</div>
+<!--info en-->
+
+<!--main-->
+<div id="main" class="g-wrap clearfix">
+    <dl class="m-nav-left fl ">
+        <dt>分类浏览</dt>
+        <ul class="m-sear">
+            <li><a href="#"><i>A</i><span>马恩列毛邓</span></a></li>
+            <li><a href="#"><i>B</i><span>哲学、宗教</span></a></li>
+            <li><a href="#"><i>C</i><span>社会科学总论</span></a></li>
+            <li><a href="#"><i>D</i><span>政治、法律</span></a></li>
+            <li><a href="#"><i>E</i><span>军事</span></a></li>
+            <li><a href="#"><i>F</i><span>经济</span></a></li>
+            <li><a href="#"><i>G</i><span>文教、科学、体育</span></a></li>
+            <li><a href="#"><i>H</i><span>语言、文字</span></a></li>
+            <li><a href="#"><i>I</i><span>文学</span></a></li>
+            <li><a href="#"><i>J</i><span>艺术</span></a></li>
+            <li><a href="#"><i>K</i><span>历史、地理</span></a></li>
+            <li><a href="#"><i>N</i><span>自然科学总论</span></a></li>
+            <li><a href="#"><i>O</i><span>数理科学和化学</span></a></li>
+            <li><a href="#"><i>Q</i><span>生物科学</span></a></li>
+            <li><a href="#"><i>R</i><span>医药、卫生</span></a></li>
+            <li><a href="#"><i>S</i><span>农业科学</span></a></li>
+            <li><a href="#"><i>T</i><span>工业技术</span></a></li>
+            <li><a href="#"><i>U</i><span>交通运输</span></a></li>
+            <li><a href="#"><i>V</i><span>航空、航天</span></a></li>
+            <li><a href="#"><i>X</i><span>环境、安全科学</span></a></li>
+            <li><a href="#"><i>Z</i><span>综合性图书</span></a></li>
+        </ul>
+    </dl>
+
+    <div class="m-cont-right fr">
+        <ul class="m-crumbs clearfix">
+
+            <li><a href="#">有声书系列</a></li>
+            <li>视频中心<em>&gt;&gt;</em></li>
+        </ul>
+
+        <div class="m-cont-table">
+            <table>
+                <thead>
+                <tr>
+                    <th>题名</th>
+                    <th>作者</th>
+                    <th>浏览次数</th>
+                    <th>加入时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>盗墓笔记</td>
+                    <td>I247.54</td>
+                    <td>2015-04-29</td>
+                    <td>10次</td>
+                    <td>
+                        <a href="detail.html">点播</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>盗墓笔记</td>
+                    <td>I247.54</td>
+                    <td>2015-04-29</td>
+                    <td>10次</td>
+                    <td>
+                        <a href="detail.html">点播</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>盗墓笔记</td>
+                    <td>I247.54</td>
+                    <td>2015-04-29</td>
+                    <td>10次</td>
+                    <td>
+                        <a href="detail.html">点播</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>盗墓笔记</td>
+                    <td>I247.54</td>
+                    <td>2015-04-29</td>
+                    <td>10次</td>
+                    <td>
+                        <a href="detail.html">点播</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>盗墓笔记</td>
+                    <td>I247.54</td>
+                    <td>2015-04-29</td>
+                    <td>10次</td>
+                    <td>
+                        <a href="detail.html">点播</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>盗墓笔记</td>
+                    <td>I247.54</td>
+                    <td>2015-04-29</td>
+                    <td>10次</td>
+                    <td>
+                        <a href="detail.html">点播</a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+            <ul class="m-paging">
+                <li><a href="#">刷新</a></li>
+                <li><a href="#">首页</a></li>
+                <li><a href="#" class="active">上一页</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">下一页</a></li>
+                <li><a href="#">尾页</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--main end-->
+
+<!--footer-->
+<div id="footer" class="g-wrap">
+    <span>	Copyright(C) 2014-2018. All rights reserved. Powered by Libonline.net </span>
+    <p>广州图汇信息科技有限公司·版权所有</p>
+</div>
+<!--footer end-->
+</body>
+
+</html>
+
+
+</body>
+</html>

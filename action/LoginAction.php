@@ -48,8 +48,9 @@ class LoginAction extends Action{
 <body>
 <script>
 alert("注册成功!!!请登录！！！");
-parent.pop.close();;
+parent.dialog_a.close();
 </script>
+<input type="button" value="test" id="regBtn" />
 </body>
 </html>
 EOF;
@@ -71,6 +72,7 @@ EOF;
     function findPasswordThreeAction(){
         $user=new User();
         $info=$user->getInfoByName($_SESSION['find_user']);
+        $this->user_name=$_SESSION['find_user'];
         if($_POST['aq']==$info['answer']){
             $this->user_name=$info['user_name'];
             $this->_tpl='find_back3.html';
@@ -81,7 +83,6 @@ EOF;
 
     }
     function changePasswordAction(){
-        print_r($_SESSION);
         $user=new User();
         if($user->changePassword($_SESSION['find_user'],$_POST['pass'])){
             echo <<<EOF
@@ -93,8 +94,9 @@ EOF;
 
 <body>
 <script>
+
 alert("密码修改成功!!!请登录！！！");
-parent.pop.close();;
+parent.dialog_a.close();
 </script>
 </body>
 </html>

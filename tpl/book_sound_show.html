@@ -1,4 +1,31 @@
 {include file="head.html"}
+<!--main-->
+<div id="main" class="g-wrap clearfix">
+    <dl class="m-nav-left fl ">
+        <dt>有声图书</dt>
+        {foreach from=$sound_type item=v key=k}
+        <dd {if $book_info.category_extend_id==$k}class="active"{/if}><a href="/book/sound/book_type/{$k}">{$v}</a></dd>
+        {/foreach}
+    </dl>
+
+    <div class="m-cont-right fr">
+        <ul class="m-crumbs clearfix">
+            <li>{$book_info.book_name}</li>
+            <li><a href="/book/sound/book_type/{$book_info.category_extend_id}">{$sound_type_name}</a><em>&gt;&gt;</em></li>
+            <li><a href="/book/sound">视频中心</a><em>&gt;&gt;</em></li>
+            <li><a href="/">首页</a><em>&gt;&gt;</em></li>
+        </ul>
+        <div class="m-cont-table">
+            <div class="sound-head">{$book_info.book_name}</div>
+            <audio controls src="/{$movie_dir}" style="width: 600px; "></audio>
+            <div class="sound-content">
+                {$book_info.book_info|nl2br}
+            </div>
+        </div>
+    </div>
+</div>
+<!--main end-->
+{if 0}
 <META name=GENERATOR content="MSHTML 8.00.7601.18806">
 <SCRIPT language=javascript>
         function winSizer(){
@@ -120,4 +147,5 @@ width=672 align=center>
     <TBODY>
     <TR>
         <TD></TD></TR></TBODY></TABLE>
+{/if}
 		{include file="foot.html"}

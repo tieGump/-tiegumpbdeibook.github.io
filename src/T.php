@@ -78,7 +78,7 @@ class T
             }
             $this->_field = substr($field_str, 1);
         } else {
-            die('不存在的表！！！');
+            die($this->_table.'不存在的表！！！');
         }
 
     }

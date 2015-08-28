@@ -1,4 +1,97 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="{$tpl}css/base.css" type="text/css"/>
+    <link rel="stylesheet" href="{$tpl}css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="{$tpl}css/chrome.css" type="text/css"/>
+    <script type="text/javascript" src="{$tpl}js/jquery-1.8.3-min.js"></script>
+    <script type="text/javascript" src="{$tpl}js/jquery.artDialog.js"></script>
+    <script type="text/javascript" src="{$tpl}js/iframeTools.js"></script>
+    <script type="text/javascript" src="{$tpl}js/main.js"></script>
+    <script type="text/javascript">
+        //获取下拉列表选中项的值
+        function getSelectedValue(name){
+            var obj=document.getElementById(name);
+            return obj.value;      //如此简单，直接用其对象的value属性便可获取到
+        }
+        //获取查找关键字的值
+        function getSelectedtxt(name){
+            var obj=document.getElementById(name);
+            return obj.value;      //如此简单，直接用其对象的value属性便可获取到
+        }
+        function Searchopen(){
+            var aa = document.getElementsByTagName("input")
+            for(var i=0;i<aa.length;i++){
+                if (aa[i].value!="请输入需要查找的关键字。") {
+                    var tmp=getSelectedtxt('textfield');
+                    tmp=tmp?"/keyword/"+tmp:'';
+                    bookurl="/book/search"+tmp+"/findtype/"+getSelectedValue('select');
+                    window.top.location.href=bookurl;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+
+<!--head-->
+<div id="head" class="g-wrap">
+    <div class="h-top">
+        <h1 class="logo fl"><a href="/" style="background: {$tpl}images/{$title_img}">图汇</a></h1>
+        <ul class="h-login fr">
+            <li><a href="javascript:;" id="addCollect" class="h-login-ico01">加入收藏</a></li>
+            <li><a href="javascript:;" id="setIndex" class="h-login-ico02">设为首页</a></li>
+            <li><a href="/admin" class="h-login-ico03">管理登陆</a></li>
+        </ul>
+        <ul class="h-nav fr">
+            <li {if $smarty.get.mod=="Index"||$smarty.get.mod=="index"}class="active"{/if}><a href="/"><i></i><span>首页</span></a></li>
+            <li {if $smarty.get.mod=="book"&&$smarty.get.action=='sound'}class="active"{/if} ><a href="/book/sound"  ><i></i><span>有声图书</span></a></li>
+            <li {if $smarty.get.mod=="book"&&$smarty.get.action=='video'}class="active"{/if}><a href="/book/video"><i></i><span>视频中心</span></a></li>
+            <li {if $smarty.get.mod=="user"}class="active"{/if} ><a href="/user"><i></i><span>个人中心</span></a></li>
+            <li {if $smarty.get.mod=="book"&&$smarty.get.action=='azlist'}class="active"{/if}><a href="/book/azlist"><i></i><span>分类浏览</span></a></li>
+        </ul>
+    </div>
+    <div class="h-bottom">
+        <div class="h-search fl">
+            <label>图书搜索：</label>
+            <input type="text" placeholder="请输入要搜索的关键字" id="textfield">
+            <select id="select">
+                <OPTION value=1>题名</OPTION>
+                <OPTION value=2>著者</OPTION>
+                <OPTION value=3>分类号</OPTION>
+                <OPTION value=4>主题词</OPTION>
+                <OPTION value=5>关键字</OPTION>
+            </select>
+            <input type="button" value="搜索" onclick="Searchopen()">
+        </div>
+    </div>
+</div>
+<!--head end-->
+
+<!--info-->
+<div class="update g-wrap">
+    <p>系统公告：</p>
+    <div class="update-wrap">
+        <ul>
+            {foreach from=$system_notice item=v}
+            <li><a style="cursor:pointer;">{$v}</a></li>
+            {/foreach}
+            <!--<li><a href="javascript:;">2盗墓笔记盗墓笔记盗墓笔记盗墓笔记盗墓笔记</a></li>-->
+            <!--<li><a href="javascript:;">3盗墓笔记盗墓笔记盗墓笔记盗墓笔记盗墓笔记</a></li>-->
+            <!--<li><a href="javascript:;">4盗墓笔记盗墓笔记盗墓笔记盗墓笔记盗墓笔记</a></li>-->
+        </ul>
+        <a id="updateUpBtn" href="javascript:;" class="triangle_up"></a>
+        <a id="updateDownBtn" href="javascript:;" class="triangle_down_red"></a>
+    </div>
+
+</div>
+<!--info en-->
+{if 0}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML
         xmlns="http://www.w3.org/1999/xhtml"><HEAD><META content="IE=7.0000"
                                                          http-equiv="X-UA-Compatible">
@@ -222,4 +315,4 @@
 </DIV>
 
 
-
+{/if}

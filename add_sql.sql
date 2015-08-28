@@ -19,3 +19,7 @@ INSERT INTO `bdei_config` VALUES ('4', '单位简介 ', 'company_desc', '向用�
 INSERT INTO `bdei_config` VALUES ('5', '系统公告', 'system_notice', '本校数字图书馆已正式投入使用，欢迎广大师生注册阅览。', '系统公告');
 INSERT INTO `bdei_config` VALUES ('6', '搜索例如', 'search_example', '三国演义、茶花女、鲁迅、陶行知、PhotoShop、Java、SQL、Flash……', '搜索例如');
 INSERT INTO `bdei_config` VALUES ('7', '标题图片', 'title_img', 'head_r1_c1.gif', '标题图片');
+
+ALTER TABLE `bdei_user`
+ADD COLUMN `add_time`  datetime NULL AFTER `answer`;
+

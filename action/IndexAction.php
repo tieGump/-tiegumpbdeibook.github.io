@@ -20,7 +20,8 @@ class IndexAction extends Action{
     function indexAction(){
         $book=new Book();
         $this->az_type=$book->getAZtype();
-        $sound_type=$book->getSoundType();
+
+        $this->sound_type=$sound_type=$book->getSoundType();
         foreach($sound_type as $key=>$value){
             if($key<=4)
             $sound_type1[$key]=$value;
@@ -30,7 +31,7 @@ class IndexAction extends Action{
         $this->sound_type1=$sound_type1;
         $this->sound_type2=$sound_type2;
         $this->sound_type_img=$book->getSoundTypeImage();
-        $video=$book->getVideoType();
+        $this->video_type=$video=$book->getVideoType();
         foreach($video as $key=>$value){
             if($key<=4)
                 $video_type1[$key]=$value;

@@ -1,0 +1,426 @@
+@charset "utf-8";
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, pre, a, code, del, dfn, em, img, strong, b, i, dl, dt, dd, ol, ul, li, form, label, table, tbody, tfoot, thead, tr, th, td, canvas, footer, header, menu, nav, section, audio, video {
+    margin: 0;
+    padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    color: #333;
+    font: 12px/12px "Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+i, em {
+    font-style: normal;
+    font-weight: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a img {
+    border: 0;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+h5, h6 {
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+div {
+    display: block;
+}
+
+html {
+    -webkit-text-size-adjust: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+input, select {
+    outline: none;
+}
+
+.fl {
+    float: left;
+    display: inline;
+}
+
+.fr {
+    float: right;
+    display: inline;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.g-wrap {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/*头部*/
+.h-top {
+    height: 68px;
+}
+
+.h-top .logo {
+    line-height: 68px;
+}
+
+.h-top .logo a {
+    color: #000;
+}
+
+.h-nav {
+    height: 18px;
+    margin-top: 28px;
+}
+
+.h-nav li {
+    float: left;
+    line-height: 18px;
+}
+
+.h-nav li a {
+    display: block;
+    color: #5B5B5B;
+    font-size: 16px;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+.h-nav li a i {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #BABABA;
+    border-radius: 4px;
+    float: left;
+    margin: 5px 5px 0 0;
+}
+
+.h-nav li a span {
+    display: block;
+    float: left;
+}
+
+.h-nav li:hover a {
+    color: #FF6600;
+}
+
+.h-nav li:hover a i {
+    background: #FF6600;
+}
+
+.h-nav li.active a {
+    color: #FF6600;
+}
+
+.h-nav li.active a i {
+    background: #FF6600;
+}
+
+.h-login {
+    margin-left: 87px;
+    padding-top: 32px;
+    margin-right: 5px;
+}
+
+.h-login li {
+    float: left;
+    margin-left: 17px;
+}
+
+.h-login li a {
+    color: #5B5B5B;
+    font-size: 12px;
+    display: block;
+    background: url(../img/book-ico.png) no-repeat;
+    height: 16px;
+    line-height: 16px;
+    padding-left: 22px;
+}
+
+.h-login li a:hover {
+    color: #FF6600;
+}
+
+.h-login li a.h-login-ico01 {
+    background-position: 0 0;
+}
+
+.h-login li a.h-login-ico02 {
+    background-position: 0 -30px;
+}
+
+.h-login li a.h-login-ico03 {
+    background-position: 0 -60px;
+}
+
+.h-login li a.h-login-ico01:hover {
+    background-position: 0 -90px;
+}
+
+.h-login li a.h-login-ico02:hover {
+    background-position: 0 -120px;
+}
+
+.h-login li a.h-login-ico03:hover {
+    background-position: 0 -150px;
+}
+
+.h-bottom {
+    height: 71px;
+}
+
+.h-search {
+    line-height: 71px;
+    height: 71px;
+    background: #64B1E5;
+. gradient(bottom, #64B1E5, #8acefc);
+    border-radius: 5px;
+    width:100%;
+}
+
+.h-search label {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    margin-left: 189px;
+}
+
+.h-search input[type=text] {
+    height: 30px;
+    border: none;
+    width: 320px;
+    padding: 0 10px;
+    float: left;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+.h-search select {
+    height: 30px;
+    border: none;
+    float: left;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+.h-search input[type=button] {
+    height: 30px;
+    border: none;
+    color: #fff;
+    background: #FF8A09;
+    font-size: 18px;
+    margin-left: 30px;
+    cursor: pointer;
+    font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    width: 80px;
+    border-radius: 3px;
+    line-height: 30px;
+    float: left;
+    margin-top: 20px;
+}
+
+.h-download {
+    height: 71px;
+    width: 320px;
+    background: #64B1E5;
+. gradient(bottom, #64B1E5, #8acefc);
+    border-radius: 5px;
+}
+
+.h-download a {
+    display: block;
+    background: #fff url(../img/book-ico.png) no-repeat 16px -187px;
+    height: 50px;
+    width: 140px;
+    margin: 10px auto;
+    color: #FF6600;
+    padding-left: 60px;
+    border-radius: 5px;
+}
+
+.h-download a p {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 31px;
+}
+
+.h-download a span {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.h-download a:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+/*滚动系统消息*/
+.triangle_up, .triangle_down_red, .triangle_down_gray {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+}
+
+.triangle_up {
+    border-bottom: 7px solid #FF9642;
+}
+
+.triangle_down_red {
+    border-top: 7px solid #FF9642;
+}
+
+.triangle_down_gray {
+    border-top: 7px solid #c4bdbd;
+}
+
+.update {
+    height: 50px;
+    position: relative;
+}
+
+.update > p {
+    line-height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+    color: #5B5B5B;
+    background: url(../img/book-ico.png) no-repeat 0 -247px;
+    padding-left: 21px;
+}
+
+.update-wrap {
+    width: 350px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    left: 92px;
+}
+
+.update ul {
+    width: 336px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+
+.update li {
+    height: 50px;
+    line-height: 50px;
+    width: 336px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.update a {
+    color: #000;
+}
+
+.update a:hover {
+    text-decoration: underline;
+}
+
+.update strong {
+    color: #d30703;
+    font-weight: normal;
+}
+
+.update span {
+    color: #999;
+}
+
+.triangle_up {
+    top: 18px;
+    right: 0;
+}
+
+.triangle_down_red {
+    top: 28px;
+    right: 0;
+}
+
+/*尾部*/
+#footer {
+    background: #E9E9E9;
+. gradient(bottom, #F5F5F5, #E9E9E9);
+    border-radius: 3px;
+    height: 34px;
+    line-height: 34px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+#footer span {
+    display: block;
+    float: left;
+    text-indent: 2em;
+}
+
+#footer p {
+    float: right;
+    margin-right: 30px;
+}

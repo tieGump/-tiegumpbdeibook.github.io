@@ -1,4 +1,70 @@
 {include file='head.html'}
+<!--main-->
+<div id="main" class="g-wrap clearfix">
+    <dl class="m-nav-left fl ">
+        <dt>书签管理</dt>
+        <dd ><a href="/user">个人资料</a></dd>
+        <dd class="active"><a href="/user/bookmark">书签管理</a></dd>
+        <dd><a href="/user/reviews">个人评论</a></dd>
+        <dd><a href="/user/readHistory">浏览历史</a></dd>
+        <dd><a href="/user/searchHistory">查询记录</a></dd>
+        <dd><a href="/login/off">注销登陆</a></dd>
+    </dl>
+
+    <div class="m-cont-right fr">
+        <ul class="m-crumbs clearfix">
+
+            <li><a>书签管理</a></li>
+            <li><a href="/user">个人中心</a><em>&gt;&gt;</em></li>
+            <li><a href="/">首页</a><em>&gt;&gt;</em></li>
+        </ul>
+
+        <div class="m-cont-table">
+            <table>
+                <thead>
+                <tr>
+                    <th>书签标题</th>
+                    <th>作者</th>
+                    <th>收藏日期</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {foreach from=$bookmark_list.info item=v}
+                <tr>
+                    <td>{$v.book_name}</td>
+                    <td>{$v.book_author}</td>
+                    <td>{$v.add_time}</td>
+                    <td>
+                        <a href="/book/info/book_id/{$v.book_id}">阅读</a>
+                        <a href="/user/deleteBookmark/bookmark_id/{$v.bookmark_id}">删除</a>
+                    </td>
+                </tr>
+                {/foreach}
+
+                </tbody>
+            </table>
+            {if $bookmark_list.page.page_total>0}
+            <ul class="m-paging">
+                <li><a href="#">刷新</a></li>
+                <li><a href="{$bookmark_list.page.page_begin.url}">首页</a></li>
+                <li><a href="{$bookmark_list.page.previous.url}" >上一页</a></li>
+                {foreach from=$bookmark_list.page.page_info item=v}
+                {if $v.checked}
+                <li><a class="active">{$v.page}</a></li>
+                {else}
+                <li><a href="{$v.url}">{$v.page}</a></li>
+                {/if}
+                {/foreach}
+                <li><a href="{$bookmark_list.page.next.url}">下一页</a></li>
+                <li><a href="{$bookmark_list.page.page_end.url}">尾页</a></li>
+            </ul>
+            {/if}
+        </div>
+    </div>
+</div>
+<!--main end-->
+{if 0}
 <STYLE type=text/css>TD IMG {
     DISPLAY: block
 }
@@ -210,4 +276,5 @@ A:active {
                  src="{$tpl}images/Perofmdlib_r6_c5.gif" width=13 height=17></TD>
         <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
                  height=17></TD></TR></TBODY></TABLE>
+{/if}
 {include file='foot.html'}

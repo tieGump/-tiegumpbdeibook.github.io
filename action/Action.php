@@ -15,10 +15,14 @@ abstract class Action {
     protected $_smarty;
     protected $_tpl;
     protected $_message;
+    private $_ip;
     function __construct(){
-        $ip=new DisableIP();
-        if(!$ip->check())
+        $this->_ip=new DisableIP();
+        if(!$this->_ip->check()){
             die('禁止访问！！！');
+            exit;
+        }
+
         require SMARTY_TPL_DIR.'/Smarty.class.php';
         require SMARTY_TPL_DIR.'/SmartyBC.class.php';
         $this->_smarty=new SmartyBC();
@@ -75,12 +79,13 @@ abstract class Action {
         $config=new ConfigBase();
         $this->_data['title_img']=$config->getOneValue('title_img');
         $this->_data['search_example']=$config->getOneValue('search_example');
-        $this->_data['system_notice']=$config->getOneValue('system_notice');
+        $this->_data['system_notice']=explode('||',$config->getOneValue('system_notice'));
     }
     /**
      * 析构函数，实现smarty对模板赋值
      */
     function __destruct(){
+
         $this->setSearchType();
 
         if(!$this->_message->checkFirst()){

@@ -1,4 +1,70 @@
 {include file="head.html"}
+<!--main-->
+<div id="main" class="g-wrap clearfix">
+    <dl class="m-nav-left fl ">
+        <dt>分类浏览</dt>
+        <ul class="m-sear">
+            {foreach from=$az_type item=v key=k}
+            <li><a href="/book/azlist/az/{$k}"><i>{$k}</i><span>{$v}</span></a></li>
+            {/foreach}
+        </ul>
+    </dl>
+
+    <div class="m-cont-center-search fr">
+
+        <div class="m-cont-table">
+            <table>
+                <thead>
+                <tr>
+                    <th>题名</th>
+                    <th>作者</th>
+                    <th>浏览次数</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {foreach from=$book_list.info item=v key=k}
+                <tr>
+                    <td>{$v.book_name}</td>
+                    <td>{if $v.book_author}{$v.book_author}{else}作者不详{/if}</td>
+                    <td>{$v.read_number}</td>
+                    <td>
+                        <a href="/book/info/book_id/{$v.book_id}" target="_blank">详细</a>
+                    </td>
+                </tr>
+                {/foreach}
+
+                </tbody>
+            </table>
+            {if $book_list.page.page_total>0}
+            <ul class="m-paging">
+                <li><a style="cursor: pointer" onclick="window.location.reload(true);">刷新</a></li>
+                <li><a href="{$book_list.page.page_begin.url}">首页</a></li>
+                <li><a href="{$book_list.page.previous.url}" >上一页</a></li>
+                {foreach from=$book_list.page.page_info item=v}
+                {if $v.checked}
+                <li><a class="active">{$v.page}</a></li>
+                {else}
+                <li><a href="{$v.url}">{$v.page}</a></li>
+                {/if}
+                {/foreach}
+                <li><a href="{$book_list.page.next.url}">下一页</a></li>
+                <li><a href="{$book_list.page.page_end.url}">尾页</a></li>
+            </ul>
+            {/if}
+        </div>
+    </div>
+    <div class="m-cont-right-search fl">
+        <dt>搜索记录</dt>
+        <ul class="m-sear">
+            {foreach from=$search_top_list item=v}
+            <li><a href="/book/search/keyword/{$v.search_value}/findtype/{$v.search_type}">{$v.search_value}</a> <em>{$v.search_total}</em></li>
+            {/foreach}
+        </ul>
+    </div>
+</div>
+<!--main end-->
+{if 0}
 <TABLE border=0 cellSpacing=0 cellPadding=0 width=940 align=center>
 <TBODY>
 <TR>
@@ -207,5 +273,5 @@
              height=19></TD>
 </TR>
 </TBODY>
-</TABLE>
+</TABLE>{/if}
         {include file="foot.html"}

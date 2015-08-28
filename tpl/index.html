@@ -1,4 +1,304 @@
 {include file='head.html'}
+{literal}
+<script type="text/javascript">
+    var dialog_a;
+    $(function(){
+        $('#newReader').click(function(){
+            var a = $.dialog.open('register.html', {
+                title:'新用户注册',
+                width:600,
+                fixed: true,
+                lock: true,
+                init:function(){
+                    var iframe = this.iframe.contentWindow;
+                    var btn = $(iframe.document.getElementById('regBtn'));
+
+                    btn.click(function(){
+//                        $(iframe.document.getElementById('checkreg')).submit();
+                        a.close();
+//                        return true;checkreg
+                    })
+                }
+            });
+        })
+
+        $('#retPass').click(function(){
+            var a = $.dialog.open('ret-pass.html', {
+                title:'找回密码',
+                width:600,
+                fixed: true,
+                lock: true,
+                init:function(){
+
+                    var iframe = this.iframe.contentWindow;
+                    var btn1 = $(iframe.document.getElementById('retPassOne'));
+                    var btn2 = $(iframe.document.getElementById('retPassTwo'));
+                    var btn3 = $(iframe.document.getElementById('retPassThree'));
+
+
+                    btn1.click(function(){
+
+                        var box = $(this).closest('.box');
+                        box.hide();
+                        box.siblings('.two').show();
+                    })
+                    btn2.click(function(){
+                        var box = $(this).closest('.box');
+                        box.hide();
+                        box.siblings('.three').show();
+                    })
+                    btn3.click(function(){
+                        a.close();
+                    })
+                }
+            });
+        })
+
+        function auto(){
+            var timer = null;
+            var index =0;
+
+            $('.m-box-tab li').mouseover(function(){
+                index = $(this).index();
+                $(this).addClass('active').siblings().removeClass('active');
+                auto(index);
+            })
+            $('.m-box-book,.m-box-tab li').mouseover(function(){
+                clearInterval(timer);
+            })
+            $('.m-box-book,.m-box-tab li').mouseout(function(){
+                timer = setInterval(function(){
+                    index++;
+                    if(index >= 3){
+                        index=0
+                    }
+                    auto(index);
+                    $('.m-box-tab li').eq(index).addClass('active').siblings().removeClass('active');
+                },3000)
+            })
+            $('.m-box-book').mouseout();
+            function auto(index){
+                var w = $('.m-box-book-move ul').width();
+                $('.m-box-book-move').stop(true,true).animate({'left':-index*w},300);
+            }
+
+        };
+
+        auto();
+    })
+    {/literal}
+</script>
+<!--main-->
+<div id="main" class="g-wrap">
+    <div class="m-box-wrap clearfix">
+        <div class="m-box-left fl h440">
+            <div class="m-box-cont-hd clearfix">
+                <p class="m-tit fl">精品推荐</p>
+                <ul class="m-box-tab clearfix fl">
+                    <li class="active">推荐书籍</li>
+                    <li>有声图书</li>
+                    <li>视频资源</li>
+                </ul>
+            </div>
+
+            <div class="m-box-book">
+                <div class="m-box-book-move clearfix">
+                    <ul class="clearfix">
+                        {foreach from=$index_recommend item=v key=k}
+                        <li {if $k%4==0}class="mr0"{/if}>
+                            <a href="/book/info/book_id/{$v.book_id}">
+                                <img src="/upload/{$v.book_cover}" width="160" height="153" alt="{$v.book_name}">
+                                <p>{$v.book_name}</p>
+                            </a>
+                        </li>
+                        {/foreach}
+
+                    </ul>
+                    <ul class="clearfix">
+                        {foreach from=$sound_type item=v key=k}
+                        <li {if $k%4==0}class="mr0"{/if}>
+                            <a href="/book/sound/book_type/{$k}">
+                                <img src="{$tpl}images/{$sound_type_img[$k]}" width="160" height="153" alt="{$v}">
+                                <p>{$v}</p>
+                            </a>
+                        </li>
+                        {/foreach}
+                    </ul>
+                    <ul class="clearfix">
+                        {foreach from=$video_type item=v key=k}
+                        <li {if $k%4==0}class="mr0"{/if}>
+                            <a href="/book/video/book_type/{$k}">
+                                <img src="{$tpl}images/{$video_type_img[$k]}" width="160" height="153" alt="{$v}">
+                                <p>{$v}</p>
+                            </a>
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="m-box-right fr h440">
+
+            <div id="login">  <!--登陆-->
+                <div class="m-box-cont-hd clearfix">
+                    <p class="m-tit fl">用户登陆</p>
+                </div>
+                <iframe src="/login" width="285" height="200" style="border: none;"></iframe>
+            </div>
+            <!--登陆成功-->
+            <div id="succ" style="display: none;">
+                <div class="m-box-cont-hd clearfix">
+                    <p class="m-tit fl">用户管理</p>
+                </div>
+                <div class="m-box-login">
+                    <div class="m-box-login-in">
+                        <label>欢迎:</label>
+                        <p>dadafsafs</p>
+
+                    </div>
+                    <ul class="m-box-log-succ clearfix">
+                        <li class="bg1"><a href="#">个人中心</a></li>
+                        <li class="bg2"><a href="#">我的书签</a></li>
+                        <li class="bg3"><a href="#">注销登陆</a></li>
+                    </ul>
+                    <div  class="m-box-login-txt">
+                        <a href="javascript:;" id="newReader">新读者注册</a>
+                        <a href="javascript:;" id="retPass">找回密码</a>
+                    </div>
+                </div>
+            </div>
+            <div class="m-box-cont-hd clearfix">
+                <p class="m-tit fl">本馆信息</p>
+            </div>
+            <div class="m-bottom-box m-bottom-box-my">
+                <div class="m-my-info">
+                    <ul>
+                        <li><span>普通图书</span><em>{$book_total[1].total}册</em></li>
+                        <li><span>有声</span><em>{$book_total[2].total}册</em></li>
+                        <li><span>视频资源</span><em>{$book_total[3].total}册</em></li>
+                    </ul>
+                    <p><strong>总计：</strong><em>{$book_total.total}册</em></p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="m-bottom-wrap clearfix">
+        <div class="m-bottom-right fl">
+
+            <div class="m-box-cont-hd clearfix">
+                <p class="m-tit fl">软件下载</p>
+            </div>
+            <div class="m-bottom-box m-bottom-box-d">
+                <div class="m-my-info">
+                    <ul class="soft-download-ul">
+                        {foreach from=$soft_list item=v}
+                        <li style="font-size: 15px;margin-top: 20px;">
+                            <img src="{$upload_dir}{$v.soft_pic}" width=33 height=31>
+                            <a href="{$upload_dir}/soft/exe/{$v.soft_save_place}">{$v.soft_name}</a>
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+            <div class="m-box-cont-hd clearfix">
+                <p class="m-tit fl">友情链接</p>
+            </div>
+            <div class="m-read-cont">
+                <table class="m-new-add" style="font-size: 15px">
+
+                    <tbody>
+                    <tr>
+                        {foreach from=$links_list item=v key=k}
+                        <td width="36%">
+                            <div align=left><a href="{$v.links_url}" target=_blank>{$v.links_name}</a></div>
+                        </td>
+                        {if ($k+1)%3 eq 0}
+                    </tr>
+                    <tr>
+                        {/if}
+                        {/foreach}
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="m-bottom-cen fl">
+            <div class="m-box-cont-hd clearfix">
+                <p class="m-tit fl">最新加入</p>
+            </div>
+            <div class="m-bottom-box">
+                <table class="m-new-add">
+                    <thead>
+                    <tr>
+                        <th>题名</th>
+                        <th>分类号</th>
+                        <th>加入时间</th>
+                        <th>次数</th>
+                        <th>内容介绍</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {foreach from=$new_in_book item=v}
+                    <tr>
+                        <td>{$v.book_name|truncate:25:'...'}</td>
+                        <td>{$v.book_classification}</td>
+                        <td>{$v.add_time|truncate:10:''}</td>
+                        <td>{$v.read_number}次</td>
+                        <td><a href="/book/info/book_id/{$v.book_id}">详细介绍</a></td>
+                    </tr>
+                    {/foreach}
+                    </tbody>
+                </table>
+            </div>
+            <div class="m-box-cont-hd clearfix">
+                <p class="m-tit fl">阅读排行</p>
+            </div>
+            <div class="m-bottom-box ">
+                <table class="m-new-add">
+                    <thead>
+                    <tr>
+                        <th>题名</th>
+                        <th>分类号</th>
+                        <th>加入时间</th>
+                        <th>次数</th>
+                        <th>内容介绍</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {foreach from=$read_book_top item=v}
+                    <tr>
+                        <td>{$v.book_name|truncate:25:'...'}</td>
+                        <td>{$v.book_classification}</td>
+                        <td>{$v.add_time|truncate:10:''}</td>
+                        <td>{$v.read_number}次</td>
+                        <td><a href="/book/info/book_id/{$v.book_id}">详细介绍</a></td>
+                    </tr>
+                    {/foreach}
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="m-bottom-left fr">
+            <div class="m-box-cont-hd clearfix">
+                <p class="m-tit fl">分类检索</p>
+            </div>
+            <div class="m-bottom-box ">
+                <ul class="m-sear">
+                    {foreach from=$az_type item=v key=k}
+                    <li><a href="/book/azlist/az/{$k}"><i>{$k}</i><span>{$v}</span></a></li>
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--main end-->
+
+{if 0}
 <SCRIPT type=text/javascript>
 
     function MM_preloadImages() { //v3.0
@@ -306,7 +606,7 @@
                     <TD onmouseover="this.style.color='blue';"
                         onmouseout="this.style.color='#333333';" class=STYLE1 width="37%">
                         <DIV onclick="Comment('login/register',480,225)" align=center><A>新读者注册</A></DIV></TD>
-                   
+
                     <TD onmouseover="this.style.color='blue';"
                         onmouseout="this.style.color='#333333';" class=STYLE1 width="31%">
                         <DIV onclick="quhui('/login/findPasswordOne',500,225)" align=center><A style="cursor: pointer">找回密码</A></DIV></TD></TR></TBODY></TABLE></TD>
@@ -605,5 +905,5 @@
     </TR>
     </TBODY>
 </TABLE>
-
+{/if}
 {include file='foot.html'}

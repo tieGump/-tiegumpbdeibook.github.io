@@ -1,4 +1,77 @@
 {include file='head.html'}
+<!--main-->
+<div id="main" class="g-wrap clearfix">
+    <dl class="m-nav-left fl ">
+        <dt>个人中心</dt>
+        <dd class="active"><a href="/user">个人资料</a></dd>
+        <dd><a href="/user/bookmark">书签管理</a></dd>
+        <dd><a href="/user/reviews">个人评论</a></dd>
+        <dd><a href="/user/readHistory">浏览历史</a></dd>
+        <dd><a href="/user/searchHistory">查询记录</a></dd>
+        <dd><a href="/login/off">注销登陆</a></dd>
+    </dl>
+
+    <div class="m-cont-right fr">
+        <ul class="m-crumbs clearfix">
+
+            <li>个人资料</a></li>
+            <li><a href="/user">个人中心</a><em>&gt;&gt;</em></li>
+            <li><a href="/">首页</a><em>&gt;&gt;</em></li>
+        </ul>
+        <FORM id="checkreg" onsubmit="return checks();" method=post name=checkreg action="/user/updateUserInfo">
+        <div class="per-cent">
+            <ul>
+                <li>
+                    <label>用户名：</label>
+                    <p> {$user_info.user_name}</p>
+                    <i>*</i>
+                </li>
+                <li>
+                    <label>登录密码：</label>
+                    <p><input type="password" name="user_pwd" id="password"/></p>
+                    <i>*</i>
+                </li>
+                <li>
+                    <label>重复密码：</label>
+                    <p><input type="password" name="regtime" id="password2"/></p>
+                    <i>*</i>
+                </li>
+                <li>
+                    <label>性别：</label>
+                    <p>
+                        <SELECT id="sex" name=user_sex>"
+                            <OPTION {if $user_info.user_sex eq '男'}selected{/if}>男</OPTION>
+                            <OPTION {if $user_info.user_sex eq '女'}selected{/if}>女</OPTION>
+                        </SELECT>
+                    </p>
+                    <i>*</i>
+                </li>
+                <li>
+                    <label>姓名：</label>
+                    <p><input type="text" name="user_nick" value="{$user_info.user_nick}"/></p>
+                </li>
+                <li>
+                    <label>提示问题：</label>
+                    <p><input type="text" value="{$user_info.question}" name="question" id="question"/></p>
+                    <i>*</i>
+                </li>
+                <li>
+                    <label>问题答案：</label>
+                    <p><input type="text" name="answer"/></p>
+                </li>
+            </ul>
+            <p class="info"><i>*</i>为必填项,为防止他人偷看到问题答案，答案将不显示，不更改请留空。</p>
+            <div class="per-cent-btn">
+                <input type="submit" value="修改">
+                <input type="reset" value="重置">
+            </div>
+        </div>
+            </FORM>
+    </div>
+</div>
+<!--main end-->
+
+{if 0}
 <STYLE type=text/css>TD IMG {
     DISPLAY: block
 }
@@ -191,4 +264,5 @@ A:active {
                  src="{$tpl}images/Perofmdlib_r6_c5.gif" width=13 height=17></TD>
         <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
                  height=17></TD></TR></TBODY></TABLE>
+{/if}
 {include file='foot.html'}

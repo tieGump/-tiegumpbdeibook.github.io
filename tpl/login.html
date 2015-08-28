@@ -1,3 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="{$tpl}css/base.css" type="text/css"/>
+    <link rel="stylesheet" href="{$tpl}css/main.css" type="text/css"/>
+    <script type="text/javascript">
+        function checks()
+        {
+            if (checkreg.txtLoginName.value=="")
+            {
+                alert("用户名不能为空。");
+                document.checkreg.txtLoginName.focus();
+                return false;
+            }
+            if (checkreg.txtLogin.value=="")
+            {
+                alert("登陆密码不能为空。");
+                checkreg.txtLogin.focus();
+                return (false);
+            }
+            return (true);
+        }
+    </script>
+    <script type="text/javascript" src="{$tpl}js/jquery-1.8.3-min.js"></script>
+    <script type="text/javascript" src="{$tpl}js/jquery.artDialog.js"></script>
+    <script type="text/javascript" src="{$tpl}js/iframeTools.js"></script>
+    <script type="text/javascript">
+        {literal}
+
+        $(function(){
+            $('#newReader').click(function(){
+                var a = $.dialog.open('login/register', {
+                    title:'新用户注册',
+                    width:600,
+                    fixed: true,
+                    lock: true,
+                    init:function(){
+                        var iframe = this.iframe.contentWindow;
+                        var btn = $(iframe.document.getElementById('regBtn'));
+
+                        btn.click(function(){
+                            a.close();
+                        })
+                    }
+                });
+                parent.dialog_a=a;
+
+            })
+
+            $('#retPass').click(function(){
+                var a = $.dialog.open('/login/findPasswordOne', {
+                    title:'找回密码',
+                    width:600,
+                    fixed: true,
+                    lock: true,
+                    init:function(){
+
+                        var iframe = this.iframe.contentWindow;
+                        var btn1 = $(iframe.document.getElementById('retPassOne'));
+                        var btn2 = $(iframe.document.getElementById('retPassTwo'));
+                        var btn3 = $(iframe.document.getElementById('retPassThree'));
+
+
+                        btn1.click(function(){
+                            var box = $(this).closest('.box');
+                            box.hide();
+                            box.siblings('.two').show();
+                        })
+                        btn2.click(function(){
+                            var box = $(this).closest('.box');
+                            box.hide();
+                            box.siblings('.three').show();
+                        })
+                        btn3.click(function(){
+                            a.close();
+                        })
+                    }
+                });
+                parent.dialog_a=a;
+            })
+
+
+        })
+        {/literal}
+    </script>
+</head>
+<body>
+<form onsubmit="return checks();" method="post" name="checkreg" action='/login/doLogin'>
+<div class="m-box-login">
+    <div class="m-box-login-in">
+        <label>用户名:</label>
+        <input type="text" placeholder="请输入登陆用户名" name="user_name" id="txtLoginName">
+    </div>
+    <div class="m-box-login-in">
+        <label>密码:</label>
+        <input type="password" placeholder="请输入登陆密码" name="password" id="txtLogin">
+    </div>
+    <div class="m-box-login-btn">
+        <input type="button" value="登陆" onclick="checkreg.submit()"/>
+    </div>
+    <div  class="m-box-login-txt">
+        <a href="javascript:;" id="newReader">新读者注册</a>
+        <a href="javascript:;" id="retPass">找回密码</a>
+    </div>
+</div>
+</form>
+</body>
+</html>
+{{if 0}}
+
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <!-- saved from url=(0036)http://210.79.110.128:8081/login.asp -->
 <HTML><HEAD><META content="IE=5.0000" http-equiv="X-UA-Compatible">
@@ -55,3 +168,4 @@
                 <DIV align=right><INPUT tabIndex=2 style="HEIGHT: 20px; WIDTH: 90px"
                                         size=12 type=password name="password"> </DIV></TD></TR></TBODY></FORM></TABLE>
 <DIV align=center></DIV></BODY></HTML>
+{{/if}}

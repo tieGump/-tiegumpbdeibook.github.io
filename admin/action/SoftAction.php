@@ -22,10 +22,11 @@ class SoftAction extends Action {
         $this->addAction();
     }
     function doChangeAction(){
+
         if($_FILES){
             $file=new File();
             if($_FILES['soft_cover']&&$_FILES['soft_cover']['error']==0){
-                $cover_name=$file->uploadFile($_FILES['soft_cover'],'upload/soft/cover');
+                $cover_name=$file->uploadFile($_FILES['soft_cover'],'soft/cover/');
                 $_POST['soft_pic']=$cover_name;
             }
         }

@@ -21,7 +21,8 @@ class File
 //                    $tmp=explode('.',$file_name);
 //                    $ext_name=isset($tmp[1])?$tmp[1]:'';
 //                    $file_name=string2ascii($file_name,'_').'.'.$ext_name;
-            move_uploaded_file($file["tmp_name"], UPLOAD_DIR . $dir . $file_name);
+            echo UPLOAD_DIR . $dir . $file_name;
+           var_dump(move_uploaded_file($file["tmp_name"], UPLOAD_DIR . $dir . $file_name));
             $return = $dir . $file["name"];
 
         }

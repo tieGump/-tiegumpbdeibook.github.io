@@ -1,4 +1,124 @@
 {include file="head.html"}
+<!--main-->
+<div id="main" class="g-wrap clearfix">
+    <div class="book-detail-box clearfix">
+        <div class="det-left fl">
+            <div class="m-box-cont-hd clearfix">
+                <p class="m-tit fl">图书详细信息</p>
+            </div>
+            <div class="book-detail-btm">
+                <table>
+                    <tr class="odd">
+                        <td class="tit">书名：</td>
+                        <td colspan="4">{$book_info.book_name}</td>
+                    </tr>
+                    <tr>
+                        <td class="tit">作者：</td>
+                        <td>{$book_info.book_author}</td>
+                        <td class="tit">浏览次数：</td>
+                        <td>{$book_info.read_number}</td>
+                        <td rowspan="6" width="150">
+                            <img src="/{$book_info.book_cover}">
+                        </td>
+                    </tr>
+                    <tr  class="odd">
+                        <td class="tit">ISBN：</td>
+                        <td>{$book_info.book_isbn}</td>
+                        <td class="tit">资源格式：</td>
+                        <td>{$book_info.book_type}</td>
+                    </tr>
+                    <tr>
+                        <td class="tit">出版社：</td>
+                        <td>{$book_info.book_press}</td>
+                        <td class="tit">分类号：</td>
+                        <td>{$book_info.book_classification}</td>
+                    </tr>
+                    <tr  class="odd">
+                        <td class="tit">关键字：</td>
+                        <td colspan="3">{$book_info.book_keyword}</td>
+                    </tr>
+                    <tr>
+                        <td class="tit">主题词：</td>
+                        <td colspan="3">{$book_info.book_key_words}</td>
+                    </tr>
+                    <tr  class="odd">
+                        <td class="tit">加入日期：</td>
+                        <td colspan="3">{$book_info.add_time}</td>
+                    </tr>
+                    <tr>
+                        <td class="tit">目录：</td>
+                        <td colspan="4">{$book_info.book_catalog_desc}</td>
+                    </tr>
+                    <tr  class="odd">
+                        <td class="tit">内容介绍：</td>
+                        <td colspan="4">{$book_info.book_desc}</td>
+                    </tr>
+                </table>
+                <ul class="det-nav">
+                    <li class="color01"><a href="/book/read/book_id/{$book_info.book_id}" target="_blank">阅读/播放</a></li>
+                    <li class="color02"><a href="/book/addBookMark/book_id/{$book_info.book_id}">加入书签</a></li>
+                    <!--<li class="color03"><a href="#">查询纸质</a></li>-->
+                    <li class="color04"><a href="/book/info/book_id/{$book_info.book_id}/#fbpl">发表评论</a></li>
+                    <li class="color05"><a href="javascript:window.external.addFavorite(window.location.href,'{$book_info.book_name}');">本地收藏</a></li>
+                </ul>
+            </div>
+
+            <div class="m-box-cont-hd clearfix">
+                <p class="m-tit fl">图书评论</p>
+            </div>
+            <ul class="m-comment">
+                {foreach from=$review_list.info item=v}
+                <li>
+                    <div class="m-comment-top clearfix">
+                        <p>{$v.user_name}说：<span>({$v.review_time})</span></p>
+                        <em>IP:{$v.ip}</em>
+                    </div>
+                    <div class="m-comment-btm ">
+                        {$v.review_content}
+                    </div>
+                </li>
+                {/foreach}
+
+            </ul>
+            <form method="post" name="form1" action="/book/addReview">
+            <div class="p-info-my-rek" id="fbpl">
+                <input type="hidden" name="book_id" value="{$book_info.book_id}" />
+                <textarea class="my-rek-ed" name="reviews_content"></textarea>
+
+                <a class="my-rek-btn" style="cursor:pointer;" onclick="form1.submit()">发表点评</a>
+            </div>
+                </form>
+            {if $review_list.page.page_total>0}
+            <ul class="m-paging">
+                <li><a href="#">刷新</a></li>
+                <li><a href="{$review_list.page.page_begin.url}">首页</a></li>
+                <li><a href="{$review_list.page.previous.url}" >上一页</a></li>
+                {foreach from=$review_list.page.page_info item=v}
+                {if $v.checked}
+                <li><a class="active">{$v.page}</a></li>
+                {else}
+                <li><a href="{$v.url}">{$v.page}</a></li>
+                {/if}
+                {/foreach}
+                <li><a href="{$review_list.page.next.url}">下一页</a></li>
+                <li><a href="{$review_list.page.page_end.url}">尾页</a></li>
+            </ul>
+            {/if}
+        </div>
+        <div class="det-right fr">
+            <div class="m-box-cont-hd clearfix">
+                <p class="m-tit fl">本类热门</p>
+            </div>
+            <ul class="m-read-cont-det">
+                {foreach from=$book_list item=v}
+                <li><a href="/book/info/book_id/{$v.book_id}"><span>{$v.book_name}</span></a></li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+</div>
+<!--main end-->
+{if 0}
 <SCRIPT language=javascript>
 function winSizer(){
 	windowWidth = window.screen.availWidth;
@@ -289,4 +409,5 @@ function winopen(bookurl)
     <TD><IMG border=0 alt=""
              src="{$tpl}images/spacer.gif" width=1
              height=20></TD></TR></TBODY></TABLE>
+{/if}
 {include file="foot.html"}

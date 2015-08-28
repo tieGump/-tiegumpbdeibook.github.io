@@ -1,3 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <link rel="stylesheet" href="{$tpl}css/base.css" type="text/css"/>
+    <script type="text/javascript" src="{$tpl}js/jquery-1.8.3-min.js"></script>
+</head>
+<style>
+    {literal}
+    .box-wrap{ width: 600px;}
+    .box{width: 400px; margin: 50px auto; }
+    .box dl{}
+    .box dl dt{ font-size: 16px; text-align: center; margin-bottom: 20px; color: #FC992D;}
+    .box dl dd{ height: 34px; margin-bottom: 30px;}
+    .box dl dd label{ display: block; float: left; width: 60px; line-height: 30px; font-size: 14px; text-align: right;}
+    .box dl dd input{ float: left; height: 28px; line-height: 28px; border-radius: 3px; border: 1px solid #ccc; width: 200px; padding: 0 10px;}
+    .box dl dd input[type=text]{}
+    .box dl dd input[type=password]{}
+    .box p{ width: 100%; font-size: 16px; line-height: 30px;}
+    .box-btn{margin: 0 auto;width: 100px; height: 30px;}
+    .box-btn input[type=submit]{ width: 100px; height: 30px; background: #FC992D; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+    .box.one label{ width: 100px;}
+    .box.two label{ width: 100px;}
+    .box.three label{ width: 130px;}
+    {/literal}
+</style>
+<body>
+
+<!--login-->
+<form action="/login/changePassword" method="POST" name="zhaohui" id="zhaohui" onSubmit="return checks();">
+<div class="box-wrap">
+    <div class="box three">
+        <dl>
+            <dt>取回密码 - 最后一步</dt>
+            <dd>
+                <label>用户名：</label>
+                <p>{$user_name}</p>
+            </dd>
+            <dd>
+                <label>请输入新密码：</label>
+                <input type="text" placeholder="请输入新密码" name="pass"/>
+            </dd>
+            <dd>
+                <label>请再次输入新密码：</label>
+                <input type="text" placeholder="请再次输入新密码" name="rpass"/>
+            </dd>
+        </dl>
+        <div class="box-btn">
+            <input type="submit" value="确认" id="retPassThree"/>
+        </div>
+    </div>
+</div>
+</form>
+<!--login end-->
+
+</body>
+</html>
+<script type="text/javascript">
+    function checks()
+    {
+        if (zhaohui.pass.value=="")
+        {
+            alert("密码不能为空,请重新输入。");
+            document.zhaohui.pass.focus();
+            return false;
+        }
+        if (zhaohui.pass.value.length < 6)
+        {
+            alert("密码不能少于6个字符!");
+            zhaohui.pass.focus();
+            return false;
+        }
+        if (zhaohui.pass.value !=zhaohui.rpass.value)
+        {
+            alert("两次密码不相同,请重新输入。");
+            document.zhaohui.rpass.focus();
+            return false;
+        }
+        return true;
+    }
+</script>
+{if 0}
 <style>
     <!--
     .c {  font-family: '宋体'; font-size: 9pt; font-style: normal; line-height: 12pt; font-weight: normal; font-variant: normal; text-decoration: none }
@@ -79,3 +162,4 @@
     </div></form>
 
 <p>
+    {/if}

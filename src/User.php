@@ -21,6 +21,7 @@ class User extends Mode{
      * 注册
      */
     function register($post,$id=''){
+
         $login=new Login();
         isset($post['user_name'])&&$post['user_name']? $data['user_name']=$post['user_name']:'';
         $post['user_pwd']?$data['user_pwd']=$login->createPassword($post['user_pwd']):'';
@@ -74,7 +75,6 @@ class User extends Mode{
         return Arrays::downArray($info,'user_id');
     }
     function changePassword($user_name,$password){
-        echo $user_name,$password;
         $login=new Login();
         $password=$login->createPassword($password);
         $this->changeOneFiled('user_pwd',$password,'user_name="'.$user_name.'"');

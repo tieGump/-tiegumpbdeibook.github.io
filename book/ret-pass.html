@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <link rel="stylesheet" href="css/base.css" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3-min.js"></script>
+</head>
+<style>
+    .box-wrap{ width: 600px; height: 400px;}
+    .box{width: 400px; margin: 50px auto; }
+    .box dl{}
+    .box dl dt{ font-size: 16px; text-align: center; margin-bottom: 20px; color: #FC992D;}
+    .box dl dd{ height: 34px; margin-bottom: 30px;}
+    .box dl dd label{ display: block; float: left; width: 60px; line-height: 30px; font-size: 14px; text-align: right;}
+    .box dl dd input{ float: left; height: 28px; line-height: 28px; border-radius: 3px; border: 1px solid #ccc; width: 200px; padding: 0 10px;}
+    .box dl dd input[type=text]{}
+    .box dl dd input[type=password]{}
+    .box p{ width: 100%; font-size: 16px; line-height: 30px;}
+    .box-btn{margin: 0 auto;width: 100px; height: 30px;}
+    .box-btn input[type=submit]{ width: 100px; height: 30px; background: #FC992D; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+    .box.two{ width: 400px; display: none;}
+    .box.three{ width: 400px; display: none;}
+    .box.one label{ width: 100px;}
+    .box.two label{ width: 100px;}
+    .box.three label{ width: 130px;}
+</style>
+<body>
+
+<!--login-->
+<div class="box-wrap">
+    <div class="box one">
+            <dl>
+                <dt>取回密码 - 第一步</dt>
+                <dd>
+                    <label>&nbsp;&nbsp;用户名：</label>
+                    <input type="text" placeholder=""/>
+                </dd>
+            </dl>
+            <div class="box-btn">
+                <input type="submit" value="下一步" id="retPassOne"/>
+            </div>
+    </div>
+    <div class="box two">
+        <dl>
+            <dt>取回密码 - 第二步</dt>
+            <dd>
+                <label>用户名：</label>
+                <p>张珊</p>
+            </dd>
+            <dd>
+                <label>密码提示问题：</label>
+                <input type="text" placeholder="请输入密码提示问题"/>
+            </dd>
+            <dd>
+                <label>密码提示答案：</label>
+                <input type="text" placeholder="请输入密码提示答案"/>
+            </dd>
+        </dl>
+        <div class="box-btn">
+            <input type="submit" value="下一步" id="retPassTwo"/>
+        </div>
+    </div>
+    <div class="box three">
+        <dl>
+            <dt>取回密码 - 最后一步</dt>
+            <dd>
+                <label>用户名：</label>
+                <p>张珊</p>
+            </dd>
+            <dd>
+                <label>请输入新密码：</label>
+                <input type="text" placeholder="请输入新密码"/>
+            </dd>
+            <dd>
+                <label>请再次输入新密码：</label>
+                <input type="text" placeholder="请再次输入新密码"/>
+            </dd>
+        </dl>
+        <div class="box-btn">
+            <input type="submit" value="确认" id="retPassThree"/>
+        </div>
+    </div>
+</div>
+<!--login end-->
+
+</body>
+</html>
+<script type="text/javascript">
+
+    $(function(){
+        $('#retPassOne').click(function(){
+
+        })
+    })
+
+</script>
+
+
+
+
+
+
+

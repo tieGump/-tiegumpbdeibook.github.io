@@ -10,7 +10,7 @@ class Book extends Mode{
         $base_info=$this->getOne($book_id);
         $tmp=explode('.',$base_info['save_place']);
         $base_info['book_type']=strtoupper(end($tmp));
-        $base_info['book_cover']=(substr($base_info['book_cover'],0,7)=='http://'||substr($base_info['book_cover'],0,8)=='https://')?$base_info['book_cover']:UPLOAD_DIR.$base_info['book_cover'];
+        $base_info['book_cover']=(substr($base_info['book_cover'],0,7)=='http://'||substr($base_info['book_cover'],0,8)=='https://')?$base_info['book_cover']:($base_info['book_cover']?UPLOAD_DIR.$base_info['book_cover']:'');
 
         $extend_info=$this->_db->getOne('bdei_book_extend','book_id='.$book_id);
         $extend_info=$extend_info?$extend_info:array();

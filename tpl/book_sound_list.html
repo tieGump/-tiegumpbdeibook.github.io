@@ -1,5 +1,73 @@
 {include file="head.html"}
+<!--main-->
+<div id="main" class="g-wrap clearfix">
+    <dl class="m-nav-left fl ">
+        <dt>有声图书</dt>
+        {foreach from=$sound_type item=v key=k}
+        <dd {if $smarty.get.book_type==$k}class="active"{/if}><a href="/book/sound/book_type/{$k}">{$v}</a></dd>
+        {/foreach}
+    </dl>
 
+    <div class="m-cont-right fr">
+        <ul class="m-crumbs clearfix">
+
+            {if $smarty.get.book_type}
+            <li>{$sound_type_name}</li>
+            <li><a href="/book/sound/">有声图书<em>&gt;&gt;</em></a></li>
+
+            {else}
+            <li><a href="">有声图书</a></li>
+            {/if}
+            <li><a href="/">首页<em>&gt;&gt;</em></a></li>
+        </ul>
+
+        <div class="m-cont-table">
+            <table>
+                <thead>
+                <tr>
+                    <th>题名</th>
+                    <th>作者</th>
+                    <th>浏览次数</th>
+                    <th>加入时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {foreach from=$book_list.info item=v}
+                <tr>
+                    <td>{$v.book_name}</td>
+                    <td>{if $v.book_author}{$v.book_author}{else}作者不详{/if}</td>
+                    <td>{$v.book_number}</td>
+                    <td>{$v.add_time}</td>
+                    <td>
+                        <a href="/book/soundInfo/book_id/{$v.book_id}">视听</a>
+                    </td>
+                </tr>
+                {/foreach}
+                </tbody>
+            </table>
+            {if $book_list.page.page_total>0}
+            <ul class="m-paging">
+                <li><a style="cursor: pointer" onclick="window.location.reload(true);">刷新</a></li>
+                <li><a href="{$book_list.page.page_begin.url}">首页</a></li>
+                <li><a href="{$book_list.page.previous.url}" >上一页</a></li>
+                {foreach from=$book_list.page.page_info item=v}
+                {if $v.checked}
+                <li><a class="active">{$v.page}</a></li>
+                {else}
+                <li><a href="{$v.url}">{$v.page}</a></li>
+                {/if}
+                {/foreach}
+                <li><a href="{$book_list.page.next.url}">下一页</a></li>
+                <li><a href="{$book_list.page.page_end.url}">尾页</a></li>
+            </ul>
+            {/if}
+        </div>
+    </div>
+</div>
+<!--main end-->
+
+{if 0}
 <TABLE border=0 cellSpacing=0 cellPadding=0 width=940 align=center><!-- fwtable fwsrc="Soundbook.png" fwpage="页面 1" fwbase="soundbook.gif" fwstyle="Dreamweaver" fwdocid = "289861556" fwnested="0" -->
 <TBODY>
 <TR>
@@ -133,4 +201,5 @@
     <TD><IMG border=0 alt="" src="{$tpl}images/spacer.gif" width=1
              height=14></TD></TR></TBODY></TABLE>
 </TABLE>
+{/if}
 {include file="foot.html"}

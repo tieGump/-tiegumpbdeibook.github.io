@@ -21,7 +21,7 @@ define('PAGE_BASE','');
 //数据库信息开始
 define('DB_SERVER', 'localhost');						//数据库地址
 define('DB_SERVER_USERNAME', 'root');				//数据库用户名
-define('DB_SERVER_PASSWORD', '');	//数据库密码
+define('DB_SERVER_PASSWORD', '123456');	//数据库密码
 //define('DB_SERVER', 'localhost');						//数据库地址
 //define('DB_SERVER_USERNAME', 'usitrip');				//数据库用户名
 //define('DB_SERVER_PASSWORD', '&1231987usitrip897HR');	//数据库密码

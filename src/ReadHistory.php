@@ -32,7 +32,6 @@ class ReadHistory extends Mode{
     function getUserList(){
         $str_sql='SELECT b.book_id,b.book_name,b.book_author,urh.add_time FROM bdei_book b,bdei_user_read_history urh WHERE b.book_id=urh.book_id AND urh.user_id='.$this->_user_id;
         return $this->getPageList($str_sql);
-        return $this->_db->doSelect($str_sql);
     }
     function drop($id=''){
         if($id){
