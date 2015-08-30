@@ -44,7 +44,7 @@ class IndexAction extends Action{
         //最新加入
         $this->new_in_book=$book->getIndexList(array(),'book_id DESC',7);
         //阅读排行
-        $this->read_book_top=$book->getIndexList(array(),'read_number DESC',50);
+        $this->read_book_top=$book->getIndexList(array(),'read_number DESC',10);
         //统计
         $this->book_total=$book->getTotal();
         //友情链接

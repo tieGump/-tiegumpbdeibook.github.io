@@ -25,7 +25,7 @@
                 <tbody>
                 {foreach from=$book_list.info item=v key=k}
                 <tr>
-                    <td>{$v.book_name}</td>
+                    <td style="text-align: left" title="{$v.book_name}">{$v.book_name|truncate:20:'...'}</td>
                     <td>{if $v.book_author}{$v.book_author}{else}作者不详{/if}</td>
                     <td>{$v.read_number}</td>
                     <td>

@@ -10,9 +10,13 @@ class Book extends Mode{
         $base_info=$this->getOne($book_id);
         $tmp=explode('.',$base_info['save_place']);
         $base_info['book_type']=strtoupper(end($tmp));
-        $base_info['book_cover']=(substr($base_info['book_cover'],0,7)=='http://'||substr($base_info['book_cover'],0,8)=='https://')?$base_info['book_cover']:($base_info['book_cover']?UPLOAD_DIR.$base_info['book_cover']:'');
+        $base_info['book_cover_show']=(substr($base_info['book_cover'],0,7)=='http://'||substr($base_info['book_cover'],0,8)=='https://')?$base_info['book_cover']:($base_info['book_cover']?UPLOAD_DIR.$base_info['book_cover']:'');
 
         $extend_info=$this->_db->getOne('bdei_book_extend','book_id='.$book_id);
+        if(!$extend_info['book_info']&&$base_info['text_info']&&is_file(UPLOAD_DIR.$base_info['text_info'])){
+            $extend_info['book_info']=file_get_contents(UPLOAD_DIR.$base_info['text_info']);
+        }
+//        $extend_info['book_info_page']=floor(strlen($extend_info['book_info'])/360);
         $extend_info=$extend_info?$extend_info:array();
         return array_merge($base_info,$extend_info);
     }
@@ -30,6 +34,7 @@ class Book extends Mode{
         $data['book_isbn']=$post['book_isbn'];
         $data['save_place']=$post['save_place'];//保存位置
         $data['book_cover']=$post['book_cover'];//封面
+        $data['text_info']=$post['text_info'];//text
         $data['status']=$post['status'];
         $data['book_classification']=$post['book_classification'];
         $data['book_classification_word']=ucfirst($post['book_classification'][0]);
@@ -51,7 +56,13 @@ class Book extends Mode{
         if($id){
             $this->changeOne($data,(int)$id);
             $where = $this->createWhere($id);
-            $this->_db->changeOne('bdei_book_extend',$data_desc,$where);
+            if($this->_db->getOne('bdei_book_extend','book_id='.$id)){
+                $this->_db->changeOne('bdei_book_extend',$data_desc,$where);
+            }else{
+                $data_desc['book_id']=$id;
+                $this->_db->addOne('bdei_book_extend',$data_desc);
+            }
+
         }else{
             $id=$this->addOne($data);
             $data_desc['book_id']=$id;
@@ -92,6 +103,7 @@ class Book extends Mode{
      * @return string
      */
     function createMyWhere($info){
+
         $where='1';
         if(isset($info['book_name'])&&$info['book_name']){
             $where.=' AND book_name LIKE "%'.$info['book_name'].'%"';
@@ -117,8 +129,8 @@ class Book extends Mode{
         if(isset($info['category_extend_id'])&&$info['category_extend_id']){
             $where.=' AND category_extend_id ='.$info['category_extend_id'];
         }
-        if(isset($info['index_show'])&&$info['index_show']){
-            $where.=' AND index_show = 1';
+        if(isset($info['index_show'])){
+            $where.=' AND index_show = '.$info['index_show'];
         }
         return $where;
     }
@@ -269,6 +281,21 @@ class Book extends Mode{
         return $this->_db->query($str_sql);
     }
     function getIndexRecommend(){
-        return $this->getIndexList(array('index_show'=>1),'',8);
+        $tmp=$this->getIndexList(array('index_show'=>1),'',8);
+        if($number=count($tmp)<8){
+            $tmp=array_merge($tmp,$this->getIndexList(array('index_show'=>0),'book_id',8-$number));
+        }
+        return $tmp;
+    }
+    function createBookInfoPage($info,$page=0){
+        $page=intval($page);
+        $j=ceil(mb_strlen($info)/360);
+//        $j=1;
+        for($i=1;$i<=$j;$i++){
+//            echo $j.'010<br />';
+            $tmp[]=$i;
+        }
+        $info=mb_substr($info,($page-1)*360,360);
+        return array('page'=>$tmp,'info'=>$info);
     }
 }

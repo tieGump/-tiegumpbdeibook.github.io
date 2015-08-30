@@ -23,7 +23,7 @@
             <table>
                 <thead>
                 <tr>
-                    <th>书签标题</th>
+                    <th>书籍标题</th>
                     <th>作者</th>
                     <th>收藏日期</th>
                     <th>操作</th>
@@ -32,7 +32,7 @@
                 <tbody>
                 {foreach from=$bookmark_list.info item=v}
                 <tr>
-                    <td>{$v.book_name}</td>
+                    <td style="text-align: left" title="{$v.book_name}">{$v.book_name|truncate:25:'...'}</td>
                     <td>{$v.book_author}</td>
                     <td>{$v.add_time}</td>
                     <td>

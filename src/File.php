@@ -8,27 +8,45 @@ class File
 {
     /**上传
      * @param $file
+     * @param string $dir
      * @return array|string
      */
     function uploadFile($file, $dir = '')
     {
-
         $return = '';
+        $this->makeDir(UPLOAD_DIR . $dir);
         if ($file['error'] == 0) {
 
             $file_name = $file["name"];
-            $file_name = iconv('UTF-8', 'GBK', $file_name);
+//            $file_name = iconv('UTF-8', 'GBK', $file_name);
 //                    $tmp=explode('.',$file_name);
 //                    $ext_name=isset($tmp[1])?$tmp[1]:'';
 //                    $file_name=string2ascii($file_name,'_').'.'.$ext_name;
-            echo UPLOAD_DIR . $dir . $file_name;
-           var_dump(move_uploaded_file($file["tmp_name"], UPLOAD_DIR . $dir . $file_name));
+           var_dump(move_uploaded_file($file["tmp_name"], iconv('UTF-8', 'GBK', UPLOAD_DIR . $dir . $file_name)));
             $return = $dir . $file["name"];
 
         }
         return $return;
     }
 
+    /**
+     * 创建目录
+     * @param $dir 目录名称
+     */
+    function makeDir($dir){
+        $dir=str_replace("\\",'/',$dir);
+        $dir_list=explode('/',$dir);
+        $tmp='';
+        foreach($dir_list as $dir_name){
+            if($dir_name){
+                $tmp.=$dir_name.'/';
+                if(!is_dir($tmp)){
+                    $tmp=iconv('UTF-8', 'GBK', $tmp);
+                    mkdir($tmp);
+                }
+            }
+        }
+    }
     /**删除文件
      * @param $file_path
      */

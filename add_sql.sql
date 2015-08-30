@@ -23,3 +23,6 @@ INSERT INTO `bdei_config` VALUES ('7', '标题图片', 'title_img', 'head_r1_c1.
 ALTER TABLE `bdei_user`
 ADD COLUMN `add_time`  datetime NULL AFTER `answer`;
 
+ALTER TABLE `bdei_book`
+ADD COLUMN `text_info`  varchar(200) NULL COMMENT 'text文本内容' AFTER `index_show`;
+

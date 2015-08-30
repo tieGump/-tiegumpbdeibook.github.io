@@ -31,7 +31,7 @@
                 <tbody>
                 {foreach from=$review_list.info item=v}
                 <tr>
-                    <td>{$v.book_name}</td>
+                    <td style="text-align: left" title="{$v.book_name}">{$v.book_name|truncate:25:'...'}</td>
                     <td>{$v.book_author}</td>
                     <td>{$v.review_time}</td>
                     <td>

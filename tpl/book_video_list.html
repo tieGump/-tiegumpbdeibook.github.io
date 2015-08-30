@@ -34,7 +34,7 @@
                 <tbody>
                 {foreach from=$book_list.info item=v}
                 <tr>
-                    <td>{$v.book_name}</td>
+                    <td style="text-align: left" title="{$v.book_name}">{$v.book_name|truncate:25:'...'}</td>
                     <td>{if $v.book_author}{$v.book_author}{else}作者不详{/if}</td>
                     <td>{$v.book_number}</td>
                     <td>{$v.add_time}</td>

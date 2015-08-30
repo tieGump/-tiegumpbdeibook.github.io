@@ -18,7 +18,7 @@
                         <td class="tit">浏览次数：</td>
                         <td>{$book_info.read_number}</td>
                         <td rowspan="6" width="150">
-                            <img src="/{$book_info.book_cover}">
+                            <img src="/upload/{$book_info.book_cover}">
                         </td>
                     </tr>
                     <tr  class="odd">
@@ -55,7 +55,7 @@
                     </tr>
                 </table>
                 <ul class="det-nav">
-                    <li class="color01"><a href="/book/read/book_id/{$book_info.book_id}" target="_blank">阅读/播放</a></li>
+                    <li class="color01"><a href="{if $book_info.category_id==1}/book/read/book_id/{$book_info.book_id}{else if $book_info.category_id==2}/book/soundInfo/book_id/{$book_info.book_id}{else}/book/videoInfo/book_id/{$book_info.book_id}{/if}" target="_blank">阅读/播放</a></li>
                     <li class="color02"><a href="/book/addBookMark/book_id/{$book_info.book_id}">加入书签</a></li>
                     <!--<li class="color03"><a href="#">查询纸质</a></li>-->
                     <li class="color04"><a href="/book/info/book_id/{$book_info.book_id}/#fbpl">发表评论</a></li>

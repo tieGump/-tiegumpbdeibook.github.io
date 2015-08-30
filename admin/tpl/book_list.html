@@ -5,14 +5,14 @@
     <form action="" method="get">
     <table style="background: #dde8f0">
         <tr class="odd">
-            <td><input type="text" name="search_name" /></td>
+            <td><input type="text" name="search_name" value="{$smarty.get.search_name}"/></td>
             <td>
                 <select name="search_type">
-                    <option value="1">书籍名称</option>
-                    <option value="2">作者</option>
-                    <option value="2">分类号</option>
-                    <option value="2">主题词</option>
-                    <option value="2">关键字</option>
+                    <option value="1" {if $smarty.get.search_type==1}selected{/if}>书籍名称</option>
+                    <option value="2" {if $smarty.get.search_type==2}selected{/if}>作者</option>
+                    <option value="3" {if $smarty.get.search_type==3}selected{/if}>分类号</option>
+                    <option value="4" {if $smarty.get.search_type==4}selected{/if}>主题词</option>
+                    <option value="5" {if $smarty.get.search_type==5}selected{/if}>关键字</option>
                 </select>
             </td>
             <td><input type="submit" value="search"/></td>

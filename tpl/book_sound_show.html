@@ -19,9 +19,19 @@
             <div class="sound-head">{$book_info.book_name}</div>
             <audio controls src="/{$movie_dir}" style="width: 600px; "></audio>
             <div class="sound-content">
-                {$book_info.book_info|nl2br}
+                {$page_info.info|nl2br}
             </div>
+            <ul class="m-paging">
+            {foreach from=$page_info.page item=v}
+            {if $smarty.get.info_page==$v}
+            <li><a class="active">{$v}</a></li>
+            {else}
+            <li><a href="/book/soundInfo/book_id/{$smarty.get.book_id}/info_page/{$v}">{$v}</a></li>
+            {/if}
+            {/foreach}
+        </ul>
         </div>
+
     </div>
 </div>
 <!--main end-->

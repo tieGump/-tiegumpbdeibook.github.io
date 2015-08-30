@@ -105,10 +105,10 @@
                 <div class="m-box-book-move clearfix">
                     <ul class="clearfix">
                         {foreach from=$index_recommend item=v key=k}
-                        <li {if $k%4==0}class="mr0"{/if}>
+                        <li {if ($k+1)%4==0}class="mr0"{/if}>
                             <a href="/book/info/book_id/{$v.book_id}">
                                 <img src="/upload/{$v.book_cover}" width="160" height="153" alt="{$v.book_name}">
-                                <p>{$v.book_name}</p>
+                                <p>{$v.book_name|truncate:10:'...'}</p>
                             </a>
                         </li>
                         {/foreach}
@@ -243,7 +243,7 @@
                     <tbody>
                     {foreach from=$new_in_book item=v}
                     <tr>
-                        <td>{$v.book_name|truncate:25:'...'}</td>
+                        <td style="text-align: left">{$v.book_name|truncate:20:'...'}</td>
                         <td>{$v.book_classification}</td>
                         <td>{$v.add_time|truncate:10:''}</td>
                         <td>{$v.read_number}次</td>
@@ -270,7 +270,7 @@
                     <tbody>
                     {foreach from=$read_book_top item=v}
                     <tr>
-                        <td>{$v.book_name|truncate:25:'...'}</td>
+                        <td style="text-align: left">{$v.book_name|truncate:20:'...'}</td>
                         <td>{$v.book_classification}</td>
                         <td>{$v.add_time|truncate:10:''}</td>
                         <td>{$v.read_number}次</td>
