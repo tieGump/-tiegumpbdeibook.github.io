@@ -18,22 +18,31 @@
         <div class="m-cont-table">
             <div class="sound-head">{$book_info.book_name}</div>
             <audio controls src="/{$movie_dir}" style="width: 600px; "></audio>
-            <div class="sound-content">
-                {$page_info.info|nl2br}
+            {foreach from=$page_info.info item=v key=k}
+            <div class="sound-content" {if $k!=1}style="display: none"{/if} id="sound_content_{$k}">
+                {$v|nl2br}
             </div>
+            {/foreach}
             <ul class="m-paging">
             {foreach from=$page_info.page item=v}
-            {if $smarty.get.info_page==$v}
-            <li><a class="active">{$v}</a></li>
-            {else}
-            <li><a href="/book/soundInfo/book_id/{$smarty.get.book_id}/info_page/{$v}">{$v}</a></li>
-            {/if}
+            <li><a {if 1==$v}class="active"{/if} style="cursor: pointer" onclick="perPage(this)">{$v}</a></li>
             {/foreach}
         </ul>
         </div>
 
     </div>
 </div>
+<script type="text/javascript">
+    function perPage(doc){
+        var doc=$(doc);
+        if(doc.attr('class')=='active')
+        return false;
+        $('.sound-content').hide();
+        $('#sound_content_'+doc.html()).show();
+        $('.m-paging a').attr('class','');
+        doc.attr('class','active');
+    }
+</script>
 <!--main end-->
 {if 0}
 <META name=GENERATOR content="MSHTML 8.00.7601.18806">

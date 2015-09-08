@@ -287,15 +287,15 @@ class Book extends Mode{
         }
         return $tmp;
     }
-    function createBookInfoPage($info,$page=0){
-        $page=intval($page);
+    function createBookInfoPage($info){
         $j=ceil(mb_strlen($info)/360);
 //        $j=1;
         for($i=1;$i<=$j;$i++){
 //            echo $j.'010<br />';
             $tmp[]=$i;
+            $info_list[$i]=mb_substr($info,($i-1)*360,360);
         }
-        $info=mb_substr($info,($page-1)*360,360);
-        return array('page'=>$tmp,'info'=>$info);
+//        $info=mb_substr($info,($page-1)*360,360);
+        return array('page'=>$tmp,'info'=>$info_list,'page_number'=>$j);
     }
 }

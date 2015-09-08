@@ -163,7 +163,7 @@ EOF;
         $this->sound_type=$tmp=$book->getSoundType();
         $this->book_info=$book_info=$book->getOneInfo($book_id);
         $this->sound_type_name=$tmp[$book_info['category_extend_id']];
-        $this->page_info=$book->createBookInfoPage($book_info['book_info'],$_GET['info_page']?$_GET['info_page']:1);
+        $this->page_info=$book->createBookInfoPage($book_info['book_info']);
 //        print_r($book_info);
 //        $this->book_list=$book->getIndexList(array('category_id'=>$book_info['category_id'],'category_extend_id'=>$book_info['category_extend_id']),' read_number DESC',20);
         $this->movie_dir=UPLOAD_DIR.$book_info['save_place'];
